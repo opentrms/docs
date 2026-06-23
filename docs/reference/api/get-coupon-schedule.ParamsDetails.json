@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","description":"Deal UUID","required":true,"schema":{"type":"string","default":""}},{"name":"asOf","in":"query","description":"Optional as-of date for schedule projection","required":false,"schema":{"type":"string","default":""}}]}

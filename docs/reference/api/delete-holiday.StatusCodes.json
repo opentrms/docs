@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Holiday deleted"},"400":{"description":"Invalid date format"},"403":{"description":"Insufficient scope"},"404":{"description":"Holiday not found for this calendar"}}}

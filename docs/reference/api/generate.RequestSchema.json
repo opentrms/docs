@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"settlementId":{"type":"string","format":"uuid"},"format":{"type":"string","pattern":"SWIFT_MT103|SWIFT_MT202|SWIFT_MT192|ISO20022_MX|RTGS|INTERNAL"}},"required":["format","settlementId"],"title":"GeneratePaymentRequestDto"}}},"required":true}}

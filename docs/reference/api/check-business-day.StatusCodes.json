@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Check result returned","content":{"*/*":{"schema":{"type":"object","additionalProperties":{}}}}},"400":{"description":"Invalid request body","content":{"*/*":{"schema":{"type":"object","additionalProperties":{}}}}},"403":{"description":"Insufficient scope","content":{"*/*":{"schema":{"type":"object","additionalProperties":{}}}}}}}

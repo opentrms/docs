@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"date":{"type":"string"},"calendars":{"type":"array","items":{"type":"string"}}},"required":["calendars","date"],"title":"CalendarCheckDto"}}},"required":true}}

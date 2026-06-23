@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"dealId":{"type":"string","format":"uuid"},"executionDetails":{"type":"object","additionalProperties":{}},"traderNotes":{"type":"string"}},"required":["dealId"],"title":"ExecuteItemRequestDto"}}},"required":true}}

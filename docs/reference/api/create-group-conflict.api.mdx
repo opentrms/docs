@@ -1,0 +1,69 @@
+---
+id: create-group-conflict
+title: "Declare a separation-of-duties (SoD) conflict between two groups"
+description: "Rejects with 409 (group_conflict_violators) and the violator list if any user currently belongs to both groups, unless force=true. With force=true the conflict is recorded anyway and the violator list is returned as a report; existing memberships are not removed."
+sidebar_label: "Declare a separation-of-duties (SoD) conflict between two groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v2zgQ/SuDOSWFEju7PbRa7MH5KlL0I7Ad5BAEBS2ObbYSqZKjOIbh/74YSnLkuM22273sIrnEoYczw3nvMXwrZDULmN7gQBfGwpllwzkVZDngbYKaQuZNycZZTHFInynjAAvDc3jZfw17M++q8lPm7DQ3GX+6My5X7HzYB2U18JygXYLcBAYzBWWXUAXykFXek+V8CRPKnZ0FYAcTx3OIWUMClc0pBJg6n9Gf7Cs6hGsp/bAQS7TlwQTwlDmvSUuZhVp+rw0J5MpbCQygwFPpPP8BdG8CGzuDgooJ+TA3ZQDlCaxj8FS4O9KHmKArySuZyoXGFDNPiumNdH3S9IIJlsqrgpi8zHeFVhWEKcbeMUEjA/1akV9igp6+VsaTxnSq8kAJhmxOhcJ0hbwsZdvEuZyURYFkqqqcm9D1+rbeToGPnV7KlsxZJsvyUZVlbrLYae9zEBBXu7ndRGDtprZVnj8G/5SyXCahIJAcTZYP3PRAV2wowN7Ine4/QDEhXhBZ4IVr4JSJeJmbhEv1uDzo9BHYGzvDRGZUKMYUq8robl+Ij7s6Nz5wXQEuTnGd1GmPfzHtiDJn9VZeT6oZ4OO8T+R5WwU20wYB4e02YffocHYIxtadSchEeW/I72OChbp/R3bGc0yP+v1+goWx7UJ/ve6y5qYd5ub4m35vE4ySxhRPdmk6rJlzyg7X2ylFXXEhlM6GGrHf+kfya/uIbSrQNUE07FkHpaeDjZg210ICznfUK6fskPVF78Uv8HNIocoZ3LRpRAorGLnTzbjT7eGXeRXibfTtXnf42m78p8rRPy2c08F40Du/+nAyvvj4YfDue0Iy+u/Z3grjB/T2Exp6QhbrpLkW9fHyqW8H/GQZrZgO2BSEQs+WyVscjuRNsAXuKpC/0KGTVXmv5JY1TEX4gUN1K22KRAwjdjXRGsmsE3zZ/31XFRc2VNOpyQxZhpC5kp65/sz1/wHXX+9y/fKbnIKpq6yOD7B448NChfiMCsTPWnjWwn9cC+sEC+K5k/d/6UL94JenGfZUaXp3Rz0ljqoXR3rQwiwgBvJ3rSmofI4pzpnLtNfLXabyuQucvuq/6u+8Jd+QFdMR+SQZQDbL8z9QVnnDy5hxQsqTH1TSys1t9+uR6KtmTjdoMxbpYvcBez2GOhrYfSELbsLKiG+aeldEYY2H70dgNIl1FFG5O6PJY2NionmJCTBpPpy3Y397PY7wijMZPniYs3tVlILCg0fAh5dt/NyyD4UB8n6O52iwiw0NLi92DjP2SsfrwWoYmvAF3iurZtHtwmgZmAoYno3GzV4Bqd53dNiXOgJzoSLnGzP3L3iirQ473u3ZbG/MdsNPpnvulbkyVsCIylk1mrtBVRqB7AgTjLpr+dJR3m2CIi6JXq0mKtCVz9drWa5tuKhHm6AmeceIf6Flx7TfqbyiyLpb+cMbCY46S3BOSmgvWepNJzWUB+Nl2d27Y8nXSbtjkGVUcidW/jNKqc1Nc/lxNBYdNU6/cFrCvFqIJtSiFoeLbIpCj2srzJWdVWomsXVJ+fkLLYg/+w==
+sidebar_class_name: "post api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Declare a separation-of-duties (SoD) conflict between two groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/admin/group-conflicts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Rejects with 409 (group_conflict_violators) and the violator list if any user currently belongs to both groups, unless force=true. With force=true the conflict is recorded anyway and the violator list is returned as a report; existing memberships are not removed.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./create-group-conflict.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./create-group-conflict.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./create-group-conflict.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

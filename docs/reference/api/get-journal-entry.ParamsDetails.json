@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","description":"Journal entry UUID","required":true,"schema":{"type":"string","default":""}}]}

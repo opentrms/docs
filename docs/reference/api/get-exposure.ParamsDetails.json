@@ -1,0 +1,1 @@
+{"parameters":[{"name":"counterpartyId","in":"path","description":"Counterparty UUID","required":true,"schema":{"type":"string","default":""}},{"name":"currency","in":"query","description":"Currency (ISO 4217)","required":false,"schema":{"type":"string","default":""}}]}

@@ -1,0 +1,69 @@
+---
+id: list-events
+title: "List instrument lifecycle events"
+description: "Returns all lifecycle events (coupon, call, maturity, corporate action) for a SHARABLE instrument, ordered chronologically by event date."
+sidebar_label: "List instrument lifecycle events"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v20gM/SsET02hrZ3dHgrdXCTtumiBwnbQQ+ADPUPZ00gz6gxlVDAE7I/YX9hfUlD+iBsbbfe2AeKLZInk8D2+Gb0NCi0T5rc49kliU7GXhPMMLScTXS0ueMxxwtJEn4DKEkpXsGlNycBrjYZnJjR18BkYKssMKpImOmkzMCHWIZIwkNFCF1CECATTv0eT0ev31+AOa2YQouXIFswqBh/KsHRaroVFu10HLAm/wAxDzZG03NhijqVLct33gRnWFKli4aiINuipYszRWczQKYyaZIUPsd0Dh5ub8RVmGPlL4yJbzCU2nGEyK64I8w1KW2vFJNH5ZV+poKYUzBG7bq6ZqQ4+cdLgP4dDvfy42nuXBEJxhsWKWlgwcFVLe4EZmuCFvWiJ54Pnejnpg2KkVsEJV+noeVh8ZiNKSFS2xG0bcvYchiLEihRC0ziLnVK1J2T8ewk9gisS/mm0zu8QPeujHkZ3yqiQK8+CIWudskjlx2NYndb8KuyTC/6/JkY2Kjw7kl/2/oe4ilGTxEnJPyinV+CVBOz0l+HL4eXp6EeNrNiLM7164aCyp1E/7lH/dTrqsU9NUTjj9FRJJtQM3/75dz/ydHTwpTwyPWngsWvg5VkN7L8rPggUofFPc37Mc+4yrFhWQW3Hkvs5qJ/IcUC1G6wvB0e7erBxthvw3pgkjuu9K2liiTmuROp8MCiDoXIVkuSvhq+GJ97kLXs1O2xhWwE0WY1GYtObrL7igily1M8L5rfz49dTldZWJcdBB0q0i5NF332awTYaJNyxh7AQcp4tFDFUICuG2eTDFJzVr5m0UMewdpYj7qySVt4WwGx382ZP+btPs55s54vQN7Ijva84+jg+6WYWyTq/BPIWJi7dwQfytOR+X03bJFzB5Ho62+Uqy9u8yxdDFV4dklTkdamdHewd2P2oTpzYww4291v2f+WDdyMU/iqDuiTnFW4vrs1OmLdItVNSLvF4+yvCvDfFO8DzDFWCmrDZLCjxTSy7Th9/aTiqxuYZrik6WuisbjdoXdJ7i3lBZeKfMPZssrM5F3BqtM9C2B+CXo/ANZWN/sMM77jdmvlu3mW4YlLFaTPbFyNjuJajFD1ddS8c9uzba5Xed3o7ers=
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List instrument lifecycle events"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/instruments/{id}/events"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all lifecycle events (coupon, call, maturity, corporate action) for a SHARABLE instrument, ordered chronologically by event date.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./list-events.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./list-events.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./list-events.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

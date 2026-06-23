@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"description":{"type":"string"},"holidays":{"type":"array","items":{"type":"string"}}},"required":["description","holidays"],"title":"HolidayUploadDto"}}},"required":true}}

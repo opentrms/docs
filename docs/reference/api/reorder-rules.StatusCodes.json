@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Rules reordered"},"400":{"description":"Invalid request body"},"403":{"description":"Insufficient scope"},"404":{"description":"One of the rule IDs does not exist"}}}

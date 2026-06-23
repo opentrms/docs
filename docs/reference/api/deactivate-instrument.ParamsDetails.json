@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","description":"Instrument UUID","required":true,"schema":{"type":"string","default":""}}]}

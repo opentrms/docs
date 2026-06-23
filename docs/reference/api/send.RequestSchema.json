@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"external_reference":{"type":"string","minLength":1}},"required":["external_reference"],"title":"SendSettlementRequestDto"}}},"required":true}}

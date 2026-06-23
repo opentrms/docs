@@ -1,0 +1,1 @@
+{"parameters":[{"name":"date","in":"query","description":"Business date in YYYY-MM-DD format; defaults to today","required":false,"schema":{"type":"string","default":""}}]}

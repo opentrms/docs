@@ -1,0 +1,1 @@
+{"parameters":[{"name":"legalEntityId","in":"query","required":true,"schema":{"type":"string","format":"uuid"}}]}

@@ -1,0 +1,1 @@
+{"parameters":[{"name":"indexName","in":"path","description":"Canonical index name","required":true,"schema":{"type":"string","default":""}}]}

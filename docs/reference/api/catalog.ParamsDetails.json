@@ -1,0 +1,1 @@
+{"parameters":[{"name":"name","in":"path","required":true,"schema":{"type":"string"}},{"name":"If-None-Match","in":"header","required":false,"schema":{"type":"string"}}]}

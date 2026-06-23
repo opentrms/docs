@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"indexName":{"type":"string"},"fixingDate":{"type":"string","format":"date"},"value":{"type":"number"},"currency":{"type":"string"}},"required":["currency","fixingDate","indexName","value"],"title":"FixingDto"}}},"required":true}}

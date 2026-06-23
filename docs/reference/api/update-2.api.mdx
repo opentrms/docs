@@ -1,0 +1,69 @@
+---
+id: update-2
+title: "Update a bank account's mutable fields"
+description: "Updates accountNumber, accountName, correspondentBank, swiftBic, and isPrimary. Returns 400 if legalEntityId, currency, or accountType differ from the stored values."
+sidebar_label: "Update a bank account's mutable fields"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN9v2zYQ/leIe9lW0LEdJ26qt2TthhTrEDjO+hAYw1k62WwkUiUpJ4ah/304Srbl2IjbvQWIXyxRvB+87ztKH1fgceYguocr1A/iMo5Nqb2DiYSEXGxV4ZXREMFdkaAnJ7Ce8XeZT8nKzS3mJEVsrCVXGJ2Q9uxPCveoUn+lYilQJ0K5G6tytMsTMSJfWu3EWa8nVCoymmH2SXvll9eJFHFpLel4KYWx6xjjZUEiUWlKVqTW5MLPSThvLCVigVlJ7gQkmIIscs7XCURQhqz/PQUJBVrMyZPl1a5AY04QgUpAguIFFujn8HzVoShNfHF3d/0RJFj6XipLCUTeliTBxXPKEaIV+GXBPp23Ss+CrxTLzEMEUFWT2pKcvzLJkqfHRnvSni+xKDIVh7y73xyHXu37NdNvFHteiuVVekUu2LYROZRGjk9/kZ75OUTnPQm50uvbXiWhheAR49PevvUe5P/Dx5ojR0z7/T3LDZ9aplNjMkINlYQdUh3ynhqbI+NTliphizXvjqQy2MlksK3iONg8t62qNmvud0oun+F3qKTthU4keOUzasjZNGzdnR+9gWo3GFM0DLBDVxPmtNfjvxeYXrdNEpLZcPRd993P0FL9WMV/HqMjfD9G6RdR/jFGv8jZo2Q4SlvlLmOvFnToaXUQ/gb4SsLZIWz/wUwlYXMRKaqstMTbqsrz0uM0I5EqyhIRz1HP6A3zV4j5YB/za+3KNFWxIu2Fi03xhuxrRPbsyE6tjRepKfXbXv0a0f2wj24TbQNwbLTzFpX2YqFMFnbxN6xfGdaVhJz83LAkKcqACauNCLpYqO6i352ifug06bnuSiUVSHBkF2u5UtoMIph7X0TdbmZizObG+eiid9HbEy1/kmYNRImoPQg2Zv3hKC6t8svgcUpoyV6WnMf9pP34lplUk6U9abNozmIv6OevY1HPFt48kBZm6lFpSrZabTz6cisUw6f8UhTWLFQSvngDdUM5gwOQzcUfa4p9/joOJWZpNNqKqE9PmBcZHRBBW5rucG47fIBN24dbEm3HWtyoZd+zBoFBihfn6fCsc/6+/75zdj487UwHadw5jT8MB+lwiCkOoc3xvRzHe3zUqQl1b5gVCnh5c71X/LHFROlZ0Ngj5R7EF9Q4o5zf/bdL5ykXo0+348aWSVXb9U96HKcwzucYRGcji2s9IVBMWy+bX5zY+WJ0z/NoSdpXc17QcNrTk+8WGarQ6aHbVk2T3gMWisvWZ2K2GxUkRCphScbNyDNXqyk6urNZVfHw95KYMPcTCQu0iksXei9Rjq8TiFLMHL1Qxl9HjZT7TRw6iziYfTOIeslZ80r5BELCAy3rE49qUkmYE3L3cTr1g9/roJ1Aw63h3tFEJdcWl3FMhW/N5VcR7ySbze7mbsxFaw48cpPwLIuPfIyCj3VaJiw7bDdhbAUZ6lmJM55bR+Tff8xebYw=
+sidebar_class_name: "put api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a bank account's mutable fields"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/v1/bank-accounts/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates accountNumber, accountName, correspondentBank, swiftBic, and isPrimary. Returns 400 if legalEntityId, currency, or accountType differ from the stored values.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./update-2.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./update-2.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./update-2.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

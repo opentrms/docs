@@ -1,0 +1,69 @@
+---
+id: discount-factor-range
+title: "Range of discount factors at day offsets"
+description: "Returns a table of interpolated discount factors at evenly-spaced day offsets from the as-of date. Tenor input is in days; the response includes both the day offset and the resolved tenor date (asOfDate + tenorDays). Valid only for DISCOUNT or OIS indexes."
+sidebar_label: "Range of discount factors at day offsets"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv20YQ/iuDPdkpbckPBAZ7MuIkUADHgaQ0B0MoRuRQ2praZXaHagSB/72YJWnRluLahovm4BMlcmfm2/nmuVaMM6/ia3WJ7oYYBialH+TVJFIp+cTpgrU1KlZD4tIZDwiM05zAZqANkytsjkwppNontjQMGSZsnQdkoCWZfHXgC0zkBK7AZpkn9pA5uwCeE6A/sBmkyHQIYzLWgTZFyaA9aCMi/vdwzpEvrPEE2iR5mZKHqeV5+LTRC2jS9rTNl5QCB5WiHvbQX2UX8uu3+vUFrvz+IfyBuU7BmnwFmXVwMRi9u/r6eQzWwdVgBLp2yKGKlC3IobhjkKpYtRf+EO47RDMjFakCHS6IyYlT18rgglRcPyKlxZEF8lzd9+47NNboBPPaHjQCjr6X2lGqYnYlRconc1qgiteKV4Uo9uy0mQV1GZY5q1ipqopuDcvNW8PfS3KrLcvntwSIwwejK/HCAhn26HB2GMFx//jtQf/04Phs/yUACfF/Cq0Po6pDoWHVMzqO2niAvRACXi/pRRCxfSoeMul/hsYzFY/AM2IqYEr8N5Fpk6qDqVEOJ/27oDLM/eNRTUS0Tjsvh4/7fXncRXJxN++b6uBCtaBURSqxhsmwSL7pvZHHlnk7/YsSluxxkmOsa3shFT4Hv9xHWkWqTedd16hDuI3/KlKF1YZ95yg6h+JWzbTw/w7ltmB0jkr5m5HrmtOGT47FXnP+kejulpKOiCkXU3ISIIo15/Lqi9xEVd1XF9uVaNjwJgerSJ3uYm5glqH0ORGAUHml9IhpSC15MJbBl0VhHW+V91difxFiT3YR68ss04kmw+ATW9ArW78IW6e72AoN3zJktjSpJKKx0pAxzCNNB3+l7/+mr4rUgnhuZfabUbicTHKx6mGhe8ujXjMp9tbSyqteC+dgUzE9uWU7GZYuV7GaMxdxr5fbBPO59Ryf9c/6W93+IxmZPCmFWgOIsLRnT0npNK+CximhI3deCqjrSffzSEKlpqB76NZBgmLL6KdvY6hPA9sbGTOmjNpQuhnex8PLEeiUDGteQeHsUqeByhCborlWoKLmx4eWs0/fxoEPbTIbgDQkBI3nXwbbA5jDVJtZmPCH2t/AJRqc0UJK3GjlmRYwfD8aN7Li5Vru6LBfR67nBRox1Qxaw7rrZTsXl86qch/JepOKrztR1EYQ0w/uFTlqI94Osb1u8uNaYaGFk6Mw0tbrZaTiZsXZSpNJpCQTRHC9nqKnry6vKnldj8IS6qn24vDNRPtTivaGzfC7D0/bdHZe7IZWm6VqiXlJYVKOnono8VvOA2i6G9ULQ3pg0XkA0GaheiacJy03DwDp7lIbKBP547RgeX4s/WRf3wmm7ZVm1cXRggyS1aSK1JxQqqdgqj+dJwkV3BGSzi/4b/vQx/dSRv8B27MSpg==
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Range of discount factors at day offsets"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/indexes/{name}/discount-factors"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a table of interpolated discount factors at evenly-spaced day offsets from the as-of date. Tenor input is in days; the response includes both the day offset and the resolved tenor date (asOfDate + tenorDays). Valid only for DISCOUNT or OIS indexes.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./discount-factor-range.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./discount-factor-range.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./discount-factor-range.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

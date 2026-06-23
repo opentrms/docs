@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Credit line suspended"},"403":{"description":"Insufficient scope"},"404":{"description":"Credit line not found"}}}

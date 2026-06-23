@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Simulation deleted"},"403":{"description":"Insufficient scope"},"404":{"description":"Simulation not found"}}}

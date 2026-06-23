@@ -1,0 +1,69 @@
+---
+id: delete-2
+title: "Deactivate (soft-delete) a bank account"
+description: "Sets is_active = false. FK references to cash_balances and ssis are preserved."
+sidebar_label: "Deactivate (soft-delete) a bank account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFq20AQ/ZVhTgkosZPmEAQ9pMQpbhsotkMPxoSxdmQvlnaV3ZGpEfr3MpJITRzSU0+SVjNv3773ZhsU2kRMl/iF3A7usszXTiKuEjQcs2Arsd5hinOWCDY+UyZ2z/AZcioiX8LDdwicc2CXcQTxkFHcPq+poG6BnIEYbQQKDFXgyGHP5hIT9BUHUvCpwRQNFyz8fI0JVhSoZOGgtBp0VDKmaA0maJVJRbLFt/Q69tSzh6en6T0mGPiltoENphJqTjBmWy4J0wblUClmlGDdpsPKqS4EU8S2XWlnrLyLHLX4enyjjw/2M9ypQsIG2wRvxp9OG6Yu1nluM8tOIGa+4r70X9jOC+S+dgbbNsGSZev/6tWpJVtMcUSVHe2vRmtyu4uhN44aa1pMsBN9kLMOBaa4FanS0ajwGRVbHyW9Hd+OT0T9yk49YgM9Amiz6hM5q4OVQ4e4Zgoc7mrlsVwd/56r4L2Ix0Wv+iuLk02//VpAXw3id+zAr4WsYwN58CXIlmExe5yDNezEygGq4PfWcMDBYUXuATAZXh58KEl68E5H63LfEbFSaH2HePdzesJmEchYt+lyPLNxB4/kaMOlujg/ROESZpP5YuhVlfu+q8ux+lv5KCU53WrI8f1rVuAs+lwueifPgWB95PtbIg1m3gk7+R+jONgh/FtGVUHWKfUuKM2QryVSZfWAV6rpccYwwdQavS80R1rZNGuK/BSKttXll5qDBmWV4J6CpbUKvmzQ2KjvBtOO/gfnPZsNg3wO7435u+yHRXIHZU1FrV+Y4I4P/WXSro7H6X7yY7KYYNv+AQrkuHA=
+sidebar_class_name: "delete api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deactivate (soft-delete) a bank account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/bank-accounts/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets is_active = false. FK references to cash_balances and ssis are preserved.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./delete-2.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./delete-2.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./delete-2.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

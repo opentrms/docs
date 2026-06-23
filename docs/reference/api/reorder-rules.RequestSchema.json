@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"ruleIds":{"type":"array","items":{"type":"string"},"minItems":1}},"required":["ruleIds"],"title":"StpRuleReorderRequest"}}},"required":true}}

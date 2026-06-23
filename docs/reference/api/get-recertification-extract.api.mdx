@@ -1,0 +1,69 @@
+---
+id: get-recertification-extract
+title: "Periodic access-review (recertification) extract"
+description: "Per user: FUNCTIONAL/DATA group memberships, effective entitlements (including DS T10 wall-crossing USER grants), expiring/expired grants, and SoD violations (DS T11). Returns JSON by default; pass format=csv or Accept: text/csv for a CSV export (one row per user, multi-valued fields flattened to semicolon-separated summaries)."
+sidebar_label: "Periodic access-review (recertification) extract"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVMFu2zgQ/ZXBnBJAiew9FSp6MBq3SHebBLbTHoIcaGpks6FIlhw5MQz/ezGU7HUaYIEF9rgnCeTM48ybeW+HrFYJqwec1K1xMHVs2FJLjhM+FlhT0tEENt5hhXcUoUsUK/h0f/NxcX17M/mrvJosJrCKvgvQUrukmNYmpAKoaUiz2RDQCSicGadtVxu3gqs5LMYjeFbWXujoU5LD+/l0BquoHKfzAuglmGjcqsw/VA83BShXw9xfwcZ4q6S8BGcZb3x+CTPiLroEX+a3N7DcQk2N6iy/h6BSgsbHVvEHnTbgI0y0psAVML1wKWeNj6Dg4/ybPO4jw5l3BNE/QxjaL6DtLJuLjbId1dAYsnWCxipmclQDe0jUGu2tdxeJgoqKqYbUta2KhtL5JRboA8Vc+HWNFa6IZ6QpsmmMzsfTF45KMxYo+S0xRZnTDp1qCSvsu8ACjUzmZ0dxiwVG+tkJT1g1yiYqMOk1tQqrHfI2SF5i4RP3++II1VNwgFqTqin+O6xHiU7Bu0RJ7v8YjeTzentu/8QCtXdMjuVWhWCHZssfSUJ2b5/wyx+kWcrFw4T+OW4voS3x2g+8ZgZ5jRWWKphyMy6VrHoZX/ONBSaKmwPLXbTCBXOoytJ6rezaJ67ejd6N8HdZfCZHw4gzAkiycJJId9HwNiMuSUWKk05KeXg8vZ5LMz1xp0HH3qSKN49++b6APhrYP5EDv2RlZP2a6FvgNcFi9nUOps7y20KIfmP6yWb2BLkHwGL4+dTvVAbPlBvX+FyI6BcrzIiTu+s31SyiypIWWc5MeoKvyqlVljzMt4mphdl0vhhyheU+b3w5wn2BwSduVd6AYSfvKBpfGw1Ka0rpItLG0DOc/Ta1c6CjTl5VtPt70/63rf/QtoaVzM8Gq4yT8WWx7AaZPaAKRoY8xgKz1LKXvBbbY4GiJ4ne7ZYq0X20+70c904mgqlNUkt74j9PtD01vtwHVpiltlHRSHTWVnEwMYHps44ed8h64z6CcvSNz1MRwC8d3nYU
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Periodic access-review (recertification) extract"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/admin/recertification"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Per user: FUNCTIONAL/DATA group memberships, effective entitlements (including DS T10 wall-crossing USER grants), expiring/expired grants, and SoD violations (DS T11). Returns JSON by default; pass format=csv or Accept: text/csv for a CSV export (one row per user, multi-valued fields flattened to semicolon-separated summaries).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./get-recertification-extract.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./get-recertification-extract.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./get-recertification-extract.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,1 @@
+{"parameters":[{"name":"counterpartyId","in":"path","description":"Counterparty UUID","required":true,"schema":{"type":"string","default":""}}]}

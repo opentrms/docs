@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Extension deleted"},"403":{"description":"Insufficient scope"},"404":{"description":"Extension not found"}}}

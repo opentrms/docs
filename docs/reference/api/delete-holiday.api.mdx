@@ -1,0 +1,69 @@
+---
+id: delete-holiday
+title: "Delete a single holiday"
+description: "Removes a single holiday row from the calendar. Date must be ISO-8601 (yyyy-MM-dd)."
+sidebar_label: "Delete a single holiday"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFu00AQ/ZXVnFrJrROoUOVbRQMEEYGSIA5RDhPvJF7V3nV3xwHL8r+jsZ00NNADEpzirGfevH3vjRtg3AVIVvAWc7IafYB1BJpC6k3JxllIYE6F21NQqIKxu5xU5nKjsVbefVdb7wrFGal0ALhW98ikiiqw2pCaLj5f3b4ZjdVFXdf11Wx2pfXlNUTgSvIoE6YaEtCUE9OHHhgiKNFjQUxeyDVgsSBIIHWaIAIjrErkDCLw9FgZTxoS9hVFENKMCoSkAa5L6Qnsjd1B20ZHGI389zBrKQ6ls4GCvH81upGfXyUbLqL6a2loI7gZjc7rpnaPudFKGKmt8wVyX/v6d7Wh2m5NasiyCqkrqS99Ybx1rLauslqwFWcmHG0SQaAgztyT/J3unEECMZYm3o/jQ3WIG9G+jQfrQ9wI5RYiCOT3B5sqn0MCGXOZxHHuUswzFzi5Hd2O4Hmq3pOVAJBWPYKSZlE3UFp5w3WHuCH05O8qYbVan75eiEO9BadFR8OExdnQj9+Wqq9W7B7IKrdhNJb0U46X89lCGU2WDdeq9G5vNHkYIiHIPQBEw8O73rYOvFPV2K3riBjOpb5DvPsyPWOz9KiN3Sm0Ws1NeFAztLijQgxe1IGpUPPJYjn0isp93/h6JNaXLnCBVkYNwb7vbDxb1OeDG0idZbL8z5Z78IDpB8dljsYK3y4dzRCxFWBp5FZjiOAYM4ggGZb8kDQ56hZ2LWeBpbVpNhjoq8/bVo4fK/ISl3UEe/QGNyL7qgFtgjxrSLaYB3pBhYv5sP+X6k/sh0O0Iuce80r+QQQPVB++TPKJ+Y8zO1Xa9eke308+TZYTaNufdFj46A==
+sidebar_class_name: "delete api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a single holiday"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/calendars/{code}/holidays/{date}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes a single holiday row from the calendar. Date must be ISO-8601 (yyyy-MM-dd).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./delete-holiday.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./delete-holiday.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./delete-holiday.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

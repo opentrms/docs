@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Bank account deactivated"},"403":{"description":"Insufficient scope"},"404":{"description":"Bank account not found"}}}

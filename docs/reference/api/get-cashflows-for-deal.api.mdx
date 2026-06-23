@@ -1,0 +1,69 @@
+---
+id: get-cashflows-for-deal
+title: "List cashflows for a deal"
+description: "Returns the cashflow schedule for a deal, including each cashflow's id, type, status, payment date, and amount. The id is required to fix a PROJECTED FLOAT_COUPON via POST /api/v1/cashflows/{id}/fix."
+sidebar_label: "List cashflows for a deal"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWc1u2zgQfpXBXLYt1DjZ7aHQLZufIkXbBI6LHoKgoMWRxS1FquTIrWEY2IfYJ9wnWQwlO27tpj+7h2IhXyyLw5lvfviR5iyR1SxifoMnKlal9R8i3maoKRbBNGy8wxzHxG1wEbgiKHoxiEVFurUEpQ+gQJOyGRhX2FYbNwNSRbUR/iWC0RnwoqEMIituYwaNWtTkGLRiykA5Dar2reMDmFQERoOJEOh9awJpYA+l+QgKrsaXz89OJmencP7i8njy9uTy9dXlK5gbBVeX1xMYqcaM5kejtek4Whq9GpXm4wFm6BsKSry60JjjjHjj9bkPp6QsZtiooGpiChKWJTpVE+Yo/l1ozNBIRBrFFWa4hoc5h5YylJjUCvMliquYY+Rg3AwzLH2oFWOObWs0rla3Mjk23kWKIv/r4aF8fRr3DTgIKQOk4QHVDS/AmshgSnDe0UPMsPCOybGoeDR6JF87UFQIaiH4meq49d5P/6CCxe8g0WHTATL6G9zI1mH5FlFLs32SqwzXuZqkgT0CfamcKt4zvmVKSknku0LaEnVtPaWQbLUhkCsWe+10pbl3qDQfjZuNP0XQq5UwlKq1AgE/XzzH1j42Drr5EBTTAbxqrQXjtCkUU4SGXFoznUxMK+p8/AoK30qFHKRAq8WJOHUeVNFp3uNcE7xuC9K/L44Dm1IV/I25aSgYr69ZBf56gO93tyhCqyx0GmWxB4YH4k1pveK3nU/gnV08vLN85u7H+d12yen7rPpppDBPTPBfOH15pw4+GKeFHvc7noGT3H+oyG3S3af/c2D/PiZ7YO2Ny9dAFb5ufOs06R+o/5PNZPBzCs7MKk7LAJpAj2MTSP0ApG7ed0K5ovB4XZedXdU01nTbS9rc7rAmhF+soFWGbNjSFkmPezo/ZY8r+WT45PBol9SPW67IsSx9yctmCxlIfCDxgcQHEh9I/Gcj8d92SfzCxbYsTWHkD0wsfEPw959/rck8pn9DMU/eDbw+8PrA6wOvD7z+s/H6k11elysgcJ6hFEvgQ/oxN9FMLW2AKGuTNwOxD8Q+EPtA7AOx/zzEvsqwJq58f7+f7vO5whx3GwPCoqNlx6UrzFDStr71b4PFHCvmJh+NrC+UrXzk/Onh08MdB5+Rk64Caeg0gEyWG/5IRRsML5LGKalAQW5/ML+53R6+lk2j4/9toU2QBcWO0edvJtBJA/t35MBPWRlpEZTB1ymuk/HLazBaLpt4AU3wc6NTstIuJZo7BZj1D+frIn/+ZpKibVzpE5A+6knj8dXFDppJUIlLpYszNvEdvFROzSj1d64XkamG8dn1pJ8rUe7mHR0cJjrykWuV2LVvt7yQBscmVVs9ps9NL+924f9Rn6rPPNNHHjVWGSdRSjW57Ov5BlVjJJZHeLeVR+zOBphh3p8RbjOUypUJy+VURXod7Golr9+3FKQ0bzOcq2DUVFJ8s0RtojxrzEtlI90T7wfj3u2H8CXM62OQk0PQXNmWOop4R4u7ptrqdpVhRUqqUxB0g8dFQQ1vTZMzlqybzfp+diZl+g95Rey+
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List cashflows for a deal"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/cashflows/deal/{dealId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the cashflow schedule for a deal, including each cashflow's id, type, status, payment date, and amount. The id is required to fix a PROJECTED FLOAT_COUPON via POST /api/v1/cashflows/\{id\}/fix.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./get-cashflows-for-deal.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./get-cashflows-for-deal.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./get-cashflows-for-deal.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

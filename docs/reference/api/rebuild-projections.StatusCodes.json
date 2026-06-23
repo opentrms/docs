@@ -1,0 +1,1 @@
+{"responses":{"202":{"description":"Rebuild started","content":{"*/*":{"schema":{"type":"object","additionalProperties":{}}}}},"403":{"description":"Insufficient scope","content":{"*/*":{"schema":{"type":"object","additionalProperties":{}}}}}}}

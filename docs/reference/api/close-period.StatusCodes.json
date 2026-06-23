@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"Period closed successfully"},"400":{"description":"Validation error — invalid period format"},"401":{"description":"Authentication required"},"403":{"description":"Insufficient scope — requires journals:period_close"},"409":{"description":"Period close conflict — already closed or pending draft items remain"}}}

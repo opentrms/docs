@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"settlementIds":{"type":"array","items":{"type":"string","format":"uuid"}}},"required":["settlementIds"],"title":"NetSettlementsRequestDto"}}},"required":true}}

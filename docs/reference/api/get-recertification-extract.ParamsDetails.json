@@ -1,0 +1,1 @@
+{"parameters":[{"name":"format","in":"query","required":false,"schema":{"type":"string"}},{"name":"Accept","in":"header","required":false,"schema":{"type":"string"}}]}

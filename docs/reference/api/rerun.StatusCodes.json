@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","properties":{"eodDate":{"type":"string","format":"date"},"mode":{"type":"string"},"message":{"type":"string"}},"title":"EodTriggerResponseDto"}}}}}}

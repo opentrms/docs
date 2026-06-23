@@ -1,0 +1,1 @@
+{"parameters":[{"name":"mode","in":"query","required":false,"schema":{"type":"string","default":"HALT_ON_ERROR","enum":["HALT_ON_ERROR","CONTINUE"]}}]}

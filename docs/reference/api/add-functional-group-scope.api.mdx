@@ -1,0 +1,69 @@
+---
+id: add-functional-group-scope
+title: "Grant a scope to a FUNCTIONAL group"
+description: "Adds the scope to the group's auth.group_scopes bundle. The scope must be a member of the system scope catalog (400 if unknown). Every current member's cached scope resolution is invalidated immediately."
+sidebar_label: "Grant a scope to a FUNCTIONAL group"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV8Fu2zgQ/RViLk0KJXZ2cyh083aTIEXbLRwHPQTGYiyObDYSqZJDJ4ahfy+Gkh3XzhYF9tDFIr5YFGeGw/dmqMc1MM4D5Hcw0rWx6sKy4YpqshxgmoGmUHjTsHEWchhpHRQvSIXCNaTYpcHcu9i8CgojL07T4O80H9QsWl3RqZpsXeoYWM1IoaqpnpFXruwCrgJT3RsVyFi5uTo6Hw6VKVW099Y92ONTdbEkv1JF9J4s9yFeBVVgsSDde3sKroqSsTJBGbvEymhk0srUNWmDTNXqFDJwDXkUu2sNOaDWl9EWMsbqSnZxI+EggwY91sTkBac1WKwJcjAaMjCCSoO8gAw8fY3Gk4acfaQMQrGgGiFfA68a8QjsjZ1DBqXzNTLkEKPR0LbTzpkC/+H0SjwKZ5ksyyM2TWWKlOfgSxAa1oeh3ewLFQzCV4mxYshtrKp9+q48Wlb4xB6qy9uPbyfXf30cve9olO16AYYNhW4pAeGZTWxXAthfJwGnjCbLpjTk1dET7YnJ7+g+hgzoEeumkviasAq5JxR4a3x8T3bOC8jPhsMMamM342Hb7kJ+1yc6zSAVcFeszxE67pD+kx2038cQ2tKL0Dgbuu3/NhzK33P7mwuaJGnusPV68PpfEDQ64EMdSbGQV95VdKzQ6qf+C8pwl0U4oM3onyi8rK/lfcN2L69n5rsEdqbQe1xJRzDV4RmXNoPCk7ThiH+YmrTqCZuaks+GzD0me/baDM6fI+jW9mXWd/ALQb+SoN8PCbq2IZalKYwc4y8s/RdYOj9k6cm6R9E6VqWL9uXQ+5VstRnUxAsnqqWJnBSKfBJhgI0ZLM8GKFJuUG69TxKqYbA2uh30m8ggkF9uNE30FeSwYG7ywaByBVYLFzh/M3wzPPi6X5EV3SR6K0VQ4iwaJlARveFVijgj9ORHURK7m+5O30iZdDDuGm3RkSwOFn33eaI6a8XunqxyM0ZjSavSuzqVx2T84aYXHbxSjXdLo8lDL8QkchcAsv7hcoP+u8+ThLvIq/GTELvYiJKtCtpVJ62ov9KlxHu+UgajT9cH2U88amPnqZLHJtyrD2hxnlS2uumk0PjiZtL7Ciud39npUNZpXOAaU0324vPnlNxePW879n+m4/u6YXrkQVOhsYJZquh13xl3gI0RZM8gg9Qd0nz7/QEZ5EnV9y0yzUC6QNzX6xkGuvVV28rrr5G8lPk0gyV6gzOh/24N2gR51pCXWAX6AQNH4152Hqt/2sHmjLFywiyxitRp7XtaddePdtpmsCCUKpfVu4m33Ronk1X6qG4cD64RbbbxGBUFNbxjK+e5dOz2lPl0O5Gu6S8ntdNi5fFBbj340KXl0i5TW6d3a6jQziPOxbZbUX7fANaf9FY=
+sidebar_class_name: "put api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Grant a scope to a FUNCTIONAL group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/v1/admin/functional-groups/{id}/scopes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the scope to the group's auth.group_scopes bundle. The scope must be a member of the system scope catalog (400 if unknown). Every current member's cached scope resolution is invalidated immediately.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./add-functional-group-scope.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./add-functional-group-scope.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./add-functional-group-scope.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

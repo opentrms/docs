@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"role":{"type":"string","minLength":1}},"required":["role"],"title":"DevTokenRequest"}}},"required":true}}

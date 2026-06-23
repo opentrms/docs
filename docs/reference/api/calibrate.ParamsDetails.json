@@ -1,0 +1,1 @@
+{"parameters":[{"name":"indexName","in":"path","description":"Canonical index name","required":true,"schema":{"type":"string","default":""}},{"name":"date","in":"query","description":"As-of date in ISO format (e.g., 2026-05-08)","required":true,"schema":{"type":"string","default":""}}]}

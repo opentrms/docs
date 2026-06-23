@@ -1,0 +1,69 @@
+---
+id: settle
+title: "Mark settlement as settled"
+description: "Transitions the settlement to SETTLED status and projects the cash balance movement."
+sidebar_label: "Mark settlement as settled"
+hide_title: true
+hide_table_of_contents: true
+api: eJztlk1P20AQhv/Kak4tcnGoOFDfkKAVqKgoScUhymHineAt9q7ZHadYlv97NbZJAqE0l3Li5I+dmX1n/Nh+G2C8DZDMYELMORVkOcA8Ak0h9aZk4ywkMPVog5GLoDgjFdbBip2anE+n38/PVGDkKii0WpXe/aKU++gUQ6YWmKNNSRVu1SUeQgSuJI9S9UJDAn1RiKBEjwUxeRHWgMWCIAGjIQIjakrkDCLwdF8ZTxoS9hVFENKMCoSkAa5LyQjsjb2FCJbOF8iQQFUZDW07l+RQOhsoSPzn0UgOT3veDGRoV0dPO6lKjUyiKnWWybLUOIgP5LCjxS1kHtKcl67Z9DsbvYdeeRqYX+wXKhKXufu9b7irLJMv0XO9Z0qJtUzlDJlejZfpSDwWssdWqK2KBflu98p7smm9W0eaNp7S/mG8sNrD9vJSMHu2Qg9M3mI+piWJkBcaEpWe5EGf8j/b/cSm6Hoe2Ng/pY2AjeC/Dd54gPSMHbStxByPjl8l1TpWS1fZdyrfqXxLKr/sUnlhV5gb3f0VSPH6D/JO5juZb0RmG0FBnDlxF6ULHU7iHRKIsTTx6ijeGJkQN0a38dqEBPKrRwdS+RwSyJjLJI5zl2KeucDJyehkBM+t0jeyYmpIq76CkmRxHIHSyhuuu4oLQk/+tBIxs/n28kTehB727aD1VETFzqaXN1PVRyt2d2SVWzAaS1otvSs6EzYdX02U0WTZcC3+bGU0eRhsk1TuC0A0nHx9nPrlzbSbt7FL1wkZ5t5VPL2+2FEz9aiNve2M4NiEO3WFFm/7H9SkDkyFGp9PpkOuTLnPOzocde+LC1xgR/Fg/a7Q3217TgyPluz53s3m2/K/TOvwHJgeOC5zNLbjVwhpBrpmgKWRzo46jja+OoKkc7EDZPMIhCNJaJoFBvrp87aV2/cVeQFlHsEKvcGFDHzWgDZBzjUkS8wDvdL8h/Hgjj+qv2kebqKtRSvmlVxBBHdU93a7nbcRZITCiezeL5ymKZW8lSKfcCF4/apd/5gIMX8Akjk7dQ==
+sidebar_class_name: "post api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Mark settlement as settled"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/settlements/{id}/settle"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Transitions the settlement to SETTLED status and projects the cash balance movement.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./settle.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./settle.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./settle.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

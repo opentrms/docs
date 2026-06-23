@@ -1,0 +1,220 @@
+---
+slug: /
+id: quickstart
+title: Quickstart
+description: Stand up a full trade-lifecycle platform on your own infrastructure and book your first deal against a real PostgreSQL event store.
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {CardGrid, Card} from '@site/src/components/Cards';
+
+<div className="eyebrow">Overview</div>
+
+<StatusBadge status="stable" reviewed="2026-06-23" />
+
+# Quickstart
+
+Stand up a full trade-lifecycle platform on your own infrastructure and book your
+first deal against a real PostgreSQL event store. No license metering, no black
+box — the logic that prices your book is the code in the repository.
+
+There are three ways to drive OpenTRMS, depending on how much control you want:
+
+| Approach | Best for |
+| --- | --- |
+| **REST API** | Full control, any language, no dependencies |
+| **MCP server** | AI agents acting through your scopes & approval chains |
+| **Java / Spring** | Embed the domain services directly in your stack |
+
+## Run OpenTRMS locally
+
+Clone the repository, bring the stack up with Docker, and start the API. The event
+store and audit trail are live the moment the application boots.
+
+```bash
+$ git clone https://github.com/ichagas/OpenTRMS
+$ cd OpenTRMS && docker compose -f docker/compose.yml up -d
+$ mvn -pl trms-api spring-boot:run
+
+✓ Started TrmsApplication in 4.2s
+✓ API explorer  → http://localhost:8080/docs
+✓ Event store ready · audit trail live
+```
+
+<div className="pill-row">
+  <span className="pill">Swagger UI at <code>/docs</code></span>
+  <span className="pill">Flyway forward-only migrations</span>
+  <span className="pill">Self-hosted · your VPC</span>
+</div>
+
+## Book your first trade
+
+Post a deal to `/api/v1/deals`. Limits, counterparty and schema checks run through
+STP in milliseconds; the response carries the new `dealId` and lifecycle status.
+
+<Tabs groupId="lang">
+<TabItem value="shell" label="Shell">
+
+```bash
+curl https://localhost:8080/api/v1/deals \
+  -H "Authorization: Bearer $TRMS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "product":      "swap",
+    "assetClass":   "rates",
+    "notional":     5000000,
+    "currency":     "USD",
+    "tenor":        "5Y",
+    "counterparty": "ABC Bank"
+  }'
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+import requests, os
+
+resp = requests.post(
+    "https://localhost:8080/api/v1/deals",
+    headers={"Authorization": f"Bearer {os.environ['TRMS_TOKEN']}"},
+    json={
+        "product": "swap",
+        "assetClass": "rates",
+        "notional": 5_000_000,
+        "currency": "USD",
+        "tenor": "5Y",
+        "counterparty": "ABC Bank",
+    },
+)
+deal = resp.json()
+print(deal["dealId"], deal["status"])
+```
+
+</TabItem>
+<TabItem value="typescript" label="TypeScript">
+
+```typescript
+const res = await fetch("https://localhost:8080/api/v1/deals", {
+  method: "POST",
+  headers: {
+    Authorization: `Bearer ${process.env.TRMS_TOKEN}`,
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    product: "swap",
+    assetClass: "rates",
+    notional: 5_000_000,
+    currency: "USD",
+    tenor: "5Y",
+    counterparty: "ABC Bank",
+  }),
+});
+
+const deal = await res.json();
+console.log(deal.dealId, deal.status);
+```
+
+</TabItem>
+</Tabs>
+
+## Talk to the AI deal desk
+
+OpenTRMS ships an MCP server, so any MCP-compatible client talks to the platform
+out of the box. Agents call the same domain services as the REST API — same
+scopes, same approval chains, same audit trail. Point your client at the server,
+or drive ops from the CLI.
+
+<Tabs groupId="mcp">
+<TabItem value="config" label="MCP config">
+
+```json
+{
+  "mcpServers": {
+    "opentrms": {
+      "command": "java",
+      "args": ["-jar", "trms-ai/target/trms-ai.jar"],
+      "env": {
+        "TRMS_API_URL": "http://localhost:8080",
+        "TRMS_TOKEN": "${TRMS_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+</TabItem>
+<TabItem value="cli" label="CLI session">
+
+```text
+$ opentrms ops review --book G10-RATES
+
+› Anything I should look at before EOD?
+
+agent  3 trades exceed the ±2σ price band:
+  #4521  5Y USD IRS · ABC Bank   +3.1σ
+  #4544  2Y EUR IRS · DEF Sàrl   −2.4σ
+
+Flag for review? [Y/n] Y
+✓ 2 deals routed to Head of Rates
+✓ Events appended · correlation b3f9e1
+```
+
+</TabItem>
+</Tabs>
+
+## Verify the audit trail
+
+Every state change appended a typed, hashed event. Read the chain back over HTTP,
+or query the append-only table directly — `UPDATE` and `DELETE` are revoked at the
+PostgreSQL level, so history cannot be rewritten.
+
+<Tabs groupId="audit">
+<TabItem value="curl" label="cURL">
+
+```bash
+curl https://localhost:8080/api/v1/deals/4521/events \
+  -H "Authorization: Bearer $TRMS_TOKEN"
+
+[
+  { "seq": 1, "type": "DealCaptured",  "hash": "a7f3c91d…", "prev": "00000000…" },
+  { "seq": 2, "type": "STPPassed",     "hash": "3d82b47e…", "prev": "a7f3c91d…" },
+  { "seq": 3, "type": "DealConfirmed", "hash": "9bc14a2f…", "prev": "3d82b47e…" }
+]
+```
+
+</TabItem>
+<TabItem value="sql" label="SQL">
+
+```sql
+-- append-only: UPDATE/DELETE revoked at the DB level
+SELECT seq, event_type, hash, prev_hash, actor, occurred_at
+FROM   trms_events
+WHERE  deal_id = 4521
+ORDER  BY seq;
+
+-- verify the hash chain end to end
+SELECT verify_hash_chain(4521);   -- → ok (3 events)
+```
+
+</TabItem>
+</Tabs>
+
+## Next steps
+
+<CardGrid>
+  <Card to="/overview/asset-coverage" title="Asset coverage">
+    FX, rates, credit, money markets and bonds on one ledger.
+  </Card>
+  <Card to="/concepts/hash-chain" title="Hash chain">
+    How tamper-evident, replayable event history works.
+  </Card>
+  <Card to="/concepts/agent-runtime" title="Agent runtime">
+    Human-in-the-loop agents that respect your scopes.
+  </Card>
+  <Card to="/concepts/end-of-day" title="End-of-day">
+    Reproducible cut-off, curves, accruals and sign-off.
+  </Card>
+</CardGrid>

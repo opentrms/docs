@@ -1,0 +1,1 @@
+{"parameters":[{"name":"code","in":"path","description":"Extension code to update","required":true,"schema":{"type":"string","default":""}}]}

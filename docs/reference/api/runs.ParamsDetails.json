@@ -1,0 +1,1 @@
+{"parameters":[{"name":"as_of_date","in":"query","required":false,"schema":{"type":"string","format":"date"}}]}

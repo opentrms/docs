@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"eodDate":{"type":"string","format":"date"},"force":{"type":"boolean"}},"title":"EodTriggerRequestDto"}}},"required":true}}

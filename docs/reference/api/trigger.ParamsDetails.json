@@ -1,0 +1,1 @@
+{"parameters":[{"name":"mode","in":"query","description":"Error handling mode","required":false,"schema":{"type":"string","default":""}}]}

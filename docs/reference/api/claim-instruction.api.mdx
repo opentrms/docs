@@ -1,0 +1,69 @@
+---
+id: claim-instruction
+title: "Claim an instruction"
+description: "Claims a PENDING instruction for the authenticated trader. Returns 409 if already claimed."
+sidebar_label: "Claim an instruction"
+hide_title: true
+hide_table_of_contents: true
+api: eJztmc1u2zgQgF+FmNNuoY2dNodWt3TTLVygaWA76MHwYSyObW4kUiFHRgxBwD7EPuE+yWIkJVFjx0gK96aTLJMznD99EoclMK4CxDMY2cC+SNg4G2AegaaQeJPLPcTwZ4omCwrV1afLi9HlZ2Uep6ul84rXpLDgNVk2CTJpxR41+RM1Ji68Deps+EGZpcLUE+qtSkQj6ROIwOXkUTSNNMRQD3SsgQhy9JgRkxdLS7CYEcRgNERgxLoceQ1PTe6oUNfXowuIwNNtYTxpiNkXFEFI1pQhxCXwNheVgb2xq1rVEouUIQaoqrlIhtzZQEEmvx0O5fL8cq1vEEHiLJNlmf5m8EYuO2u6xd+UsHjpJRBsmkWM3mfX0vkMxayiMBoq8f9h2Wk996lMFUFg5CLsHUo8SbI+bvePNn48M4ohmJUlPXUfnbsZvczeR6HrQH6fUBWBdUz77c29cd7wfoPoLjeewjkftEQj0x9sMur4/xqRItevFaE7JhvqJ2tP3lFrI/nD9KpbAZVklynryqD3uIXd/49WQy/M4qGKOlgzmjB94RriigukL4jRpK+NHN1RUsjYz4k38Lp8tg4D3RZkE/rmNfnODGOZVuS7/hjL795CrdRwSj+iYsSUXbCD6pnxccuddk4VwdnwdBc+54/kFf48cK4HUA+gHkA9gI4LoHd7v36K5dIkhiyrkLic1H///HsPotD9XAxxnaGeTT2bejb1bDoym84O78ysY7V0he0/jXr89Pjp8XNs/Hw4jJ8nza8eQj2Eegj1EDoihKoIMuK1k0567kKdcumOxzDA3Aw2p4PuVmxQGl0N7vdjgfzmvsde+BRiWDPn8WCQugTTtQscvx++H+502j+TlQY+adVoUCIsXfNASdE8jLMSFoSevHSqIJ7Nu8MTIV4Tx+6kh5iJFTuLfvk+Vc1sxe6GrHILRmNJq6V3WX0eMR1/nSijpTHGW5V7tzG6Dn2NWNHcKICo/fHXfUq+fJ/WCTF26WpD2sDXGs+vRjvWTD1qY1cKrVZjE27UV7S4oky2w5NtYMrU+NNk2spKlBu505NhXcoucIZWlmoPN+oDF4W2u3N+umr5+Pb4tQc0bR6Y7niQp2hsjTmpkLKtrhlgbsSzU/gBFwEiiOuDmqbI5hFIHYlAWS4w0LVPq0r+vi3IS6HMI9igN7iQgM9K0CbIbw3xEtNAB0Lw27hte/6u9pz97PXhnppWmLnBtJA7iOCGts0BUzWvIlgT1g/xrGwHzpOEcu6IyKtbKvrh0bv6NpEK+h/Dhn6l
+sidebar_class_name: "post api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Claim an instruction"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/instructions/{id}/claim"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Claims a PENDING instruction for the authenticated trader. Returns 409 if already claimed.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./claim-instruction.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./claim-instruction.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./claim-instruction.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

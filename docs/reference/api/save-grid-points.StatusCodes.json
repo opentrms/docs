@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Grid points saved"},"400":{"description":"Invalid request body"},"403":{"description":"Insufficient scope"},"404":{"description":"Market index not found"}}}

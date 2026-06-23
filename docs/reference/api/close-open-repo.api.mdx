@@ -1,0 +1,69 @@
+---
+id: close-open-repo
+title: "Close an open repo"
+description: "Instructs close of an open (is_open=true) repo; schedules far-leg settlement for T+1."
+sidebar_label: "Close an open repo"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWs1u2zgQfhViTm1XqZO2h8LFHpyfLRw0TmA7WyyCoKDFkc2GIlWSctcwDOxD7BPukyyGUhwlkbIu0OyJJymaHw6Hw4+fmVmD53MH/Ss4Rq4cXCcg0KVWFl4aDX0YaudtmXrHUmUcMpMxrpkpULMX0n2hl1+9LfEls1iYD8ylCxSlQscybvcUzplD7xXmqD3LjGXTXw5eQwKmQMtpjKGAPgTf5wXqMRYGEii45Tl6tBTaGjTPEfogBSQgKaqC+wU8DJVmwC4vh8eQgMVvpbQooE/BJUBh5Rz6a/Crgnw5b6WeBx8ZL5WHPsBmc02WrjDaoSPlN/v79Lg/zlFIhKwTg+LDdqopd4tMme/bLFDAqdEetSc/r3qv6PEoGDP7iqmneVvKi5fV6FK0BZwZm3OKtyylgE0wEmXqp0Hvof6dfFLOfJcKdw79keLOtYqd575sF2lDWeGqIdRlPkNLQmPlXGquRk8ppaW1qNNVq/vUlNqjLbj1q+Fu6Wia/LQcVxXYEqBC2R247ZiURSH9mHv6+7HCJgEvvaJPR425TMo853Z17A35mBlzs2NCSPX5E4HaS98+3xl3ePTUKlOEneWrcM7VSfC+44QFupsjI9rcNXJ7aMzN/ZxWW5qQaseB7gx+Wn7vXH60pixaM3Kn05m0O5Wntn3nYj65J6Wgtc5kQOf/mjbmxb2qmBmjkOsAOtbyDpEulWqX1MO0yjJleIeohptW2ZKrEkf366UhJvzmUndZ59I5qefd9toIbF8n2jRlTofvYDwe/AEJHA5Hg3F4OT//dDIYQQJnw8lkOPoICYwuP30Kj7PDkzEkcH54enI0hQQuzk/PIYHJdEyK1wGw7X1sacQjtce55Wr0REoK89W0S9zC2I4cS90hUKYrFmHKmerI20zOjzGVOe+ohJmcD2kqXXPw+KcvW40JIQqLKfe3BKHCoCDsGEtz21Groeqknl8Yqf1TScV8hkKg+J3qrU2lAU6nzuhQUs2Pw8ambuKWt1zgMfetJbZFGEEKt9pTmaPzPG8BmAcme17meAvSKAZ+dwvMMky9XO4eW2qRFuVHBikL8aMmS7QuULmtgawLqWEhtX/7JsCUUuY7iqnl2kniMU3UqzAsAekxbyNIlLdyNcF7cNaEaY9Wc3WxM79plAPx3XHNVkMlbEj6ro2yBmosHdPGb+m7rah2pKeRnkZ6GulppKeRnkZ6GulppKeRnj4rPX37mJ4OtSuzTKaSLoldagpk//z1N6svcR0TdDfdD5fEXyJtjbQ10tZIWyNtjbQ10tZIWyNtjbT1/6Ct7x7T1nCrSleqmSl1/Fd/JKWRlEZSGklpJKWRlEZSGklpJKXPSkoJkNAvDPXPFsYFPKa22D70eCF7y4NeuDbtraXY9MLd6V59d+rQLm9ba0uroA8L74t+r6dMytXCON9/v/9+/1GD7UfU1LSLglUeGBlTz6zDtLSBElytYYbcoh2UFMrVdVM8ITJcnRVNpW0iKIpHg55+nrJKm3lzg5qZWcBowTJrcuYXyKbjswmrjiq/YoU1SynCCgf2HfZdcABJ/fLbbaJPP09DnqXOKhCs8x08Di6Gj6KZWi6knjOuBRtLd8POuObzqrt5snIeczY+mUxr2231wcHr/Qpsnc8r5Kl7mqtm4gc9GffGXN/9rHi2bux6AQhHe4XiMoBYKI11XVRXwAtJUzoI8VGveAL90JHdqK3rBKh8SH29Ji54adVmQ5+/lUioenVNh7CVPJwFV2sQ0tG7gH7GlcMn5v5iXPd0v2TNTu/W0G+3rKYNu6xAGCCBG1xVfeQbOjoXyKlOKIxKMEhTLHzDhH7FUQVvN9rF+YQq5l8F4CmX
+sidebar_class_name: "post api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Close an open repo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/deals/{id}/close-repo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Instructs close of an open (is_open=true) repo; schedules far-leg settlement for T+1.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./close-open-repo.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./close-open-repo.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./close-open-repo.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

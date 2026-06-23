@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","properties":{"sessionId":{"type":"string","format":"uuid"},"sessionType":{"type":"string"},"userRole":{"type":"string"},"provider":{"type":"string"},"model":{"type":"string"},"createdAt":{"type":"string","format":"date-time"}},"title":"AiSessionResponse"}}}}}}

@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Limit deleted"},"403":{"description":"Insufficient scope"},"404":{"description":"Limit not found"}}}

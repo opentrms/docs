@@ -1,0 +1,69 @@
+---
+id: discount-factor
+title: "Get discount factor at tenor"
+description: "Returns the interpolated discount factor for the named index at the requested tenor. Only valid for indexes whose type is DISCOUNT or OIS — for those, the stored grid values are discount factors and are returned directly."
+sidebar_label: "Get discount factor at tenor"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVs1u20YQfpXBnJKAlmQnLQLejDgxFMBRISnIwdBhxR1KW5O7zO7QDSEQ6EP0CfskxSwpWZYUA01y84kSOT/ffvPtzGyQ1Spgeos3yt8Rw9hq+kYBFwlqCpk3FRtnMcUpce1tAF4TGMvkK1coJg3ahMzVliFXGTsPufPRyKqSNBiJB4rjK09fawrixGSdH8DEFg3cq8Lo6Ga65PDX2gUCbioCE+BqPHs3+fxpDs7DZDyDf//+p0/iAiUxcGDnScPKGy3hagqgPB1CC6Csjh98PEwE7ynjohlggq4ir+S0Y40pbn0/RFdMsFJelcTkha4NyvEw7R4JGqGoUrzGQ97eKeusyVTRU9E7CBXGk8aUfU0JhmxNpcJ0g3JsTDGwN3YVw+WqLhhTxLZNdom14l3irzX55ijzZThzOYgdGAvj2URYKxXDCxqsBglcjC5+Pxu9PrsYvfwVgGJJn0Y0FxMB05DyYYdj8NtPAFiIZ6icDRTE+GI0ksfjxFcHGt3WHxPMnGWyLD6vhq/kcZTYLf+kjEUCXjTCpssU6/kpHv4QY5ugCpP8Smp04gBdHbZFbJOeuwdLW5dL8o8sXb0sou2BMI+cWolnuKC9c3e2054nbFsxenOKqXj/u6unHQWwjiHUVeU8H12nZ87e61PshTrPTWbIMoTMVfTMOXrzPYWJrnJXWy1d3TppUyp29b6vPVfS2gRL4rWTEbSieDqZKikOVWWG9+fDfkYON9J22+E27Vm+nVOB/P12SNW+wBTXzFU6HBYuU8XaBU7fjt6OjprzNVmZf6ShiwDiLO01UFZ7w02MuCTlyV/Wgul2sf95JvXpSrBvtONBUBwl/fhlDp01sLsjC27Jyshkzr0r42yfT29mYDRZNtxA5d290bEIURASuQuASf/jw7Y4H7/MI+3G5i4C6emPES//GB/PJ6+0sau4JkxNuIMbZdWKSrnNsyYwlTB9P5v3vsJy53c+GIkEKhe4VFZS9TPxmo66ZtyF+lH5KPvmQfPPYNnqRcH0jYdVoYwVAqNcN73ib1FVRmg+j0tFt5YmmPYL1KHwFwmKtsVvs1mqQJ990bbyuttFRLzaBLUsZMXIVRHoiQK8mPbbyEv4f2vUyXPdUfOwsUXK4u6S/CCiJ9eoJwBsZfeAYCF/vBEIP07Qdzbck0D6l8o2+zi2AKNnu2gTXJOSSy6Yuk+XWUYV7znJVBD8u255/V5u+3/kNWD6
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get discount factor at tenor"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/indexes/{name}/discount-factor"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the interpolated discount factor for the named index at the requested tenor. Only valid for indexes whose type is DISCOUNT or OIS — for those, the stored grid values are discount factors and are returned directly.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./discount-factor.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./discount-factor.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./discount-factor.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

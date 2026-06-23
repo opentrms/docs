@@ -1,0 +1,69 @@
+---
+id: amend-instrument
+title: "Administratively amend an instrument"
+description: "Updates name, identifiers, and/or extensions in place. Rejects any attempt to change financial terms (details) with 400 — use supersede for that."
+sidebar_label: "Administratively amend an instrument"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWc1O5EYQfpVWnXZXXmZIOGx8mwWSsNJGaBiyB8ShcJfHvdjd3u4y7GhkKQ+RJ8yTRNU2g2G8RCQ5JGi4MLirquvn+9o9H2tgXAZIL+DEBvZNRZYDXCagKWTe1GychRTOa41MQVmsKFFGk2WTG/IhUWj1xHlFX5lsMM4GZayqS8xoT83pM2UcFNqVQmaqalbsVFagXZLKjUWbGSwVk6+CeqWJ0ZThtbo1XKiD6VT98dvvqgmkQlOTD6RJ5c4rLpD3IAFXk0fJ8ERDCliR1fdVQAI1eqyIyUuBa5DkIQWjIQEjVdXIBTwu9T6COj8/OYIEPH1pjCcNKfuGEghZQRVCugZe1RIxsDd2GSPl2JQMKUDbXnaeFPi90ysxz5xlySxdA9Z1abKY/ORzkI3X23HdlbRPCvFSKhsKstrV8Xj3NoHBXMaioNZGNsTy9EG8R3HaBO6H+Yw44thP8FlebQJsuBTj2cMRzrv2HbGDaPZwEPFBqJ0NXRnfTafy65vTjPggGf5gDm8mb57TeqPHxp47X6FMvWmMjoPY7LqIpiOzWnrX1KMr3xxv1nhPNluNLlbIjTe8OkIe8R7kKEQWh8DIzdj8/0Uc/R04/AP0ZZ6QSc/4Lxvwlk0Vu9DEg+1ZLpuzSL8fGcUIGjYOI13aMh+wYUiEDuc9E9oEDsbA3rdb5YZKrWpPgSwnynllXQd/vCqpXw6NHEE7Puz48DL4sL/Nh1nDhUyue8+qzetjh/gd4l8A4r8fve40eW4yIxeekLma4hW6R75czTeX/LQrfEeGHRleAhkOnrz7W8cqd43dnf07uL8IuP/wJNxNUCe/zA4XJ78ex+u/bjq1gQbSzY4JOyb835kg8yYunO7EvKyIoh8XkMIEazO52Z8MbjyTtdEtJBDI39xpgo0vIYWCuU4nk9JlWBYucPpu+m66pQz+RFb0RtKqi6DEWWS+QFnEXIx4RejJy1cPSC8uh8tnQq6u+KHRphWSxdamHz4tVGet2F2TVe6K0VjSKveuUlyQWsw/nvXE5pWqvbsxOvI7slkidwEg6T/8eNfqD58WsdOiQM7vtcrjr1jVZaRPr5lupvSQEo9B+gDqbTwAchcr7EcZU52dnmyVufCojV2KmqzmJlyrj2hxSfE0O1sFpkrNj88Wva+Mr/Pb35sKtGoXuEI7yHimK2NNYBGIb6hcdfqHQju4Az/OYqDQ/kcV7x4pTF95UpdobOSuYHjdA/8CsDbSon0Ynr8BEkiNFmVfAC526/UVBjr3ZdvK4y8NeUHwZQI36I0oRRHP2gT5rCHNsQz0RMtezfsv2K/Vtog+mnn/EO1KMsaykb8ggWtadUJ9e9kmUBAKniWZbuGw2/JtfKncO25p6m1y5zHLMqp5YCvvO+Hm5vg4nS0OfxaG9Fp95bTYebyV/wDgbZeYi2VHCsdnayjRLhtcim23p/z8CY/51NU=
+sidebar_class_name: "patch api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Administratively amend an instrument"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/api/v1/instruments/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates name, identifiers, and/or extensions in place. Rejects any attempt to change financial terms (details) with 400 — use supersede for that.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./amend-instrument.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./amend-instrument.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./amend-instrument.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

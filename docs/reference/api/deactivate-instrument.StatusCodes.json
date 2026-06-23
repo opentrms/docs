@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Instrument deactivated"},"401":{"description":"Authentication required"},"403":{"description":"Insufficient scope — requires instruments:deactivate"},"404":{"description":"Instrument not found"}}}

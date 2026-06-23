@@ -1,0 +1,69 @@
+---
+id: interpolate
+title: "Interpolate index value at tenor"
+description: "Interpolates the index curve at the requested tenor (in years) for the given as-of date. The returned value's meaning depends on the index type — discount factor for DISCOUNT/OIS, forward rate for PROJECTION, etc."
+sidebar_label: "Interpolate index value at tenor"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVs1u20YQfpXFXGoHtEg7aRHwZjhuIAO2AklBDoYOI3IobU3uMrtDNYJAoA/RJ+yTFLOkfhwpBpr21Jwo7c7sfPPNtzO7AcaFh/QR7tE9EauhyekLeZhFkJPPnK5ZWwMpDA2Tq22JTF7xkpQWS5U1bkUKOSw5+tyQZ8oVk7FOnWmj1oTOn6vCumCy0CsyCv2FLVSOTAM1DY7cOEO5WmHZ0E9eVYRGm4XKqSaTe2XNQUxe16T++uNPlWuf2cawKjBj60KQd8PJzejjwzQeDSeRrPyOLlcOmcL2h/Ho7vZmOhw9RIo4G0AEtiaHkuUwhxT0Pk+IoEaHFTE54WgDBiuCtPtEoIWXGnkJX5N1g8YanWHZI+4dhB/tKIeUXUMR+GxJFUK6AUkJUvDstFmE4wpsSoYUoG2jXeC8QxUCf27IrY8iX++YVdqo4WQkWVfI6owGi0GkrpKrXy6S1xdXyfl/ASjU+WVE0yCFrRJ2OAY//wsAM/H0tTWevBhfJYl8vqnYXlg7nUEEmTVMhsXtVfxKPkex7fw3ylhU4EQjrLtgoaQPIf+vYbYRoB8V76RMJ3LoSrGtYxv19O0tTVPNyT2ztM28DLYhg2PbVo7RXNLzjMc9PdC2YvEmeX2KIN8Uhc40GVY+szX9gLy8OcVLuLOWVWEbkyvrlLFypzC0kP4S/khEtRFUxEsrDXJBISNpeynEWOt4dRnrbmzEG+kLbfy8iXpyq20HbVwJKSyZ6zSOS5thubSe07fJ2+Soc7wnI52ZctWdoMRZ7r6nrHGa1+HEOaEjd90InsfZ4fZE6tFRfmi0I0BQHAW9+zRVnbVi+0RG2TmjltlUOFuFKTQd30+Uzsmw5rWqnV3pPJAeBCAndwdA1P/4dVuMu0/TwLc2hQ1Aet7DidcfhsfN02EucxBNrsbaP6l7NLigSm7sZO2ZKjW+nUx7X2G587scJFLy2nqu0EiovmEfVLifTV1nlAne9/JnCDZ7nf+PnwC9IJi+cFyXqI2QF6S66ZX+CFhrofgyTLvukRRBunsK7AU/i0A0LT6bzRw9fXRl28pyNyBFtLn2OC9l7hVYenqB9LNxPyLP1T+b7SdzeqL1/hnRNwQAGejfhejF2f4CgK3U9ghm8sdpgfD9BH3j2XUSSL+IZn2IYwsweLazNoIloVxuwdRtXWcZ1XzgJN1f8O865PtbueV/AzAJ2Fs=
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Interpolate index value at tenor"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/indexes/{name}/interpolate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Interpolates the index curve at the requested tenor (in years) for the given as-of date. The returned value's meaning depends on the index type — discount factor for DISCOUNT/OIS, forward rate for PROJECTION, etc.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./interpolate.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./interpolate.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./interpolate.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

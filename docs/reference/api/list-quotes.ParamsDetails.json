@@ -1,0 +1,1 @@
+{"parameters":[{"name":"date","in":"query","required":false,"schema":{"type":"string","format":"date"}},{"name":"currency","in":"query","required":false,"schema":{"type":"string"}},{"name":"instrument_type","in":"query","required":false,"schema":{"type":"string"}}]}

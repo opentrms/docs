@@ -1,0 +1,1 @@
+{"parameters":[{"name":"instructionId","in":"path","description":"Instruction UUID","required":true,"schema":{"type":"string","default":""}},{"name":"itemId","in":"path","description":"Item UUID","required":true,"schema":{"type":"string","default":""}}]}

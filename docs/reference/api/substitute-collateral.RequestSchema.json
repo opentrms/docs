@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"newInstrumentId":{"type":"string","format":"uuid"},"quantity":{"type":"number"},"dirtyPrice":{"type":"number"},"reason":{"type":"string"}},"required":["dirtyPrice","newInstrumentId","quantity"],"title":"CollateralSubstitutionRequest"}}},"required":true}}

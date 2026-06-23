@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"date":{"type":"string"},"convention":{"type":"string"},"calendars":{"type":"array","items":{"type":"string"}}},"required":["calendars","convention","date"],"title":"CalendarAdjustDto"}}},"required":true}}

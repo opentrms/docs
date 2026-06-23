@@ -1,0 +1,67 @@
+---
+id: pre-check
+title: "Run pre-trade checks"
+description: "Validates a prospective deal against credit limit, currency exposure, and custom Python rules. Returns HTTP 200 if all checks pass, HTTP 422 if any check fails. The deal is NOT created."
+sidebar_label: "Run pre-trade checks"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktv2zgQ/ivEHAs5dpzEzeqWTbu7LbaN4XhbFIEPY2lss6FIlRy5MQz992IoJVZsY5EFelmgvlgg58H55pvHFhiXAdI7eENoAswSyClkXpesnYUUPqHROTIFhar0LpSUsV6TygmNwiVqG1hlnnLNyuhCc6Kyynuy2UbRQ+lC5SlRaHOVVYFdocYbXjmrfGUonKgJceVtUH9Np2M1HAyUXig0RmUryu6DKjGEpLk8Hw7jpd00l2qB2oQTNV21j9FBfbyZyluQKT+BBFxJHiWOdzmkUHq6FkVIwNO3igL/7vINpFvInGWyLJ9YlkZnUan/NQgCWwjZigqUL96UBCm4+VfKGBIovbhgTaExU1kmX6LnjXh8kg/stV1CAgvnC2RIoap0DnUCpfO8cEa7l8p7l1cZT6PcoXyh7d9kl7yC9LROAEMgvjYYwguEH7P2AlHrBB80HVFbFXPyjaguqgLSQZ0Ak3X+C6HvPkBbpmWUfQpPWz4bSnz0wGSDdjYcgxvzXDeex13g67puUqo95ULlTtzJflY6gXYCeY7sLAHWbMT32NPUY94wZ9LQ5g072PPJvqJ4EEpnQ0OH4WAgf8/L6coYVXrqsRjtspzi03ZEfNV/9V+415rYyc2dM4RWQG28dO7Qe5TwNVNxFOg9Xov+RyyOUE4o+S+ec2LU5ohavUO4RTZUpgU2gVAVBfojTOzq7WWmAb5NTZ3A+XB4iP6NJeW8KpynwyxIP/mVhZ+bhYvB2WEWxs+RV2SX2pKyjhWuURucG/qVhp+XhjqBgnjl4hB0IcaE0suhj6Xur0/7Mj9DXyoiaydkIL8madt3W6i8gRRWzGXa7xuXoVm5wOnl4HIA++vCn2Rl5lKuGgtKlOuZGMwqr3kTLc4JPfmrSh5xN+te30qKG6S7Qk+xyysOnL7/PFWNtGJ3T1a5OaO2lKuFd4XiFanp5MOt0jlZ1ryRRWat8ziDIqdipqIBSNqPPx5n0/vP0wi1bAOT3d7w9gGL0tCxuQ9nC7y8WIzOexevT1/3zi9Gw978bJH1htlvo7PFaIQLHMHe8H+xUncD2E3o7qjfne5m+u5sN7wHzwf0YG/8StDaLlxEv+VZhPFq/O4gBcI+bZdx0ZvocK8+oMUlFWRZ3W4CU6Emb2+nra5Qq9E7PRk0e1DgAuO2ZWNtwaSyBy1632tnc/tf76ktt5keuF8a1LFdxKrbtpV6B1hqAe40YiCbulDhsV5nCUhJitx2O8dA/3hT13L8rSLpHXezBNbodWytUnIJrAilAqQc70kYct1g2YvUEnFTxf64vxHXyaPGVZZRyR1Z6dNSzU/tZnxzO5WSahftwuUi5vG7LOH4HVKIazo/bnzxbAsG7bLCpcg2LuX3AyLFVKw=
+sidebar_class_name: "post api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run pre-trade checks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/deals/pre-check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Validates a prospective deal against credit limit, currency exposure, and custom Python rules. Returns HTTP 200 if all checks pass, HTTP 422 if any check fails. The deal is NOT created.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./pre-check.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./pre-check.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

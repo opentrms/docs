@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","description":"Party UUID","required":true,"schema":{"type":"string","default":""}},{"name":"expand","in":"query","required":false,"schema":{"type":"boolean","default":false}}]}

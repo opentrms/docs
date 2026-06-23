@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","description":"Instrument UUID","required":true,"schema":{"type":"string","default":""}},{"name":"limit","in":"query","description":"Optional maximum number of peers to return. Defaults to 20 and is capped at 50.","required":false,"schema":{"type":"string","default":""}}]}

@@ -1,0 +1,1 @@
+{"responses":{"200":{"description":"OK","content":{"*/*":{"schema":{"type":"object","properties":{"targetAsOfDate":{"type":"string","format":"date"},"processedDates":{"type":"array","items":{"type":"string","format":"date"}},"message":{"type":"string"}},"title":"EodCatchUpResponseDto"}}}}}}

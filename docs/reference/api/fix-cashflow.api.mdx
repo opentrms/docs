@@ -1,0 +1,69 @@
+---
+id: fix-cashflow
+title: "Manually fix a floating-rate cashflow"
+description: "Applies a manual fixing rate to a PROJECTED FLOAT_COUPON cashflow, recalculating the coupon amount using the deal's notional and the cashflow's day count fraction."
+sidebar_label: "Manually fix a floating-rate cashflow"
+hide_title: true
+hide_table_of_contents: true
+api: eJztmt1u2zYUgF+FODf9gRInWy863aVpMqRYm8Bx14vAKI7FI5stRaok5cQwBOwh9oR7kuGQsuPMTvqzAcEA5SJ2xEOeX35UpLOEgFMP+RUco5+V2l57GGcgyRdO1UFZAzkc1bVW5AWKCk2DWpTqRpmpcBhIBCtQXAzP35wcj05ei9Pfzo9GH4/P31+cvxNFt2YmHBWoi0Zj4IlhRqKwTW2NwMo2JojGr65LQv3EC2NZOWqBRib5bq0nXkhc8HQTROmwYLl9yMDW5JD/OJOQQ6luVh5BBjU6rCiQY1eXYLAiyEFJyECxhzWGGWTg6EujHEnIg2soA1/MqELIlxAWNc/wwSkzhQxK6yoMkEPTKAltO06TyYdXVi54RmFNIBP4K3L8imjb4JPnkC63l7aTT1QEttWxJ0GR51GO8YaUaaoJOWjbTWOvktQ4g6CCZrGV66fqZpjMgvbuHHYwXvC1NT7p+unggD/uJn+1FCedpPBNUZD3ZaP1ArJNL58Pnn+PY0p+Q1y5ElGffZuopukuyTaDVe2M4sAOgRoXFZnw+m6wt1VJFmgzSFW7Iy8ZFI1zZIrFTj0+YGj8zqG0p4Y7081hKLHRbAJs7U6t95TZ3JP74l2jtVBGctWRFzUZyYNJxovSOnE6fNftQb8fA42LY3bqtNtSO52rnZVNQfLV4sgFVWIRvjE3NTll5WVAF74e4IfdLQrHDEorCs9LiqfsTaktho8dV6zRi2e3mk/Mw3Z+t14y8iGtduLJzeOW/y+cPr9dTlwrI+31fY5nwnDur2dk1unu0v9Pw/59THaYtTMuXzOqsFVtGyNJ/kD9H68nCzsnZ9R0FtLRVDva87Uj/AGT0rzvNOWC3N6qLpPeiH6SfEqmQ29ta7Tw3gpqt1k+7FD9OliGeZvBi128/h21kikl5Jx14q8//hSV8n59YlsnlJmz2PpQ5WqKye553vO853nP857nj8Lzw22eHzVhRiZ0/z+I9R18z+qe1T2re1b3rH4kVv+8zeoz45uyVIUiE4QvbE3x7rtjtl/fbvu8VDc9wXuC9wTvCd4T/LEI/uKBp93WxTcR/B5ClKy0x3WP6x7XPa57XD8Wrn95ANcqvjEWymy8ik78YZLzEN55Nd3TvKd5T/Oe5j3NH4PmbQYVhZnlRp3a+khY7sDJYYC1GswPB+snJYOlku0gPS7hjK1aeBqnIYdZCHU+GGhboJ5ZH/KXBy8Ptnz7lQy3BnH3SlxB8GRu2fFUNE6FRVxxQujI8eN2yK/Gm8OXfC4k9G8KrePLVmwpffNhJJK0CPYzGWEnAZUhKUpnqxjS0fDtpVCSn+6HhaidnSsZ8xQPIl45LQBZ9+V0Vd9vPoxioLmbaHjbd3Ryg1WtYxWmvqGDlhucShuN7ZIStR5dnG1ZPHIYUcsdV0PlP4u3aHBKfLqIy4UPVInhyeWom8uZSPMO9w8irawPFUb4dv1Vb2O3mF5wlQpMxaLMdC/WT3HbnXXHjI3Oqf9J41lXBYFuwqDWqAxHI9bnsivrK8BaccwO4fZE95BBHlvQuLrHGXABs+xyOUFP751uW778pSHHFTrOYI5O4YSzeLUEqTx/l5CXqD09EManw+6l0TNxn7ndRTTc1DVH3VCCxGdapEa5dtxmMCPkAmXtaeA46diLdye3E7ca3tpsNeOoKKgOG7J878WbbQ2Ei/PLEVd810dXWcliDrlS+He0y0Y3uw65a/7QaKYNTlk2qeSfvwE3zCTC
+sidebar_class_name: "post api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Manually fix a floating-rate cashflow"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/v1/cashflows/{id}/fix"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Applies a manual fixing rate to a PROJECTED FLOAT_COUPON cashflow, recalculating the coupon amount using the deal's notional and the cashflow's day count fraction.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./fix-cashflow.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./fix-cashflow.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./fix-cashflow.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

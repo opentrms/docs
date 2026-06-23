@@ -1,0 +1,59 @@
+---
+id: list-roles
+title: "List available roles and their scopes"
+description: "Returns every FUNCTIONAL group (former role) from auth.groups together with the scope identifiers (auth.group_scopes) each grants (DS T12, #712). Manage these via POST/DELETE /api/v1/admin/functional-groups/{id}/scopes."
+sidebar_label: "List available roles and their scopes"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVNtu00AQ/ZXR8NIiUycFCeS3igYUVApKgnioIrSxx/ZSe9fMjgNRFImP4Av5EjRr96L2hVd4sr2zcznHZ84exVQBsyt87V1pq56NWO9wnWBBIWfbxc8MFyQ9uwC0Jd7Bm0+Xr1fzD5dnF1Cx7zs4Kj23xMC+oWMo2bdgeqlPYjSA+IqkJobvVmqQmiDkviOwBTmxpSUOcHSX8CVGwzGQyWuo2DgJcHS+hNX0NIEnL6enxyfw3jhTkRYLBFtr4OOH5So9n13MVjNITWfT7TQ1RWtdWvYuVxymeTYMlO5tcUiHLieYoO9oAD4vMMPGBln4hgImyBQ67wIFzPZ4Opno4wEzviHQFODIERWYYO6dkBO9/TR9qo+Q19QafZNdR5ihYTY7TNAKteHeud98pVwwwY51LLFDb2X20rR072YQtq7CQ4IDkr8ofpNyOCQoVhoaAcxd6c/Fa0BDLybTx0DPeqn1d+WRKWD61lv+P9A+f4x27kJflja35GRU6++fv25QB8jjvmRM5p9n4JBgS1J71X5FcRQjNWZ4s0UD1pTHnQjEW2J1jT323GCGtUiXpWnjc9PUPkj2avJqgg895C05XTMqYKgAmnxYa8G8Zyu7WHFDholVbJhdre+Hl0rpAPv+pVuwOsWjpu8+r2C4DeKvyYHfiLGOisGl1ItWi/fL0YpkBx37rS2IFWhsiNnYDpPx5Y3n1shQHJU+60ofBxkpjhXPPs4fTbNiU1hXgXEFLGy4Hl2sVZEtd0GohcVsuRpzleUhb3oy0f/e+SCtcdrKRW3ghRqP2RrbmE1D0X9DrC41WYZRKA/G2N/p9T839lEZQj8k7RpjnbIYNbsfRX6FprPK9XRY49JWavtR6usEVc16ab/fmECfuDkc9PhbT6xyXSe4NWyV+6jWBGsyKh5V8jXt1DbznDpdqq1peh1GDUJlfbtzb2eqoj+5w5To
+sidebar_class_name: "get api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List available roles and their scopes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/v1/config/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns every FUNCTIONAL group (former role) from auth.groups together with the scope identifiers (auth.group_scopes) each grants (DS T12, #712). Manage these via POST/DELETE /api/v1/admin/functional-groups/\{id\}/scopes.
+
+<ParamsDetails>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./list-roles.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./list-roles.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string"},"identifiers":{"type":"object","additionalProperties":{"type":"string"}},"extensions":{"type":"object","additionalProperties":{}},"details":{"type":"object","additionalProperties":{}}},"title":"AmendInstrumentRequestDto"}}},"required":true}}

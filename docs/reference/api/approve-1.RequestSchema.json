@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"comment":{"type":"string","maxLength":2000,"minLength":0}},"title":"ApprovalDecisionRequestDto"}}}}}

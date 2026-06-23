@@ -1,0 +1,69 @@
+---
+id: disable-rule
+title: "Disable STP rule"
+description: "Sets the rule's enabled flag to false and reloads the in-memory rule cache. The rule record is retained in the database."
+sidebar_label: "Disable STP rule"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVMFu2zAM/RWBl22AV6dbD4VvBZoNGVagSDzsUOTAWHQsVJZciQ4WGP73gbLbBUvX605JHPLx8b1HD8C4j1A8wKa8V+veUoRtBppiFUzHxjsoYEMcFTekQm/pXVTkcGdJq9riXrFXNdpICp1WgaxHPRUb97Gl1odjalMVVg1dqHKGUYEqH7QyUQViNI60Mi41amTcYaQLyMB3FFBorDQUoE2UyUITMugwYEtMQfgP4LAlKEDAVxoyMEK9Q27gbJ/yfuJgNDk2taEAGQR66k0gDQWHnjKIVUMtQjEAHztBjhyM2ye0GnvLUACM41Y6Y+ddpCjFnxZX8vGPifMGGsYMrhafzytXLvZ1bSpDjlWsfEdT6VugzrOqfe80jGMGLXHjk1pkiSehuIECcuxMfrjMI3e59MV8mMQaIYNI4fCsZB8sFNAwd0WeW1+hbXzk4npxvTjT8is5cYi0mhCUNIsokao+GD4mxB1hoHDTC4+H7enfG1F5Uu606EV0YXE29NvPUk3Viv0jOeV3c4Tq4NsUonJ9t5n95aPqgj8YnWxOtgryBADZ/OWLDy3yBJ50NK72iYhhK/UJ8eZ+dcamDKiN26cDWJv4qO7Q4Z5acXBzjEytWi835dwrKk99lxcL8bbzkVt0MmqO8O0UEvVs8N8TB6i8Y3L8f29zdojpF+edReNkm5SdYY7cA2BnZOdLET4ZmYIHGRTznW4zkHBJ7TAI8o9gx1EeP/UUJD3bDA4YjKyVsvRyQkXa7Q1t3q/nk/6gXj/5VzeYH6I7CnO0vfyCDB7p+Of1Mm5PL+12+X1ZLmEcfwMPYM5t
+sidebar_class_name: "delete api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Disable STP rule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/stp/rules/{ruleId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the rule's enabled flag to false and reloads the in-memory rule cache. The rule record is retained in the database.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./disable-rule.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./disable-rule.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./disable-rule.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"Calendar deleted"},"403":{"description":"Insufficient scope"},"404":{"description":"Calendar not found"}}}

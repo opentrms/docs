@@ -1,0 +1,1 @@
+{"title":"Body","body":{"content":{"application/json":{"schema":{"type":"object","properties":{"key_alias":{"type":"string","minLength":1},"base64_der_encoded_key":{"type":"string","minLength":1},"algorithm":{"type":"string","pattern":"RSA|EC|DSA"}},"required":["base64_der_encoded_key","key_alias"],"title":"RegisterKeyRequest"}}},"required":true}}

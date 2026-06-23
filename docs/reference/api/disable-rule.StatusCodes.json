@@ -1,0 +1,1 @@
+{"responses":{"204":{"description":"STP rule disabled"},"403":{"description":"Insufficient scope"},"404":{"description":"STP rule not found"}}}

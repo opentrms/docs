@@ -1,0 +1,1 @@
+{"parameters":[{"name":"id","in":"path","description":"Instrument UUID","required":true,"schema":{"type":"string","default":""}},{"name":"window","in":"query","description":"History window: 1m, 3m, 6m, or 1y","required":true,"schema":{"type":"string","default":""}}]}

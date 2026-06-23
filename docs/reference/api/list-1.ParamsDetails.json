@@ -1,0 +1,1 @@
+{"parameters":[{"name":"bookId","in":"query","description":"Book UUID — omit to return limits across all books","required":false,"schema":{"type":"string","default":""}}]}

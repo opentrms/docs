@@ -1,0 +1,1 @@
+{"parameters":[{"name":"code","in":"path","description":"Extension code, e.g. metal","required":true,"schema":{"type":"string","default":""}}]}

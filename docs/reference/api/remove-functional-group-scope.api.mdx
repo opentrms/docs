@@ -1,0 +1,69 @@
+---
+id: remove-functional-group-scope
+title: "Revoke a scope from a FUNCTIONAL group"
+description: "Removes the scope from the group's auth.group_scopes bundle. Every current member's cached scope resolution is invalidated immediately."
+sidebar_label: "Revoke a scope from a FUNCTIONAL group"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVkuP2zYQ/ivEXPIAs/K2OQS6GY032CBJC9tBDgujGItji12JVMihUUPQfw+G0j5qp0HRQ9NDTnpwOJz5vo8z0wPjPkJ5A3PTWqcWji031JLjCBsNhmIVbMfWOyhhSa0/UFRck4qV70jtgm/z5z741D2JChPXF/nj92wR1TY509CFWhwoHFWVQiDHqqV2S+FJVBVWNZnJXaDomySnKRuVdQdsrEEmo2zbkrHI1BwvQIPvKKDYXRsoIeS4rpKr5Bc2b+T8lXgEDR0GbIkpSJo9OGwJSrAGNFhJqkOuQUOgz8kGMlBySKQhVjW1CGUPfOxkR+Rg3R407HxokaGElKyBYdD3TuN05L/xOwwbMY6dd5GirP80m8njrxSsJpwO/pYkhco7Jsdi+Lx4Lo+zA/z2D6oYhMwdpoahdKlpTrmdq6uPH35ZX//6Yf5uZFM9lUwpqOAbeqbQmQfio7Ks9gFFJhq6IHywHeO25h+gpifMzmA4iesr62MAj5YwBDwK7Ext/BqyGqpAIqM5fzM0kdoLti3lPfkmQAknunrNHoZBDF7Ofj4n6NrFtNvZyorK7wTxg6XvydLLc5YerCcUnWe188kZrXyY/hlPMS9kCBXXNv5g9LszOmhoiWsvhd9QQzwWea6hhAI7WxwuC5RmVuzuHbzIwMait2YoxjyKPj8H0BApHO7aQwoNlFAzd2VRNL7CpvaRy1ezVzM4pe4NOelC0r2yByWbpYxHqlKwfMwet4SBwjxJgDebx8srUcyI6GOje6AkirND335aq9Fasb8lp/yW0ToyD714vXy/UtaQ9PKj6oI/WEMBpt4jnkcHoKeXqzsi3n5aZwqs2/kcyERF9jj/7fosmnVAY90+i3Rp4616jw73eX5Qq2NkatVysVpPewXlcd/lxUwk1fnILWa5TS10mTubwsfzBZ5dkdM4+of7+D8aUiYamf7komvQOkk5C6yfBHsD2FkB5hI0ZNHKtTiVLWgo87wy3UAN5ViGNhpEneKn77cY6WNohkF+f04URH4bDQcMFrdC400PxkZ5N1DusIn0DRifLqfB5Zn6u1TuyoCTInDAJskXaLil4zhhyWj0H544gjJsBg01oUheUh7X5lVFHT/aJVVbLuN9LXm9eLdYL2AYvgC8fMxH
+sidebar_class_name: "delete api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Revoke a scope from a FUNCTIONAL group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/admin/functional-groups/{id}/scopes/{scope}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the scope from the group's auth.group_scopes bundle. Every current member's cached scope resolution is invalidated immediately.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./remove-functional-group-scope.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./remove-functional-group-scope.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./remove-functional-group-scope.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

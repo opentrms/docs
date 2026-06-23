@@ -1,0 +1,69 @@
+---
+id: delete-calendar
+title: "Delete a calendar"
+description: "Removes the calendar metadata row and every holiday for the given code. Returns 404 if no calendar exists for the code."
+sidebar_label: "Delete a calendar"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVMFu2zAM/RWBpw0Q6nTLofCtaLOhwwoMSYYdghwYi46F2pIr0V4Nw/8+0HbSrsV63cmy/Pj0+PjkHhiPEdId3GBJzmCIsNdgKGbB1my9gxTWVPmWouKCVDbDVEWMBhlV8L8VOqOopdCpwpfWYKdyH0b80bbkVOYNXag1cRNcVMvFUtlcOf/MRk82cjxXjXjQ4GsKKCruDKRgqCSmk1DQUGPAipiCdNCDw4ogBSkGDVak18gFaAj02NhABlIODWmIWUEVQtoDd7XURA7WHWEY9gKOtXeRonz/tFjK429DThLUpMjAoGG5+PwWeOdik+c2s+RYxczXNEHf43SeVe4bZ2AYNFTEhX9ufmyaC0ghwdom7WVysjAmvTQ+gIZIoT150oQSUiiY6zRJSp9hWfjI6dXiagGv5/yVnNhNRk0MSorFkUhZEyx3I+OBMFC4bkTFbv/y80ZcnWx7CTqbLCreHPrt11ZNaMX+gZzyB0bryKg8+GpMw3Z9v1HWkGPLnaqDb60hmf84RmGeCEDPiy8+VMgT+eiidbkfhVguBT8yXv+4e6NmG9BYdxwDvbbxQd2jwyNVMr9NF5kqtV5ttnOtuDzVXV4sZLK1j1yhk6PmMN6OY1N4jvrrI3vIvGNy/F8v2jwhpidO6hKtk27G7PRz4HaAtZWeL0HDOXSgIR3v216DBEtwfX/ASD9DOQyy/dhQkOTsNbQYLB5kArsejI2yNpDmWEZ6x5YP6/n6flT/kjpvoutEIpaNvIGGB+pOf4Rh//I63a6+r7YrGIY/zc21Jw==
+sidebar_class_name: "delete api-method"
+info_path: reference/api/trms-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a calendar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/v1/calendars/{code}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the calendar metadata row and every holiday for the given code. Returns 404 if no calendar exists for the code.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+>
+  <Translate id="theme.openapi.request.title">Request</Translate>
+</Heading>
+
+<ParamsDetails
+  {...require("./delete-calendar.ParamsDetails.json")}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./delete-calendar.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./delete-calendar.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

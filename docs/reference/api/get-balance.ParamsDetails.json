@@ -1,0 +1,1 @@
+{"parameters":[{"name":"accountId","in":"path","required":true,"schema":{"type":"string","format":"uuid"}},{"name":"currency","in":"path","required":true,"schema":{"type":"string"}},{"name":"as_of_date","in":"query","description":"Value date in ISO-8601 format (optional, defaults to today)","required":false,"schema":{"type":"string","default":""}}]}

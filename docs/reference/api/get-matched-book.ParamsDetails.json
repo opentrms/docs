@@ -1,0 +1,1 @@
+{"parameters":[{"name":"currency","in":"query","description":"Optional ISO 4217 currency filter","required":false,"schema":{"type":"string","default":""}}]}

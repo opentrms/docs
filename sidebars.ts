@@ -21,6 +21,10 @@ const sidebars: SidebarsConfig = {
       'guides/run-locally', 'guides/setup', 'guides/operate-eod', 'guides/book-a-trade',
       'guides/drive-via-mcp', 'guides/verify-audit',
     ]},
+    {type: 'category', label: 'Frontend', collapsible: false, items: [
+      'frontend/workbench-overview', 'frontend/feature-guides', 'frontend/backend-integration',
+      'frontend/local-setup-and-roles', 'frontend/e2e-playwright',
+    ]},
     {type: 'category', label: 'Extend', collapsible: false, items: [
       'extend/spi-contracts', 'extend/product-valuator', 'extend/tck', 'extend/new-product-playbook',
       'extend/schema-authoring', 'extend/extensibility-model',

@@ -15,11 +15,13 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://opentrms.io',
-  baseUrl: '/',
+  // GitHub Pages project site for opentrms/opentrms-docs.
+  url: 'https://opentrms.github.io',
+  baseUrl: '/opentrms-docs/',
 
-  organizationName: 'ichagas',
-  projectName: 'OpenTRMS',
+  organizationName: 'opentrms',
+  projectName: 'opentrms-docs',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 

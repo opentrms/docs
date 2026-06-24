@@ -5,6 +5,30 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const GITHUB_URL = 'https://github.com/ichagas/OpenTRMS';
+const ALGOLIA_APP_ID = process.env.DOCSEARCH_APP_ID;
+const ALGOLIA_API_KEY = process.env.DOCSEARCH_API_KEY;
+const ALGOLIA_INDEX_NAME = process.env.DOCSEARCH_INDEX_NAME;
+const ALGOLIA_CONTEXTUAL_SEARCH = process.env.DOCSEARCH_CONTEXTUAL_SEARCH !== 'false';
+const HAS_ALGOLIA_CONFIG = Boolean(ALGOLIA_APP_ID && ALGOLIA_API_KEY && ALGOLIA_INDEX_NAME);
+
+const searchThemes: Config['themes'] = [
+  '@docusaurus/theme-mermaid',
+  'docusaurus-theme-openapi-docs',
+];
+
+if (!HAS_ALGOLIA_CONFIG) {
+  searchThemes.push([
+    require.resolve('@easyops-cn/docusaurus-search-local'),
+    {
+      hashed: true,
+      indexBlog: false,
+      docsRouteBasePath: '/',
+      highlightSearchTermsOnTargetPage: true,
+      explicitSearchResultPath: true,
+      searchBarPosition: 'right',
+    },
+  ]);
+}
 
 const config: Config = {
   title: 'OpenTRMS',
@@ -37,21 +61,7 @@ const config: Config = {
     locales: ['en'],
   },
 
-  themes: [
-    '@docusaurus/theme-mermaid',
-    'docusaurus-theme-openapi-docs',
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-        indexBlog: false,
-        docsRouteBasePath: '/',
-        highlightSearchTermsOnTargetPage: true,
-        explicitSearchResultPath: true,
-        searchBarPosition: 'right',
-      },
-    ],
-  ],
+  themes: searchThemes,
 
   presets: [
     [
@@ -109,6 +119,14 @@ const config: Config = {
         autoCollapseCategories: false,
       },
     },
+    algolia: HAS_ALGOLIA_CONFIG
+      ? {
+          appId: ALGOLIA_APP_ID,
+          apiKey: ALGOLIA_API_KEY,
+          indexName: ALGOLIA_INDEX_NAME,
+          contextualSearch: ALGOLIA_CONTEXTUAL_SEARCH,
+        }
+      : undefined,
     navbar: {
       title: 'OpenTRMS',
       logo: {

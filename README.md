@@ -19,6 +19,24 @@ npm run build        # static output in ./build
 npm run serve        # preview the production build
 ```
 
+## Search
+
+By default the site uses local offline search via
+`@easyops-cn/docusaurus-search-local`.
+
+If the repository is approved for Algolia DocSearch, set these environment
+variables before `npm run build` or the GitHub Pages deploy job:
+
+```bash
+export DOCSEARCH_APP_ID=...
+export DOCSEARCH_API_KEY=...
+export DOCSEARCH_INDEX_NAME=...
+```
+
+With all three present, `docusaurus.config.ts` enables `themeConfig.algolia`
+and disables the local-search theme automatically. Leave them unset to keep the
+offline search fallback.
+
 ## Structure
 
 - `docs/overview/` — Quickstart (site root), Principles, Architecture, Asset coverage

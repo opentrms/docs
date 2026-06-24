@@ -97,26 +97,175 @@ function parseJavaStringExpression(expr) {
 /**
  * (a) ERD -> docs/reference/erd.mdx
  */
+function parseErdSource(mermaidBody) {
+  const lines = mermaidBody.split('\n');
+  const sectionHeaderRegex = /^\s*%%\s+──\s+(.+?)\s+─+\s*$/;
+  const entityStartRegex = /^\s*([a-z_][a-z0-9_]*)\s*\{\s*$/;
+  const relationshipRegex = /^\s*([a-z_][a-z0-9_]*)\s+([|o}{\-]+)\s+([a-z_][a-z0-9_]*)\s*:\s*(.+?)\s*$/;
+
+  const sections = [];
+  const entityBlocks = new Map();
+  const relationshipLines = [];
+
+  let currentSection = null;
+  let currentEntityName = null;
+  let currentEntityLines = [];
+
+  for (const line of lines) {
+    const sectionMatch = line.match(sectionHeaderRegex);
+    if (sectionMatch) {
+      const title = sectionMatch[1].trim();
+      currentSection = title === 'RELATIONSHIPS'
+        ? null
+        : {
+            title,
+            entities: [],
+          };
+      if (currentSection) {
+        sections.push(currentSection);
+      }
+      continue;
+    }
+
+    if (currentEntityName) {
+      currentEntityLines.push(line);
+      if (/^\s*\}\s*$/.test(line)) {
+        entityBlocks.set(currentEntityName, currentEntityLines.join('\n'));
+        currentEntityName = null;
+        currentEntityLines = [];
+      }
+      continue;
+    }
+
+    const entityMatch = line.match(entityStartRegex);
+    if (entityMatch && currentSection) {
+      currentEntityName = entityMatch[1];
+      currentEntityLines = [line];
+      currentSection.entities.push(currentEntityName);
+      continue;
+    }
+
+    const relationshipMatch = line.match(relationshipRegex);
+    if (relationshipMatch) {
+      relationshipLines.push({
+        left: relationshipMatch[1],
+        right: relationshipMatch[3],
+        line: line.trim(),
+      });
+    }
+  }
+
+  return {sections, entityBlocks, relationshipLines};
+}
+
+function buildErdSectionDiagram(section, entityBlocks, relationshipLines) {
+  const internalEntities = new Set(section.entities);
+  const stubEntities = new Set();
+  const relevantRelationships = relationshipLines.filter((relationship) => {
+    const leftInternal = internalEntities.has(relationship.left);
+    const rightInternal = internalEntities.has(relationship.right);
+
+    if (leftInternal && !rightInternal) {
+      stubEntities.add(relationship.right);
+    }
+    if (!leftInternal && rightInternal) {
+      stubEntities.add(relationship.left);
+    }
+
+    return leftInternal || rightInternal;
+  });
+
+  const lines = ['erDiagram', `    %% ${section.title}`, ''];
+
+  for (const entityName of section.entities) {
+    const block = entityBlocks.get(entityName);
+    if (block) {
+      lines.push(block, '');
+    }
+  }
+
+  if (stubEntities.size > 0) {
+    lines.push('    %% Cross-domain stubs');
+    for (const entityName of [...stubEntities].sort((a, b) => a.localeCompare(b))) {
+      if (internalEntities.has(entityName)) {
+        continue;
+      }
+      lines.push(
+        `    ${entityName} {`,
+        '        UUID id PK',
+        '    }',
+        '',
+      );
+    }
+  }
+
+  if (relevantRelationships.length > 0) {
+    lines.push('    %% Relationships');
+    for (const relationship of relevantRelationships) {
+      lines.push(`    ${relationship.line}`);
+    }
+  }
+
+  return lines.join('\n').trimEnd();
+}
+
 function syncErd() {
   const erdSourcePath = path.join(BACKEND, 'docs', 'ERD.mermaid');
   const outPath = path.join(DOCS_DIR, 'reference', 'erd.mdx');
+  const downloadPath = path.join(STATIC_DIR, 'erd', 'trms-erd-full.mermaid');
 
   let mermaidBody;
-  let noteBlock = '';
 
   try {
     mermaidBody = fs.readFileSync(erdSourcePath, 'utf8').trimEnd();
     info(`ERD: read ${erdSourcePath}`);
   } catch (err) {
     warn(`ERD source not found at ${erdSourcePath} (${err.code ?? err.message}); writing placeholder.`);
-    mermaidBody = [
-      'erDiagram',
-      '    PLACEHOLDER {',
-      '        TEXT note "ERD source not found - run npm run sync after fixing OPENTRMS_BACKEND"',
-      '    }',
-    ].join('\n');
-    noteBlock = `\n:::note\nThe ERD source (\`docs/ERD.mermaid\`) was not found in the backend repository. Showing a placeholder diagram instead.\n:::\n`;
+    const placeholder = `---
+id: erd
+title: Entity-relationship diagram
+description: The OpenTRMS database schema, generated from the backend's ERD source.
+---
+
+<div className="eyebrow">Reference</div>
+
+# Entity-relationship diagram
+
+<StatusBadge status="stable" reviewed="${TODAY}" />
+
+:::note
+The ERD source (\`docs/ERD.mermaid\`) was not found in the backend repository. Run \`npm run sync\` after fixing \`OPENTRMS_BACKEND\`.
+:::
+
+\`\`\`mermaid
+erDiagram
+    PLACEHOLDER {
+        TEXT note "ERD source not found - run npm run sync after fixing OPENTRMS_BACKEND"
+    }
+\`\`\`
+`;
+    fs.mkdirSync(path.dirname(outPath), {recursive: true});
+    fs.writeFileSync(outPath, placeholder, 'utf8');
+    info(`ERD: wrote placeholder ${outPath}`);
+    return;
   }
+
+  const {sections, entityBlocks, relationshipLines} = parseErdSource(mermaidBody);
+  const domainSections = sections.filter((section) => section.entities.length > 0);
+  const tableCount = domainSections.reduce((sum, section) => sum + section.entities.length, 0);
+  const summaryRows = domainSections
+    .map((section) => `| ${escapeMarkdownCell(section.title)} | ${section.entities.length} |`)
+    .join('\n');
+  const sliceSections = domainSections
+    .map((section) => {
+      const diagram = buildErdSectionDiagram(section, entityBlocks, relationshipLines);
+      return `### ${section.title} (${section.entities.length} table${section.entities.length === 1 ? '' : 's'})
+
+\`\`\`mermaid
+${diagram}
+\`\`\``;
+    })
+    .join('\n\n');
 
   const content = `---
 id: erd
@@ -130,16 +279,41 @@ description: The OpenTRMS database schema, generated from the backend's ERD sour
 
 <StatusBadge status="stable" reviewed="${TODAY}" />
 
+The full OpenTRMS schema currently spans **${tableCount} tables**, so this page
+splits the backend ERD into domain slices generated from \`docs/ERD.mermaid\`.
+Each slice keeps the local tables readable and adds one-field stubs when a
+foreign-key edge crosses into another domain.
+
+| Domain | Tables |
+| --- | ---: |
+${summaryRows}
+
+[Download the full Mermaid source](/erd/trms-erd-full.mermaid)
+
+## Domain slices
+
 {/* AUTO-GENERATED by scripts/sync-from-source.mjs - do not edit; run npm run sync */}
-${noteBlock}
+
+${sliceSections}
+
+## Full diagram
+
+<details>
+  <summary>Expand the full ${tableCount}-table ERD</summary>
+
 \`\`\`mermaid
 ${mermaidBody}
 \`\`\`
+
+</details>
 `;
 
   fs.mkdirSync(path.dirname(outPath), {recursive: true});
   fs.writeFileSync(outPath, content, 'utf8');
+  fs.mkdirSync(path.dirname(downloadPath), {recursive: true});
+  fs.writeFileSync(downloadPath, `${mermaidBody}\n`, 'utf8');
   info(`ERD: wrote ${outPath}`);
+  info(`ERD: wrote ${downloadPath}`);
 }
 
 /**

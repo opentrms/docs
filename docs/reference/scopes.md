@@ -20,21 +20,18 @@ Scopes are not stored in a database table; they are system-defined strings.
 validate admin grants. The table below lists every scope that is actually
 enforced by a `@RequireScope` annotation somewhere in the codebase today.
 
-:::info
-This list is hand-maintained from `grep -r "@RequireScope(" trms-api` against
-the OpenTRMS backend. It is a candidate for future auto-generation from the
-annotations at build time.
-:::
-
 ## Enforced scopes, by resource
 
-101 distinct scope strings are enforced via `@RequireScope` across the REST controllers in `trms-api` as of this writing.
+{/* BEGIN GENERATED:scopes */}
+> AUTO-GENERATED from `@RequireScope` literals in `trms-api/src/main/java`. Do not edit by hand; run `npm run sync`.
+
+101 distinct scope strings are enforced via 225 `@RequireScope` annotations across the REST controllers in `trms-api`.
 
 | Resource | Scopes |
 | --- | --- |
 | `ai` | `ai:chat` |
 | `approvals` | `approvals:approve`, `approvals:escalate`, `approvals:read`, `approvals:reject` |
-| `artifacts` (plugin packages) | `artifacts:activate`, `artifacts:read`, `artifacts:review`, `artifacts:submit`, `artifacts:upload` |
+| `artifacts` | `artifacts:activate`, `artifacts:read`, `artifacts:review`, `artifacts:submit`, `artifacts:upload` |
 | `audit` | `audit:read`, `audit:verify` |
 | `bank_accounts` | `bank_accounts:read`, `bank_accounts:write` |
 | `books` | `books:read`, `books:write` |
@@ -47,7 +44,7 @@ annotations at build time.
 | `credit` | `credit:read`, `credit:write` |
 | `curves` | `curves:calibrate`, `curves:manage`, `curves:read` |
 | `deals` | `deals:amend`, `deals:cancel`, `deals:capture`, `deals:close_repo`, `deals:pre-check`, `deals:read`, `deals:substitute_collateral`, `deals:terminate`, `deals:transition` |
-| `dev` | `dev:auth` (local dev only) |
+| `dev` | `dev:auth` |
 | `entitlements` | `entitlements:admin` |
 | `fixings` | `fixings:capture`, `fixings:read` |
 | `indexes` | `indexes:manage`, `indexes:read` |
@@ -57,22 +54,24 @@ annotations at build time.
 | `market-data` | `market-data:publish`, `market-data:read` |
 | `market-quotes` | `market-quotes:publish`, `market-quotes:read` |
 | `netting` | `netting:execute`, `netting:read` |
-| `parties` | `parties:internal:read`, `parties:internal:write` |
+| `parties:internal` | `parties:internal:read`, `parties:internal:write` |
 | `payments` | `payments:acknowledge`, `payments:cancel`, `payments:generate`, `payments:read`, `payments:send` |
 | `plugins` | `plugins:admin` |
 | `positions` | `positions:read` |
 | `pretrade` | `pretrade:read` |
-| `ref` (reference data) | `ref:read` |
+| `ref` | `ref:read` |
 | `reports` | `reports:admin`, `reports:read` |
 | `risk` | `risk:manage`, `risk:read` |
 | `settlements` | `settlements:cancel`, `settlements:instruct`, `settlements:read`, `settlements:send` |
 | `simulations` | `simulations:manage`, `simulations:read`, `simulations:run` |
 | `stp` | `stp:manage`, `stp:read` |
 | `system` | `system:admin`, `system:batch`, `system:read` |
-| `user` | `user:preferences:read`, `user:preferences:write` |
+| `user:preferences` | `user:preferences:read`, `user:preferences:write` |
 | `users` | `users:admin` |
 | `valuations` | `valuations:execute`, `valuations:read` |
-| `workbench` | `workbench:read`, `workbench:templates:read`, `workbench:templates:write` |
+| `workbench` | `workbench:read` |
+| `workbench:templates` | `workbench:templates:read`, `workbench:templates:write` |
+{/* END GENERATED:scopes */}
 
 ## Scope shape
 

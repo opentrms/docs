@@ -18,48 +18,38 @@ any connected agent. See [Drive via MCP](/guides/drive-via-mcp) for how to
 connect a client, and [Agent runtime](/concepts/agent-runtime) for how the
 runtime wires these tools into a chat session.
 
-:::info
-This list is hand-maintained from the `@Tool`-annotated methods in
-`trms-ai/src/main/java/io/trms/ai/tool/*.java`. It is a candidate for future
-auto-generation from the annotations at build time.
-:::
+## Tool catalogue
+
+{/* BEGIN GENERATED:mcp-tools */}
+> AUTO-GENERATED from `@Tool` methods in `trms-ai/src/main/java/io/trms/ai/tool`. Do not edit by hand; run `npm run sync`.
 
 There are **9** `@Tool` methods today, across 3 tool classes.
 
-## DealTools (4 tools)
+### ApprovalTools (3 tools)
 
 | Tool | Parameters | Description |
 | --- | --- | --- |
-| `captureDeal` | `productType`, `assetClass`, `currency`, `notionalStr`, `counterpartyId`, `bookId`, `detailsJson` | Previews a deal capture and returns a confirmation token — does **not** book the deal |
-| `confirmCaptureDeal` | `confirmationToken` | Executes a previously previewed capture; books the deal via `DealService.capture` |
-| `getDeal` | `dealId` | Retrieves a deal summary by UUID |
-| `listDeals` | `productType`, `assetClass`, `status` (each nullable) | Lists up to 50 deals matching the given filters |
+| `listPendingApprovals` | — | List all pending approval requests. Returns a JSON array of approval requests. |
+| `approveRequest` | `approvalId` - The approval request UUID<br/>`comment` - Optional comment for the approval decision | Approve a pending approval request by its UUID. |
+| `rejectRequest` | `approvalId` - The approval request UUID<br/>`comment` - Reason for rejection | Reject a pending approval request by its UUID. |
 
-`captureDeal`/`confirmCaptureDeal` implement a human-in-the-loop preview/confirm
-pattern: the agent must show the preview to the user and only call
-`confirmCaptureDeal` after explicit confirmation. The token is held by
-`ConfirmationStore` and is single-use.
-
-## ApprovalTools (3 tools)
+### DealTools (4 tools)
 
 | Tool | Parameters | Description |
 | --- | --- | --- |
-| `listPendingApprovals` | — | Lists all pending approval requests, including `requiredScope`, `stepOrder`, and `chainId` |
-| `approveRequest` | `approvalId`, `comment` (optional) | Approves a pending request as the authenticated user |
-| `rejectRequest` | `approvalId`, `comment` (required) | Rejects a pending request as the authenticated user |
+| `captureDeal` | `productType` - Product type: swap, spot, forward, option, repo, deposit<br/>`assetClass` - Asset class: rates, fx, credit, equity, money_market<br/>`currency` - ISO 4217 currency code, e.g. USD<br/>`notionalStr` - Notional amount as a number string, e.g. 10000000<br/>`counterpartyId` - Counterparty UUID<br/>`bookId` - Book UUID<br/>`detailsJson` - Financial details as JSON object string, or empty object &#123;&#125; | Preview a deal capture. Returns a preview summary and a confirmation token. Always show the preview to the user and ask for confirmation before calling confirmCaptureDeal. |
+| `confirmCaptureDeal` | `confirmationToken` - The confirmation token returned by captureDeal | Execute a deal capture that was previously previewed. Requires a valid confirmation token. |
+| `getDeal` | `dealId` - The deal UUID | Retrieve a deal by its UUID. Returns deal details as JSON. |
+| `listDeals` | `productType` - Filter by product type, e.g. swap; or null<br/>`assetClass` - Filter by asset class, e.g. rates; or null<br/>`status` - Filter by deal status, e.g. draft; or null | List deals with optional filters. Pass null or empty string to omit a filter. |
 
-Decisions run as the user currently bound to the MCP/HTTP request
-(`AuthenticatedTrmsUserAccessor`) — the agent cannot approve on behalf of a
-different identity, and the underlying `ApprovalService` still enforces the
-approval chain's required scope. See
-[Approval chains](/concepts/approval-chains).
-
-## ValuationTools (2 tools)
+### ValuationTools (2 tools)
 
 | Tool | Parameters | Description |
 | --- | --- | --- |
-| `valuateDeal` | `dealId`, `marketDataJson` | Valuates a deal with caller-supplied market data; returns market value, unrealized/realized/day P&L, currency |
-| `getValuationSummary` | `dealId` | Human-readable one-line valuation summary using empty (default) market data |
+| `valuateDeal` | `dealId` - The deal UUID to valuate<br/>`marketDataJson` - Market data as JSON object string, e.g. &#123;"discountRate": 0.05&#125; | Valuate a deal using provided market data. Returns valuation summary as JSON. |
+| `getValuationSummary` | `dealId` - The deal UUID | Get a human-readable valuation summary for a deal. Uses default (empty) market data. |
+
+{/* END GENERATED:mcp-tools */}
 
 ## Authorization
 

@@ -35,6 +35,65 @@ function info(msg) {
   console.log(`[sync] ${msg}`);
 }
 
+function updateMarkedRegion(filePath, begin, end, generatedRegion, label) {
+  let existing;
+  try {
+    existing = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    warn(`Could not read ${filePath} (${err.code ?? err.message}); skipping ${label}.`);
+    return;
+  }
+
+  const beginIdx = existing.indexOf(begin);
+  const endIdx = existing.indexOf(end);
+
+  if (beginIdx === -1 || endIdx === -1 || endIdx < beginIdx) {
+    warn(`Markers ${begin} / ${end} not found in ${filePath}; skipping ${label}.`);
+    return;
+  }
+
+  const before = existing.slice(0, beginIdx + begin.length);
+  const after = existing.slice(endIdx);
+  const updated = `${before}\n${generatedRegion}\n${after}`;
+  fs.writeFileSync(filePath, updated, 'utf8');
+  info(`${label}: updated ${filePath}`);
+}
+
+function escapeMarkdownCell(value) {
+  return String(value ?? '')
+    .replace(/\|/g, '\\|')
+    .replace(/\n/g, ' ')
+    .replace(/\{/g, '&#123;')
+    .replace(/\}/g, '&#125;')
+    .trim();
+}
+
+function findFilesBySuffix(dir, suffix) {
+  const results = [];
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, {withFileTypes: true});
+  } catch {
+    return results;
+  }
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...findFilesBySuffix(full, suffix));
+    } else if (entry.isFile() && entry.name.endsWith(suffix)) {
+      results.push(full);
+    }
+  }
+  return results;
+}
+
+function parseJavaStringExpression(expr) {
+  const literals = [...String(expr).matchAll(/"((?:\\.|[^"\\])*)"/g)];
+  return literals
+    .map((match) => JSON.parse(`"${match[1]}"`))
+    .join('');
+}
+
 /**
  * (a) ERD -> docs/reference/erd.mdx
  */
@@ -87,22 +146,7 @@ ${mermaidBody}
  * (b) Schema catalog -> inject generated table into docs/reference/schema-catalog.md
  */
 function findJsonFiles(dir) {
-  const results = [];
-  let entries;
-  try {
-    entries = fs.readdirSync(dir, {withFileTypes: true});
-  } catch {
-    return results;
-  }
-  for (const entry of entries) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      results.push(...findJsonFiles(full));
-    } else if (entry.isFile() && entry.name.endsWith('.json')) {
-      results.push(full);
-    }
-  }
-  return results;
+  return findFilesBySuffix(dir, '.json');
 }
 
 function syncSchemaCatalog() {
@@ -140,28 +184,166 @@ function syncSchemaCatalog() {
     info(`Schema catalog: found ${files.length} schema file(s) under ${schemasDir}.`);
   }
 
-  let existing;
-  try {
-    existing = fs.readFileSync(catalogPath, 'utf8');
-  } catch (err) {
-    warn(`Could not read ${catalogPath} (${err.code ?? err.message}); skipping schema catalog sync.`);
-    return;
+  updateMarkedRegion(catalogPath, BEGIN, END, generatedRegion, 'Schema catalog');
+}
+
+function syncScopesReference() {
+  const controllersDir = path.join(BACKEND, 'trms-api', 'src', 'main', 'java');
+  const scopesPath = path.join(DOCS_DIR, 'reference', 'scopes.md');
+  const BEGIN = '{/* BEGIN GENERATED:scopes */}';
+  const END = '{/* END GENERATED:scopes */}';
+
+  const files = findFilesBySuffix(controllersDir, '.java').sort();
+  const scopeRegex = /@RequireScope\("([^"]+)"\)/g;
+  const scopeCounts = new Map();
+  let annotationCount = 0;
+
+  for (const file of files) {
+    let raw;
+    try {
+      raw = fs.readFileSync(file, 'utf8');
+    } catch (err) {
+      warn(`Could not read ${file} (${err.code ?? err.message}); skipping.`);
+      continue;
+    }
+    for (const match of raw.matchAll(scopeRegex)) {
+      annotationCount += 1;
+      scopeCounts.set(match[1], (scopeCounts.get(match[1]) ?? 0) + 1);
+    }
   }
 
-  const beginIdx = existing.indexOf(BEGIN);
-  const endIdx = existing.indexOf(END);
+  let generatedRegion;
+  if (scopeCounts.size === 0) {
+    warn(`No @RequireScope annotations found under ${controllersDir}; writing note into scopes reference.`);
+    generatedRegion = [
+      '> AUTO-GENERATED from `@RequireScope` literals in `trms-api/src/main/java`. Do not edit by hand; run `npm run sync`.',
+      '',
+      `No \`@RequireScope\` annotations were found under \`${controllersDir}\`.`,
+    ].join('\n');
+  } else {
+    const scopesByResource = new Map();
+    for (const scope of scopeCounts.keys()) {
+      const lastColon = scope.lastIndexOf(':');
+      const resource = lastColon === -1 ? scope : scope.slice(0, lastColon);
+      const list = scopesByResource.get(resource) ?? [];
+      list.push(scope);
+      scopesByResource.set(resource, list);
+    }
 
-  if (beginIdx === -1 || endIdx === -1 || endIdx < beginIdx) {
-    warn(`Markers ${BEGIN} / ${END} not found in ${catalogPath}; skipping schema catalog sync.`);
-    return;
+    const rows = [...scopesByResource.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([resource, scopes]) => {
+        const sortedScopes = scopes.sort((a, b) => a.localeCompare(b));
+        const scopeList = sortedScopes.map((scope) => `\`${scope}\``).join(', ');
+        return `| \`${escapeMarkdownCell(resource)}\` | ${scopeList} |`;
+      });
+
+    generatedRegion = [
+      '> AUTO-GENERATED from `@RequireScope` literals in `trms-api/src/main/java`. Do not edit by hand; run `npm run sync`.',
+      '',
+      `${scopeCounts.size} distinct scope strings are enforced via ${annotationCount} \`@RequireScope\` annotations across the REST controllers in \`trms-api\`.`,
+      '',
+      '| Resource | Scopes |',
+      '| --- | --- |',
+      ...rows,
+    ].join('\n');
+    info(`Scopes: found ${scopeCounts.size} distinct scope(s) across ${annotationCount} annotations.`);
   }
 
-  const before = existing.slice(0, beginIdx + BEGIN.length);
-  const after = existing.slice(endIdx);
+  updateMarkedRegion(scopesPath, BEGIN, END, generatedRegion, 'Scopes reference');
+}
 
-  const updated = `${before}\n${generatedRegion}\n${after}`;
-  fs.writeFileSync(catalogPath, updated, 'utf8');
-  info(`Schema catalog: updated ${catalogPath}`);
+function extractToolMethods(raw) {
+  const toolRegex = /@Tool\s*\(\s*description\s*=\s*([\s\S]*?)\)\s*public\s+\S+\s+(\w+)\s*\(([\s\S]*?)\)\s*\{/g;
+  const paramRegex = /@ToolParam\s*\(\s*description\s*=\s*([\s\S]*?)\)\s*[\w<>\[\],.? ]+\s+(\w+)/g;
+  const methods = [];
+
+  for (const match of raw.matchAll(toolRegex)) {
+    const [, descriptionExpr, methodName, paramsBlock] = match;
+    const params = [];
+    for (const paramMatch of paramsBlock.matchAll(paramRegex)) {
+      const [, paramDescriptionExpr, paramName] = paramMatch;
+      params.push({
+        name: paramName,
+        description: parseJavaStringExpression(paramDescriptionExpr),
+      });
+    }
+    methods.push({
+      name: methodName,
+      description: parseJavaStringExpression(descriptionExpr),
+      params,
+    });
+  }
+
+  return methods;
+}
+
+function syncMcpToolsReference() {
+  const toolsDir = path.join(BACKEND, 'trms-ai', 'src', 'main', 'java', 'io', 'trms', 'ai', 'tool');
+  const toolsPath = path.join(DOCS_DIR, 'reference', 'mcp-tools.md');
+  const BEGIN = '{/* BEGIN GENERATED:mcp-tools */}';
+  const END = '{/* END GENERATED:mcp-tools */}';
+
+  const files = findFilesBySuffix(toolsDir, '.java').sort();
+  const toolClasses = [];
+
+  for (const file of files) {
+    const className = path.basename(file, '.java');
+    let raw;
+    try {
+      raw = fs.readFileSync(file, 'utf8');
+    } catch (err) {
+      warn(`Could not read ${file} (${err.code ?? err.message}); skipping.`);
+      continue;
+    }
+
+    const methods = extractToolMethods(raw);
+    if (methods.length > 0) {
+      toolClasses.push({className, methods});
+    }
+  }
+
+  let generatedRegion;
+  if (toolClasses.length === 0) {
+    warn(`No @Tool methods found under ${toolsDir}; writing note into MCP tools reference.`);
+    generatedRegion = [
+      '> AUTO-GENERATED from `@Tool` methods in `trms-ai/src/main/java/io/trms/ai/tool`. Do not edit by hand; run `npm run sync`.',
+      '',
+      `No \`@Tool\` methods were found under \`${toolsDir}\`.`,
+    ].join('\n');
+  } else {
+    const totalTools = toolClasses.reduce((sum, toolClass) => sum + toolClass.methods.length, 0);
+    const sections = toolClasses.flatMap((toolClass) => {
+      const rows = toolClass.methods.map((method) => {
+        const params = method.params.length === 0
+          ? '—'
+          : method.params
+              .map((param) => `\`${escapeMarkdownCell(param.name)}\` - ${escapeMarkdownCell(param.description)}`)
+              .join('<br/>');
+        return `| \`${escapeMarkdownCell(method.name)}\` | ${params} | ${escapeMarkdownCell(method.description)} |`;
+      });
+
+      return [
+        `### ${toolClass.className} (${toolClass.methods.length} tool${toolClass.methods.length === 1 ? '' : 's'})`,
+        '',
+        '| Tool | Parameters | Description |',
+        '| --- | --- | --- |',
+        ...rows,
+        '',
+      ];
+    });
+
+    generatedRegion = [
+      '> AUTO-GENERATED from `@Tool` methods in `trms-ai/src/main/java/io/trms/ai/tool`. Do not edit by hand; run `npm run sync`.',
+      '',
+      `There are **${totalTools}** \`@Tool\` methods today, across ${toolClasses.length} tool class${toolClasses.length === 1 ? '' : 'es'}.`,
+      '',
+      ...sections,
+    ].join('\n');
+    info(`MCP tools: found ${totalTools} tool method(s) across ${toolClasses.length} class(es).`);
+  }
+
+  updateMarkedRegion(toolsPath, BEGIN, END, generatedRegion, 'MCP tools reference');
 }
 
 /**
@@ -221,9 +403,10 @@ async function main() {
   info(`Frontend source: ${FRONTEND}`);
   syncErd();
   syncSchemaCatalog();
+  syncScopesReference();
+  syncMcpToolsReference();
   await syncOpenApiSpec();
   info('Done.');
 }
 
 main();
-

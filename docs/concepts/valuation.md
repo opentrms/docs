@@ -6,7 +6,7 @@ description: How the valuation engine prices deals through pluggable product val
 
 <div className="eyebrow">Concepts</div>
 
-<StatusBadge status="draft" reviewed="2026-06-23" />
+<StatusBadge status="draft" reviewed="2026-06-24" />
 
 # Valuation
 
@@ -68,3 +68,8 @@ the valuation that existed when it was posted, and the amendment triggers a
 fresh valuation plus a reversal-and-repost in
 [accounting](/concepts/accounting). The linkage, not the number, is what's
 permanent.
+
+## Related decisions
+
+- [ADR-004: FX spot curves by base currency](/decisions/fx-spot-curve-model)
+- [ADR-006: Extensibility surface is layered and narrow](/decisions/platform-extensibility-surface)

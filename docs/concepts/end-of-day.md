@@ -6,7 +6,7 @@ description: The fixed, reproducible pipeline that revalues the book, closes out
 
 <div className="eyebrow">Concepts</div>
 
-<StatusBadge status="draft" reviewed="2026-06-23" />
+<StatusBadge status="draft" reviewed="2026-06-24" />
 
 # End-of-day
 
@@ -67,3 +67,8 @@ sign-off isn't a single opaque "EOD: PASS" flag; it's a chain of evidence a
 reviewer can walk through step by step. See the
 [operate-eod guide](/guides/operate-eod) for triggering and monitoring a run
 in practice.
+
+## Related decisions
+
+- [ADR-003: Business date and system time separation](/decisions/business-clock-time-model)
+- [ADR-001: Event-sourced state](/decisions/event-sourced-state)

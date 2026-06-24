@@ -6,7 +6,7 @@ description: How OpenTRMS makes its event history tamper-evident, not just appen
 
 <div className="eyebrow">Concepts</div>
 
-<StatusBadge status="draft" reviewed="2026-06-23" />
+<StatusBadge status="draft" reviewed="2026-06-24" />
 
 # Hash chain
 
@@ -54,13 +54,18 @@ target event, which is what "tamper-evident" promises rather than merely
 
 A chain is verified by walking it from genesis (or from a known-good
 checkpoint) and recomputing each hash, comparing it against the stored
-value. This is exposed via `POST /audit/verify-chain` for on-demand checks —
-useful after a restore, before a regulatory submission, or as a periodic
-integrity job. A verification failure identifies exactly which event broke
-the chain, which is the starting point for an incident investigation rather
-than the end of one.
+value. This is exposed via `POST /api/v1/audit/verify-chain/{aggregateId}`
+for on-demand checks — useful after a restore, before a regulatory
+submission, or as a periodic integrity job. A verification failure
+identifies exactly which event broke the chain, which is the starting point
+for an incident investigation rather than the end of one.
 
 See [Event sourcing & CQRS](/concepts/event-sourcing) for why state is
 derived from this log in the first place, and the
 [verify-audit guide](/guides/verify-audit) for running a verification
 end to end.
+
+## Related decisions
+
+- [ADR-002: Tamper-evident hash chain](/decisions/tamper-evident-hash-chain)
+- [ADR-001: Event-sourced state](/decisions/event-sourced-state)

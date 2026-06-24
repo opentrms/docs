@@ -12,6 +12,11 @@ const sidebars: SidebarsConfig = {
       'concepts/capture-stp', 'concepts/approval-chains', 'concepts/valuation', 'concepts/accounting',
       'concepts/settlement-netting', 'concepts/closeout', 'concepts/end-of-day', 'concepts/agent-runtime',
     ]},
+    {type: 'category', label: 'Decisions', collapsible: false, items: [
+      'decisions/index', 'decisions/event-sourced-state', 'decisions/tamper-evident-hash-chain',
+      'decisions/business-clock-time-model', 'decisions/fx-spot-curve-model',
+      'decisions/jar-plugin-subprocess-sandbox', 'decisions/platform-extensibility-surface',
+    ]},
     {type: 'category', label: 'Guides', collapsible: false, items: [
       'guides/run-locally', 'guides/setup', 'guides/operate-eod', 'guides/book-a-trade',
       'guides/drive-via-mcp', 'guides/verify-audit',

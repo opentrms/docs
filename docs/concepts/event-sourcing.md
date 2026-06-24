@@ -6,7 +6,7 @@ description: How OpenTRMS derives state from an append-only event log, and why w
 
 <div className="eyebrow">Concepts</div>
 
-<StatusBadge status="draft" reviewed="2026-06-23" />
+<StatusBadge status="draft" reviewed="2026-06-24" />
 
 # Event sourcing & CQRS
 
@@ -64,3 +64,8 @@ flowchart LR
 See [Event store](/concepts/event-store) for the storage mechanics, and
 [Deal state machine](/concepts/deal-state-machine) for how deal events map to
 lifecycle transitions.
+
+## Related decisions
+
+- [ADR-001: Event-sourced state](/decisions/event-sourced-state)
+- [ADR-002: Tamper-evident hash chain](/decisions/tamper-evident-hash-chain)

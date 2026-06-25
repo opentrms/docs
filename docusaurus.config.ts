@@ -45,7 +45,7 @@ const config: Config = {
   baseUrl: '/',
 
   organizationName: 'opentrms',
-  projectName: 'opentrms-docs',
+  projectName: 'docs',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',

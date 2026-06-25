@@ -39,9 +39,10 @@ const config: Config = {
     v4: true,
   },
 
-  // GitHub Pages project site for opentrms/opentrms-docs.
-  url: 'https://opentrms.github.io',
-  baseUrl: '/docs/',
+  // Served from the docs.opentrms.com custom domain (GitHub Pages).
+  // The CNAME lives in static/CNAME so it is copied into every build.
+  url: 'https://docs.opentrms.com',
+  baseUrl: '/',
 
   organizationName: 'opentrms',
   projectName: 'opentrms-docs',

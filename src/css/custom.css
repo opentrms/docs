@@ -1,65 +1,134 @@
 /**
  * OpenTRMS documentation theme.
- * Mirrors the Quickstart design: near-black canvas, IBM Plex type,
- * and a single emerald accent (#35d6a4).
+ * Mirrors the trms-workbench product UI: Inter / JetBrains Mono type and a
+ * single teal accent over panel-heavy surfaces with visible borders.
+ * Colors are driven by the design's --h* tokens, which carry both a dark
+ * and a light value, so the navbar theme toggle switches the whole site.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+/* Inter & JetBrains Mono are loaded via <link> tags in docusaurus.config.ts
+   (headTags + stylesheets) so the font is ready at first paint instead of via
+   a render-blocking CSS @import. */
 
 :root {
-  /* Emerald accent */
-  --ifm-color-primary: #35d6a4;
-  --ifm-color-primary-dark: #20cd97;
-  --ifm-color-primary-darker: #1ec28f;
-  --ifm-color-primary-darkest: #18a076;
-  --ifm-color-primary-light: #51dcb1;
-  --ifm-color-primary-lighter: #5fdfb7;
-  --ifm-color-primary-lightest: #86e6c8;
-
-  --ifm-font-family-base: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-  --ifm-font-family-monospace: 'IBM Plex Mono', ui-monospace, SFMono-Regular,
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI',
+    sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SF Mono', ui-monospace,
     monospace;
   --ifm-code-font-size: 90%;
   --ifm-heading-font-weight: 600;
 
-  --docusaurus-highlighted-code-line-bg: rgba(53, 214, 164, 0.12);
-}
+  --docusaurus-highlighted-code-line-bg: rgba(20, 184, 166, 0.12);
 
-/* Single dark color scheme — the switch is disabled in config. */
-[data-theme='dark'] {
-  --ifm-background-color: #0c0e11;
-  --ifm-background-surface-color: #101317;
+  /* Infima variables map onto the design tokens, so they resolve per theme. */
+  --ifm-color-primary: var(--h35d6a4);
+  --ifm-background-color: var(--h0c0e11);
+  --ifm-background-surface-color: var(--h101317);
 
-  --ifm-font-color-base: #e6e9ed;
-  --ifm-font-color-secondary: #aab1bb;
-  --ifm-heading-color: #f2f4f7;
-  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-font-color-base: var(--he6e9ed);
+  --ifm-font-color-secondary: var(--haab1bb);
+  --ifm-heading-color: var(--he6e9ed);
+  --ifm-link-color: var(--h35d6a4);
 
-  --ifm-navbar-background-color: rgba(12, 14, 17, 0.85);
-  --ifm-navbar-link-color: #8b93a0;
-  --ifm-navbar-link-hover-color: #e6e9ed;
+  --ifm-navbar-background-color: var(--header-bg);
+  --ifm-navbar-link-color: var(--h8b93a0);
+  --ifm-navbar-link-hover-color: var(--he6e9ed);
   --ifm-navbar-height: 60px;
 
-  --ifm-toc-border-color: #16191e;
-  --ifm-color-emphasis-200: #1b1f25;
-  --ifm-color-emphasis-300: #232830;
+  --ifm-toc-border-color: var(--h16191e);
+  --ifm-color-emphasis-200: var(--h1b1f25);
+  --ifm-color-emphasis-300: var(--h232830);
 
-  --ifm-menu-color: #9aa2ad;
+  --ifm-menu-color: var(--h9aa2ad);
   --ifm-menu-color-background-active: transparent;
-  --ifm-menu-color-background-hover: #16191e;
+  --ifm-menu-color-background-hover: var(--h16191e);
 
-  --ifm-code-background: #14171b;
-  --ifm-pre-background: #0a0c0f;
-  --ifm-blockquote-color: #aab1bb;
+  --ifm-code-background: var(--h14171b);
+  --ifm-pre-background: var(--h0a0c0f);
+  --ifm-blockquote-color: var(--haab1bb);
 
-  --ifm-table-border-color: #1f242b;
-  --ifm-table-head-background: #13161a;
+  --ifm-table-border-color: var(--h1f242b);
+  --ifm-table-head-background: var(--h13161a);
   --ifm-table-stripe-background: rgba(255, 255, 255, 0.015);
 
-  --ifm-footer-background-color: #0a0c0f;
-  --ifm-footer-color: #8b93a0;
-  --ifm-footer-link-color: #aab1bb;
-  --ifm-footer-title-color: #6c7681;
+  --ifm-footer-background-color: var(--h0a0c0f);
+  --ifm-footer-color: var(--h8b93a0);
+  --ifm-footer-link-color: var(--haab1bb);
+  --ifm-footer-title-color: var(--h6c7681);
+}
+
+/* ── Dark palette (default) ───────────────────────────────── */
+[data-theme='dark'] {
+  --header-bg: rgba(22, 27, 35, 0.82);
+  --h0c0e11: #161b23; /* surface base */
+  --h0a0c0f: #0d1117; /* sunken (pre / footer) */
+  --h06140f: #0a0b0d; /* accent ink */
+  --h35d6a4: #14b8a6; /* accent (teal) */
+  --h13161a: #232934; /* panel */
+  --h14171b: #232934; /* panel (code bg) */
+  --h16191e: #2e3540; /* raised (hover) */
+  --h101317: #232934; /* panel (cards) */
+  --h1b1f25: #3f4856; /* border subtle */
+  --h1d222a: #3f4856; /* border subtle */
+  --h1f242b: #3f4856; /* border subtle */
+  --h1a1e24: #3f4856; /* border subtle */
+  --h232830: #56616f; /* border strong */
+  --h2b313a: #56616f; /* border strong (scrollbar) */
+  --he6e9ed: #f8fafc; /* text primary */
+  --hc3c9d2: #cdd4de; /* text secondary */
+  --hcdd3db: #cdd4de; /* text secondary */
+  --hcfd5dd: #cdd4de; /* text secondary */
+  --haab1bb: #cdd4de; /* text secondary */
+  --h9aa2ad: #a4adba; /* text muted */
+  --h8b93a0: #a4adba; /* text muted */
+  --h7d8691: #6b7280; /* text disabled */
+  --h6c7681: #6b7280; /* text disabled */
+  --h5f6873: #6b7280; /* text disabled */
+
+  --ifm-color-primary-dark: #0fa99b;
+  --ifm-color-primary-darker: #0c8a7f;
+  --ifm-color-primary-darkest: #0a7268;
+  --ifm-color-primary-light: #2cc3b2;
+  --ifm-color-primary-lighter: #44cabb;
+  --ifm-color-primary-lightest: #6fd6cb;
+}
+
+/* ── Light palette ────────────────────────────────────────── */
+[data-theme='light'] {
+  --header-bg: rgba(255, 255, 255, 0.82);
+  --h0c0e11: #ffffff; /* surface base */
+  --h0a0c0f: #f1f4f7; /* sunken (pre / footer) */
+  --h06140f: #ffffff; /* accent ink (on teal) */
+  --h35d6a4: #0d9488; /* accent (teal, darkened for AA) */
+  --h13161a: #f4f6f8; /* panel */
+  --h14171b: #f4f6f8; /* panel (code bg) */
+  --h16191e: #eaeef2; /* raised (hover) */
+  --h101317: #f7f9fb; /* panel (cards) */
+  --h1b1f25: #cbd2da; /* border subtle */
+  --h1d222a: #cbd2da; /* border subtle */
+  --h1f242b: #cbd2da; /* border subtle */
+  --h1a1e24: #d4dae1; /* border subtle (table rows) */
+  --h232830: #b8c0ca; /* border strong */
+  --h2b313a: #b8c0ca; /* border strong (scrollbar) */
+  --he6e9ed: #0d1117; /* text primary */
+  --hc3c9d2: #2c333d; /* text secondary */
+  --hcdd3db: #202730; /* text secondary */
+  --hcfd5dd: #28303a; /* text secondary */
+  --haab1bb: #3f4856; /* text secondary */
+  --h9aa2ad: #4f5762; /* text muted */
+  --h8b93a0: #5b636e; /* text muted */
+  --h7d8691: #6b7280; /* text disabled */
+  --h6c7681: #6b7280; /* text disabled */
+  --h5f6873: #767e89; /* text disabled */
+
+  --ifm-color-primary-dark: #0c8579;
+  --ifm-color-primary-darker: #0f766e;
+  --ifm-color-primary-darkest: #0a5d56;
+  --ifm-color-primary-light: #14b8a6;
+  --ifm-color-primary-lighter: #2cc3b2;
+  --ifm-color-primary-lightest: #6fd6cb;
+
+  --ifm-table-stripe-background: rgba(0, 0, 0, 0.02);
 }
 
 html,
@@ -69,7 +138,7 @@ body {
 }
 
 ::selection {
-  background: rgba(53, 214, 164, 0.28);
+  background: rgba(20, 184, 166, 0.28);
 }
 
 ::-webkit-scrollbar {
@@ -77,15 +146,15 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #22272e;
+  background: var(--h2b313a);
   border-radius: 6px;
-  border: 2px solid #0c0e11;
+  border: 2px solid var(--h0c0e11);
 }
 
 /* ── Navbar ───────────────────────────────────────────────── */
 .navbar {
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #1b1f25;
+  border-bottom: 1px solid var(--h1b1f25);
   box-shadow: none;
 }
 .navbar__title {
@@ -98,17 +167,43 @@ body {
   padding: 7px 12px;
 }
 .navbar__link--active {
-  color: #e6e9ed;
-  background: #16191e;
+  color: var(--he6e9ed);
+  background: var(--h16191e);
 }
 .navbar__brand .navbar__logo {
   height: 26px;
   width: 26px;
 }
+/* Small "docs" tag next to the wordmark, like the design template. */
+.navbar__brand .navbar__title::after {
+  content: 'docs';
+  margin-left: 11px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--h6c7681);
+  border: 1px solid var(--h232830);
+  border-radius: 5px;
+  padding: 2px 7px;
+  vertical-align: middle;
+}
+
+/* Top-right cluster: order Search → GitHub to match the template, with
+   even spacing. (Docusaurus appends search after the GitHub item.) */
+.navbar__items--right {
+  gap: 14px;
+}
+.navbar__items--right > [class*='navbarSearchContainer'] {
+  order: -1;
+}
+/* Template's GitHub link has no external-link arrow. */
+.navbar__items--right .navbar__link[href*='github'] svg {
+  display: none;
+}
 
 /* ── Sidebar ──────────────────────────────────────────────── */
 .theme-doc-sidebar-container {
-  border-right: 1px solid #16191e !important;
+  border-right: 1px solid var(--h16191e) !important;
 }
 .menu {
   padding: 16px 12px 60px !important;
@@ -125,11 +220,11 @@ body {
   line-height: 1.3;
 }
 .menu__link:hover {
-  color: #e6e9ed;
+  color: var(--he6e9ed);
 }
 .menu__link--active:not(.menu__link--sublist) {
   background: var(--ifm-color-primary);
-  color: #06140f;
+  color: var(--h06140f);
   font-weight: 600;
 }
 /* Category headers as small mono labels, like the design */
@@ -138,7 +233,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #5f6873;
+  color: var(--h5f6873);
   cursor: default;
   margin-top: 14px;
 }
@@ -146,16 +241,16 @@ body {
   > .menu__list-item-collapsible
   > .menu__link:hover {
   background: transparent;
-  color: #5f6873;
+  color: var(--h5f6873);
 }
 
 /* ── Table of contents ────────────────────────────────────── */
 .table-of-contents {
   font-size: 13px;
-  border-left: 1px solid #1f242b;
+  border-left: 1px solid var(--h1f242b);
 }
 .table-of-contents__link {
-  color: #8b93a0;
+  color: var(--h8b93a0);
 }
 .table-of-contents__link--active,
 .table-of-contents__link:hover {
@@ -192,18 +287,18 @@ article li {
 /* ── Code blocks ──────────────────────────────────────────── */
 .theme-code-block,
 div[class^='codeBlockContainer'] {
-  border: 1px solid #1d222a;
+  border: 1px solid var(--h1d222a);
   border-radius: 11px;
   box-shadow: none;
 }
 .theme-code-block pre,
 div[class^='codeBlockContent'] pre {
-  background: #0a0c0f !important;
+  background: var(--h0a0c0f) !important;
 }
 
 /* Tabs (used for Shell / Python / TypeScript, MCP config / CLI, …) */
 .tabs {
-  border-bottom: 1px solid #1d222a;
+  border-bottom: 1px solid var(--h1d222a);
   gap: 2px;
 }
 .tabs__item {
@@ -212,11 +307,11 @@ div[class^='codeBlockContent'] pre {
   border-radius: 0;
   border-bottom: 2px solid transparent;
   padding: 11px 14px;
-  color: #7d8691;
+  color: var(--h7d8691);
 }
 .tabs__item:hover {
   background: transparent;
-  color: #e6e9ed;
+  color: var(--he6e9ed);
 }
 .tabs__item--active {
   color: var(--ifm-color-primary);
@@ -227,7 +322,7 @@ div[class^='codeBlockContent'] pre {
 .markdown table {
   display: table;
   width: 100%;
-  border: 1px solid #1f242b;
+  border: 1px solid var(--h1f242b);
   border-radius: 12px;
   border-collapse: separate;
   border-spacing: 0;
@@ -238,12 +333,12 @@ div[class^='codeBlockContent'] pre {
   font-size: 11.5px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #6c7681;
+  color: var(--h6c7681);
 }
 .markdown table th,
 .markdown table td {
   border: none;
-  border-bottom: 1px solid #1a1e24;
+  border-bottom: 1px solid var(--h1a1e24);
   padding: 13px 18px;
 }
 .markdown table tr:last-child td {
@@ -262,10 +357,10 @@ div[class^='codeBlockContent'] pre {
   margin: 1.5rem 0;
 }
 .doc-card {
-  border: 1px solid #1f242b;
+  border: 1px solid var(--h1f242b);
   border-radius: 11px;
   padding: 18px;
-  background: #101317;
+  background: var(--h101317);
   display: block;
   transition: border-color 0.15s ease;
 }
@@ -277,11 +372,11 @@ div[class^='codeBlockContent'] pre {
   font-weight: 600;
   font-size: 15px;
   margin-bottom: 5px;
-  color: #e6e9ed;
+  color: var(--he6e9ed);
 }
 .doc-card__body {
   font-size: 13.5px;
-  color: #8b93a0;
+  color: var(--h8b93a0);
   line-height: 1.5;
 }
 
@@ -300,9 +395,9 @@ div[class^='codeBlockContent'] pre {
 }
 .pill {
   font-size: 12.5px;
-  color: #9aa2ad;
-  background: #13161a;
-  border: 1px solid #1f242b;
+  color: var(--h9aa2ad);
+  background: var(--h13161a);
+  border: 1px solid var(--h1f242b);
   border-radius: 7px;
   padding: 6px 11px;
 }
@@ -319,7 +414,7 @@ div[class^='codeBlockContent'] pre {
 .openapi-explorer__btn,
 button[class*='openapi-run-button'] {
   background: var(--ifm-color-primary) !important;
-  color: #06140f !important;
+  color: var(--h06140f) !important;
   border-radius: 7px !important;
   font-weight: 600;
 }
@@ -329,13 +424,84 @@ button[class*='openapi-run-button']:hover {
 }
 .openapi-card,
 div[class*='apiItemCard'] {
-  border: 1px solid #1f242b !important;
+  border: 1px solid var(--h1f242b) !important;
   border-radius: 11px !important;
-  background: #101317 !important;
+  background: var(--h101317) !important;
 }
 .openapi-card:hover,
 div[class*='apiItemCard']:hover {
   border-color: var(--ifm-color-primary) !important;
+}
+
+/* Match the hand-authored docs (Quickstart): the eyebrow + status row are
+   injected as real markup by src/theme/ApiItem/Layout; here we only align
+   the generated <h1> typography with .markdown h1 so they read identically. */
+.openapi__heading {
+  font-size: 40px !important;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+
+/* The intro page renders a "Version: 1.0" pill above the title. The plugin
+   default (badge--secondary) is a bright near-white chip that clashes with
+   the muted status badges used elsewhere; align it with .status-badge. */
+.theme-doc-version-badge {
+  display: inline-block;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--h13161a);
+  color: var(--h9aa2ad);
+  border: 1px solid var(--h1f242b);
+  border-radius: 6px;
+  padding: 3px 9px;
+  margin-bottom: 14px;
+}
+
+.openapi-tabs__heading {
+  font-size: 1.05rem !important;
+  line-height: 1.25;
+  letter-spacing: 0;
+  margin-top: 1.75rem;
+}
+
+.openapi__method-endpoint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 1.25rem;
+  padding: 11px 14px;
+  border: 1px solid var(--h1d222a);
+  border-radius: 11px;
+  background: var(--h0a0c0f);
+  overflow-x: auto;
+}
+
+.openapi__method-endpoint .badge {
+  flex: 0 0 auto;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 5px 9px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  /* Dark ink on the (theme-independent) colored method badge. */
+  color: #0a0b0d;
+}
+
+.openapi__method-endpoint-path {
+  margin: 0 !important;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 13.5px !important;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--hcdd3db);
+  white-space: nowrap;
 }
 
 /* Status badge (doc maturity) */
@@ -356,5 +522,5 @@ div[class*='apiItemCard']:hover {
 }
 .status-reviewed {
   font-size: 12px;
-  color: #6c7681;
+  color: var(--h6c7681);
 }

@@ -41,13 +41,34 @@ const config: Config = {
 
   // GitHub Pages project site for opentrms/opentrms-docs.
   url: 'https://opentrms.github.io',
-  baseUrl: '/opentrms-docs/',
+  baseUrl: '/docs/',
 
   organizationName: 'opentrms',
   projectName: 'opentrms-docs',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
+
+  // Load Inter + JetBrains Mono via real <link> tags in the head (matches the
+  // trms-workbench product UI). A CSS @import is render-blocking and can fall
+  // back to a system font on first paint, which reads as "the wrong font".
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+  ],
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap',
+  ],
 
   markdown: {
     mermaid: true,
@@ -106,12 +127,11 @@ const config: Config = {
     image: 'img/opentrms-social-card.png',
     colorMode: {
       defaultMode: 'dark',
-      disableSwitch: true,
+      disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    // Site is dark-only; use Mermaid's dark palette so diagram text is legible.
     mermaid: {
-      theme: {light: 'dark', dark: 'dark'},
+      theme: {light: 'default', dark: 'dark'},
     },
     docs: {
       sidebar: {
@@ -177,7 +197,7 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} OpenTRMS. Self-hosted, open source.`,
     },
     prism: {
-      theme: prismThemes.vsDark,
+      theme: prismThemes.github,
       darkTheme: prismThemes.vsDark,
       additionalLanguages: ['bash', 'json', 'sql', 'java', 'python'],
     },

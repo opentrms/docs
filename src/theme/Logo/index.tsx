@@ -21,7 +21,9 @@ export default function Logo(props: Props): ReactNode {
   } = useThemeConfig();
   const {imageClassName, titleClassName, ...propsRest} = props;
   return (
-    <Link to={MAIN_SITE_URL} {...propsRest}>
+    // href + target="_self" so the brand navigates in the same tab. Docusaurus
+    // <Link> otherwise treats this external URL as a new-tab link.
+    <Link href={MAIN_SITE_URL} target="_self" {...propsRest}>
       <b className={titleClassName}>{navbarTitle ?? title}</b>
     </Link>
   );

@@ -150,10 +150,9 @@ const config: Config = {
       : undefined,
     navbar: {
       title: 'OpenTRMS',
-      logo: {
-        alt: 'OpenTRMS',
-        src: 'img/logo.svg',
-      },
+      // No logo mark: the wordmark matches the marketing site header, which is
+      // text-only. The brand links back to the main site (see the swizzled
+      // src/theme/Logo).
       items: [
         {
           type: 'docSidebar',

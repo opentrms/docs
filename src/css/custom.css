@@ -59,7 +59,8 @@
 
 /* ── Dark palette (default) ───────────────────────────────── */
 [data-theme='dark'] {
-  --header-bg: rgba(22, 27, 35, 0.82);
+  /* Matches the marketing site header (opentrms.com): rgba(10,11,13,0.78). */
+  --header-bg: rgba(10, 11, 13, 0.78);
   --h0c0e11: #161b23; /* surface base */
   --h0a0c0f: #0d1117; /* sunken (pre / footer) */
   --h06140f: #0a0b0d; /* accent ink */
@@ -152,14 +153,38 @@ body {
 }
 
 /* ── Navbar ───────────────────────────────────────────────── */
+/* The translucent blur lives on a ::before layer rather than on .navbar
+   itself. Putting backdrop-filter on .navbar makes it the containing block
+   for the position:fixed mobile sidebar, which then collapses to the navbar's
+   height (60px) and renders behind the page content instead of over it. */
 .navbar {
-  backdrop-filter: blur(12px);
+  background: transparent;
   border-bottom: 1px solid var(--h1b1f25);
   box-shadow: none;
+}
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+/* The mobile drop-down menu must be opaque — the navbar's translucent header
+   color would otherwise let page content bleed through behind the menu items. */
+.navbar-sidebar {
+  background: var(--h0a0c0f);
 }
 .navbar__title {
   font-weight: 600;
   letter-spacing: -0.01em;
+  /* Primary text color for the wordmark, like the marketing site header. */
+  color: var(--he6e9ed);
+}
+/* Wordmark shifts to the accent on hover, matching the site header. */
+.navbar__brand:hover .navbar__title {
+  color: var(--ifm-color-primary);
 }
 .navbar__link {
   font-size: 13.5px;
@@ -169,10 +194,6 @@ body {
 .navbar__link--active {
   color: var(--he6e9ed);
   background: var(--h16191e);
-}
-.navbar__brand .navbar__logo {
-  height: 26px;
-  width: 26px;
 }
 /* Small "docs" tag next to the wordmark, like the design template. */
 .navbar__brand .navbar__title::after {

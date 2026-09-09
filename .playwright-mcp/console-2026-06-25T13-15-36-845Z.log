@@ -1,8 +1,0 @@
-[     176ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom-client.development.js:28004
-[ 2211575ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109
-[ 2234978ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109
-[ 2256269ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109
-[ 2260399ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109
-[ 2266438ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109
-[ 2283371ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109
-[ 2886095ms] [LOG] [HMR] Reload all CSS @ webpack-internal:///./node_modules/@rspack/core/dist/cssExtractHmr.js:109

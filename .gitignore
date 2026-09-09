@@ -13,6 +13,10 @@
 # them would add a fresh ~5 MB blob to history on every regeneration.
 /static/learn/assets/**/*.mp4
 
+# Playwright MCP scratch output (page snapshots, console logs) from driving
+# the site in a browser locally.
+/.playwright-mcp/
+
 # Misc
 .DS_Store
 .claude/

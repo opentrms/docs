@@ -1,0 +1,92 @@
+---
+title: 'Automation, Audit and Health'
+description: 'How the OpenTRMS Workbench automates routing, records what happened, and reports its own health.'
+sidebar_position: 4
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/19-automation-audit.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How the OpenTRMS Workbench automates routing, records what happened, and reports its own health.
+
+<Walkthrough
+  video="/learn/assets/19-automation-audit/19-automation-audit.mp4"
+  captions="/learn/assets/19-automation-audit/19-automation-audit.vtt"
+  poster="/learn/assets/19-automation-audit/poster.png"
+  duration="1m 40s"
+>
+
+In this walkthrough we'll see how straight-through processing is configured, and how to check what happened, in the OpenTRMS Workbench.
+
+Straight-through processing is what lets a trade settle without anyone touching it. The STP Rules Manager decides which trades qualify.
+
+Rules are evaluated in order, and the order column is the whole point. The first rule that matches a trade decides its route, so what sits at the top matters more than what sits below.
+
+Rules are reordered by dragging the handle. There is a keyboard route as well — focus a handle, press Space to pick it up, then use the arrow keys — so this is usable without a mouse.
+
+Expanding a rule shows the thresholds it applies — product, currency, maximum notional, minimum rating and maximum tenor. A trade must satisfy all of them to qualify.
+
+When you need to know what actually happened to something, Audit Event History has it. Choose a deal and it loads that deal's event stream.
+
+Every change is recorded in order, with a timestamp, the type of event, a version number, and who caused it. The record is append-only, so it shows what happened rather than what things look like now.
+
+And System Status is the first place to look when the Workbench itself seems unwell. Overall health, when end of day last ran, and whether each component is active.
+
+That completes Automation, Audit and Health. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll see how straight-through processing is configured, and how to check what happened, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/19-automation-audit/step-01.png)
+
+## 2. Open the STP Rules Manager
+
+Straight-through processing is what lets a trade settle without anyone touching it. The STP Rules Manager decides which trades qualify.
+
+![Step 2](/learn/assets/19-automation-audit/step-02.png)
+
+## 3. Order decides precedence
+
+Rules are evaluated in order, and the order column is the whole point. The first rule that matches a trade decides its route, so what sits at the top matters more than what sits below.
+
+![Step 3](/learn/assets/19-automation-audit/step-03.png)
+
+## 4. Reorder by dragging, or by keyboard
+
+Rules are reordered by dragging the handle. There is a keyboard route as well — focus a handle, press Space to pick it up, then use the arrow keys — so this is usable without a mouse.
+
+![Step 4](/learn/assets/19-automation-audit/step-04.png)
+
+## 5. Read a rule's thresholds
+
+Expanding a rule shows the thresholds it applies — product, currency, maximum notional, minimum rating and maximum tenor. A trade must satisfy all of them to qualify.
+
+![Step 5](/learn/assets/19-automation-audit/step-05.png)
+
+## 6. Open the Audit Event History
+
+When you need to know what actually happened to something, Audit Event History has it. Choose a deal and it loads that deal's event stream.
+
+![Step 6](/learn/assets/19-automation-audit/step-06.png)
+
+## 7. Read a deal's event stream
+
+Every change is recorded in order, with a timestamp, the type of event, a version number, and who caused it. The record is append-only, so it shows what happened rather than what things look like now.
+
+![Step 7](/learn/assets/19-automation-audit/step-07.png)
+
+## 8. Check system health
+
+And System Status is the first place to look when the Workbench itself seems unwell. Overall health, when end of day last ran, and whether each component is active.
+
+![Step 8](/learn/assets/19-automation-audit/step-08.png)
+
+## 9. Next steps
+
+That completes Automation, Audit and Health. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

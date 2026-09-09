@@ -1,0 +1,55 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.833
+In this walkthrough we'll see how
+straight-through processing is configured,
+and how to check what happened, in the OpenTRMS Workbench.
+
+2
+00:00:08.833 --> 00:00:18.133
+Straight-through processing is what lets a
+trade settle without anyone touching it. The
+STP Rules Manager decides which trades qualify.
+
+3
+00:00:18.133 --> 00:00:30.433
+Rules are evaluated in order, and the order column is the
+whole point. The first rule that matches a trade decides its
+route, so what sits at the top matters more than what sits below.
+
+4
+00:00:30.433 --> 00:00:43.333
+Rules are reordered by dragging the handle. There is a
+keyboard route as well — focus a handle, press Space to pick
+it up, then use the arrow keys — so this is usable without a mouse.
+
+5
+00:00:43.333 --> 00:00:56.133
+Expanding a rule shows the thresholds it applies —
+product, currency, maximum notional, minimum rating and
+maximum tenor. A trade must satisfy all of them to qualify.
+
+6
+00:00:56.133 --> 00:01:05.167
+When you need to know what actually happened
+to something, Audit Event History has it.
+Choose a deal and it loads that deal's event stream.
+
+7
+00:01:05.167 --> 00:01:18.367
+Every change is recorded in order, with a timestamp, the type of
+event, a version number, and who caused it. The record is
+append-only, so it shows what happened rather than what things look like now.
+
+8
+00:01:18.367 --> 00:01:29.800
+And System Status is the first place to look when the
+Workbench itself seems unwell. Overall health, when
+end of day last ran, and whether each component is active.
+
+9
+00:01:29.800 --> 00:01:38.300
+That completes Automation, Audit and Health. Every
+surface shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

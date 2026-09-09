@@ -1,0 +1,84 @@
+---
+title: 'Netting Settlements'
+description: 'How bilateral netting works in the OpenTRMS Workbench — choosing eligible settlements and reading the netting sets that result.'
+sidebar_position: 3
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/13-netting.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How bilateral netting works in the OpenTRMS Workbench — choosing eligible settlements and reading the netting sets that result.
+
+<Walkthrough
+  video="/learn/assets/13-netting/13-netting.mp4"
+  captions="/learn/assets/13-netting/13-netting.vtt"
+  poster="/learn/assets/13-netting/poster.png"
+  duration="1m 19s"
+>
+
+In this walkthrough we'll net settlements down to a single payment, and read the result, in the OpenTRMS Workbench.
+
+Netting reduces many payments to one. Rather than settling twenty amounts with the same counterparty on the same day, you settle the difference.
+
+Only eligible settlements are listed. Each row shows the amount and whether it is money going out or coming in, which is what makes netting possible in the first place.
+
+Netting is bilateral, so the counterparty filter comes first. You net against one institution at a time — amounts owed to different counterparties cannot offset each other.
+
+Select Visible takes everything the filters have left on screen, which is quicker than ticking rows one by one, and the count keeps track of what you have chosen.
+
+Executing the netting would create a netting set from that selection.
+
+Netting Sets is where the results live. Each set records the gross payable, the gross receivable, and the net amount that will actually move, along with how many settlements it replaced.
+
+That completes Netting Settlements. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll net settlements down to a single payment, and read the result, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/13-netting/step-01.png)
+
+## 2. Open Execute Netting
+
+Netting reduces many payments to one. Rather than settling twenty amounts with the same counterparty on the same day, you settle the difference.
+
+![Step 2](/learn/assets/13-netting/step-02.png)
+
+## 3. Eligible settlements only
+
+Only eligible settlements are listed. Each row shows the amount and whether it is money going out or coming in, which is what makes netting possible in the first place.
+
+![Step 3](/learn/assets/13-netting/step-03.png)
+
+## 4. Net against one counterparty
+
+Netting is bilateral, so the counterparty filter comes first. You net against one institution at a time — amounts owed to different counterparties cannot offset each other.
+
+![Step 4](/learn/assets/13-netting/step-04.png)
+
+## 5. Select the eligible items
+
+Select Visible takes everything the filters have left on screen, which is quicker than ticking rows one by one, and the count keeps track of what you have chosen.
+
+![Step 5](/learn/assets/13-netting/step-05.png)
+
+## 6. Execute the netting
+
+Executing the netting would create a netting set from that selection.
+
+![Step 6](/learn/assets/13-netting/step-06.png)
+
+## 7. Read the netting sets
+
+Netting Sets is where the results live. Each set records the gross payable, the gross receivable, and the net amount that will actually move, along with how many settlements it replaced.
+
+![Step 7](/learn/assets/13-netting/step-07.png)
+
+## 8. Next steps
+
+That completes Netting Settlements. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

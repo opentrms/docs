@@ -1,0 +1,128 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:09.100
+In this walkthrough we'll run pre-trade
+analysis on a government bond and promote it
+to a booking ticket, in the OpenTRMS Workbench.
+
+2
+00:00:09.100 --> 00:00:20.667
+The Bond Deal Workbook is the first item under Trades. It
+carries a single deal through its whole life — pre-trade,
+booking, approval, settlement and history — as tabs across one panel.
+
+3
+00:00:20.667 --> 00:00:28.000
+Start a new deal. The workbook opens on
+the Pre-Trade tab, because the analysis
+comes before the booking, not after it.
+
+4
+00:00:28.000 --> 00:00:34.567
+Find the bond by its ISIN. This one is a five-year US
+dollar demo bond maturing in July twenty thirty-one.
+
+5
+00:00:34.567 --> 00:00:38.333
+Enter the notional — ten
+million US dollars of face value.
+
+6
+00:00:38.333 --> 00:00:42.167
+Then the price you expect to deal
+at, quoted as a percentage of par.
+
+7
+00:00:42.167 --> 00:00:48.133
+Choose the counterparty. The pre-trade
+check will test this trade against the
+credit limits for this name specifically.
+
+8
+00:00:48.133 --> 00:00:53.667
+And the book, which sets both the portfolio the risk
+lands in and the limits the trade is measured against.
+
+9
+00:00:53.667 --> 00:00:59.100
+Set the trade date, and the settlement date — for
+a government bond, normally the next business day.
+
+10
+00:00:59.100 --> 00:01:04.033
+With the settlement date entered,
+the workbook prices the trade live.
+
+11
+00:01:04.033 --> 00:01:16.733
+Here is the pre-trade result. The workbook returns a clean price of
+ninety-six point nine three, a yield to maturity of five and a half
+percent, and the DV01 — the profit or loss for a one basis point move in rates.
+
+12
+00:01:16.733 --> 00:01:27.000
+The limit status is green, and it names the binding constraint —
+counterparty exposure. That is the limit this trade would come
+closest to breaching, so it is the one to watch if the size goes up.
+
+13
+00:01:27.000 --> 00:01:35.933
+The Risk tab breaks the same trade down
+further — instrument metrics, key rate
+exposures, and the effect on the portfolio as a whole.
+
+14
+00:01:35.933 --> 00:01:40.467
+With the analysis clean,
+promote the ticket to booking.
+
+15
+00:01:40.467 --> 00:01:51.333
+The Deal Detail tab now holds a booking ticket. The instrument
+and the economics carry across from the analysis, and the
+workbook resolves the bond's coupon, face value and maturity alongside them.
+
+16
+00:01:51.333 --> 00:02:01.267
+Counterparty and portfolio are not carried over, so confirm
+them on the booking ticket. Re-entering them here is deliberate
+— the desk you analysed against is not always the one you book to.
+
+17
+00:02:01.267 --> 00:02:04.733
+Then the portfolio the position will be held in.
+
+18
+00:02:04.733 --> 00:02:08.633
+The booking ticket is now
+complete, and ready to submit for approval.
+
+19
+00:02:08.633 --> 00:02:15.133
+Submit the trade. It is validated against
+limits and standing instructions, then booked.
+
+20
+00:02:15.133 --> 00:02:24.767
+The Settlement tab shows the cash movements
+the deal generated — one row per coupon,
+each with its payment date, amount and direction.
+
+21
+00:02:24.767 --> 00:02:33.433
+The Coupon Schedule is the same story
+from the position's point of view —
+every future coupon, projected out to maturity.
+
+22
+00:02:33.433 --> 00:02:41.767
+And History records every change to the
+deal, with who made it and when — the
+audit trail the deal carries for its whole life.
+
+23
+00:02:41.767 --> 00:02:49.933
+That completes Bond Pre-Trade and Booking. Every
+surface shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

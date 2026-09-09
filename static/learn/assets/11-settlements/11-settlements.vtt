@@ -1,0 +1,59 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.033
+In this walkthrough we'll read the
+settlement queue, and see what is due
+to pay and receive, in the OpenTRMS Workbench.
+
+2
+00:00:08.033 --> 00:00:16.567
+The Settlement List is the operations queue.
+Every cash movement the system expects
+appears here, on its way to being paid or received.
+
+3
+00:00:16.567 --> 00:00:27.467
+Two columns answer the daily question. Direction says
+whether the money is going out or coming in, and payment
+date says when. Sorting on the date gives you what is due today.
+
+4
+00:00:27.467 --> 00:00:40.300
+The list opens on the operational view, which is the one to work
+from. It keeps backdated open items visible, and hides settled and
+cancelled history so the queue only shows what still needs attention.
+
+5
+00:00:40.300 --> 00:00:47.000
+Switch to all history when you need the full
+record, including everything already settled or cancelled.
+
+6
+00:00:47.000 --> 00:00:52.400
+And back to the working queue, which
+is where the day is actually run from.
+
+7
+00:00:52.400 --> 00:01:02.000
+The status filter narrows the queue further.
+Typing a status shows only the items in that
+state — projected, instructed, or settled.
+
+8
+00:01:02.000 --> 00:01:13.000
+Settlements are selected with the checkbox on each row. A
+selection can be carried straight through to the next step,
+which is instructing them against a settlement instruction.
+
+9
+00:01:13.000 --> 00:01:21.700
+Open Instruct Settlement takes the
+selection with it, so you do not re-key
+anything. That is the subject of the next walkthrough.
+
+10
+00:01:21.700 --> 00:01:29.833
+That completes Settlements and What Is Due. Every
+surface shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

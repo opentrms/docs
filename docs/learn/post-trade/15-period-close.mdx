@@ -1,0 +1,76 @@
+---
+title: 'Closing an Accounting Period'
+description: 'How to close an accounting period in the OpenTRMS Workbench, and the guard rails around a destructive action.'
+sidebar_position: 5
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/15-period-close.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How to close an accounting period in the OpenTRMS Workbench, and the guard rails around a destructive action.
+
+<Walkthrough
+  video="/learn/assets/15-period-close/15-period-close.mp4"
+  captions="/learn/assets/15-period-close/15-period-close.vtt"
+  poster="/learn/assets/15-period-close/poster.png"
+  duration="1m 13s"
+>
+
+In this walkthrough we'll understand what closing an accounting period does before you do it, in the OpenTRMS Workbench.
+
+Closing an accounting period draws a line under it. Once closed, no further entries can be booked into that period, which is what makes the reported numbers final.
+
+The Workbench marks this as a destructive action, and says plainly that it cannot be quickly undone. That warning is the pattern for anything consequential — if you see it, read it.
+
+The only input is the period itself. There is deliberately nothing else to configure, because a close either happens or it does not.
+
+Before closing, the work is done elsewhere. Draft journal entries need posting, and anything still pending approval needs resolving, because neither can be added afterwards.
+
+Start Close commits it. In a shared environment this affects everyone, so it is worth being certain the period is genuinely complete.
+
+That completes Closing an Accounting Period. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll understand what closing an accounting period does before you do it, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/15-period-close/step-01.png)
+
+## 2. Open Period Close
+
+Closing an accounting period draws a line under it. Once closed, no further entries can be booked into that period, which is what makes the reported numbers final.
+
+![Step 2](/learn/assets/15-period-close/step-02.png)
+
+## 3. Read the warning
+
+The Workbench marks this as a destructive action, and says plainly that it cannot be quickly undone. That warning is the pattern for anything consequential — if you see it, read it.
+
+![Step 3](/learn/assets/15-period-close/step-03.png)
+
+## 4. Choose the period
+
+The only input is the period itself. There is deliberately nothing else to configure, because a close either happens or it does not.
+
+![Step 4](/learn/assets/15-period-close/step-04.png)
+
+## 5. Finish the checks first
+
+Before closing, the work is done elsewhere. Draft journal entries need posting, and anything still pending approval needs resolving, because neither can be added afterwards.
+
+![Step 5](/learn/assets/15-period-close/step-05.png)
+
+## 6. Start the close
+
+Start Close commits it. In a shared environment this affects everyone, so it is worth being certain the period is genuinely complete.
+
+![Step 6](/learn/assets/15-period-close/step-06.png)
+
+## 7. Next steps
+
+That completes Closing an Accounting Period. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

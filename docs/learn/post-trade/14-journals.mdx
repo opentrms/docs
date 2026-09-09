@@ -1,0 +1,84 @@
+---
+title: 'Journals and Posting Rules'
+description: 'How trading activity becomes accounting entries in the OpenTRMS Workbench — the journal, and the rules that generate it.'
+sidebar_position: 4
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/14-journals.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How trading activity becomes accounting entries in the OpenTRMS Workbench — the journal, and the rules that generate it.
+
+<Walkthrough
+  video="/learn/assets/14-journals/14-journals.mp4"
+  captions="/learn/assets/14-journals/14-journals.vtt"
+  poster="/learn/assets/14-journals/poster.png"
+  duration="1m 19s"
+>
+
+In this walkthrough we'll follow trading activity into the accounting ledger, in the OpenTRMS Workbench.
+
+Every trade eventually becomes an accounting entry. The Journal List is where those entries live, and it is the bridge between the trading floor and the ledger.
+
+Entries carry a type. Mark to market records a change in value, realized profit and loss records a gain or loss that has actually crystallised.
+
+Status matters just as much. A draft entry has been generated but not committed to the ledger, and only posted entries count towards the accounts.
+
+The filters answer the two questions people actually ask — what happened in this accounting period, and what did this particular deal generate.
+
+Opening an entry shows its lines. Every entry balances, so the lines always show a debit against a matching credit.
+
+None of this is typed by hand. Posting Rules is the configuration that generates it — for each product and entry type, which account is debited and which is credited.
+
+That completes Journals and Posting Rules. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll follow trading activity into the accounting ledger, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/14-journals/step-01.png)
+
+## 2. Open the Journal List
+
+Every trade eventually becomes an accounting entry. The Journal List is where those entries live, and it is the bridge between the trading floor and the ledger.
+
+![Step 2](/learn/assets/14-journals/step-02.png)
+
+## 3. Entry types
+
+Entries carry a type. Mark to market records a change in value, realized profit and loss records a gain or loss that has actually crystallised.
+
+![Step 3](/learn/assets/14-journals/step-03.png)
+
+## 4. Draft and posted
+
+Status matters just as much. A draft entry has been generated but not committed to the ledger, and only posted entries count towards the accounts.
+
+![Step 4](/learn/assets/14-journals/step-04.png)
+
+## 5. Filter by period or deal
+
+The filters answer the two questions people actually ask — what happened in this accounting period, and what did this particular deal generate.
+
+![Step 5](/learn/assets/14-journals/step-05.png)
+
+## 6. Open an entry
+
+Opening an entry shows its lines. Every entry balances, so the lines always show a debit against a matching credit.
+
+![Step 6](/learn/assets/14-journals/step-06.png)
+
+## 7. The rules behind the entries
+
+None of this is typed by hand. Posting Rules is the configuration that generates it — for each product and entry type, which account is debited and which is credited.
+
+![Step 7](/learn/assets/14-journals/step-07.png)
+
+## 8. Next steps
+
+That completes Journals and Posting Rules. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

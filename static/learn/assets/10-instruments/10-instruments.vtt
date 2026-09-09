@@ -1,0 +1,49 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.200
+In this walkthrough we'll find and
+inspect the instruments that trades are
+booked against, in the OpenTRMS Workbench.
+
+2
+00:00:08.200 --> 00:00:19.233
+Instruments are registered separately from trades. The
+bond used in the earlier walkthrough existed here first,
+which is why it could be found by its ISIN during deal capture.
+
+3
+00:00:19.233 --> 00:00:29.000
+The register lists what the system can
+trade — type, name, currency, maturity
+and status, with the identifier alongside.
+
+4
+00:00:29.000 --> 00:00:37.333
+Search finds an instrument by name or
+identifier, which is the quickest route
+when you already know what you are looking for.
+
+5
+00:00:37.333 --> 00:00:45.633
+The type filter narrows it a different
+way, to bonds or futures contracts,
+when you are browsing rather than searching.
+
+6
+00:00:45.633 --> 00:00:55.100
+Expanding a row shows the full
+definition — the terms that make the
+instrument what it is, and which valuations depend on.
+
+7
+00:00:55.100 --> 00:01:07.300
+Deactivate rather than delete is the pattern here. An
+instrument that trades already point at cannot be removed
+outright, so it is retired instead and stops appearing in pickers.
+
+8
+00:01:07.300 --> 00:01:15.367
+That completes Managing Instruments. Every surface
+shown here can also be opened from the agent panel
+on the right, by asking for it in plain English.

@@ -1,0 +1,84 @@
+---
+title: 'Managing Instruments'
+description: 'How instruments are registered in the OpenTRMS Workbench, independently of the trades that reference them.'
+sidebar_position: 5
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/10-instruments.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How instruments are registered in the OpenTRMS Workbench, independently of the trades that reference them.
+
+<Walkthrough
+  video="/learn/assets/10-instruments/10-instruments.mp4"
+  captions="/learn/assets/10-instruments/10-instruments.vtt"
+  poster="/learn/assets/10-instruments/poster.png"
+  duration="1m 17s"
+>
+
+In this walkthrough we'll find and inspect the instruments that trades are booked against, in the OpenTRMS Workbench.
+
+Instruments are registered separately from trades. The bond used in the earlier walkthrough existed here first, which is why it could be found by its ISIN during deal capture.
+
+The register lists what the system can trade — type, name, currency, maturity and status, with the identifier alongside.
+
+Search finds an instrument by name or identifier, which is the quickest route when you already know what you are looking for.
+
+The type filter narrows it a different way, to bonds or futures contracts, when you are browsing rather than searching.
+
+Expanding a row shows the full definition — the terms that make the instrument what it is, and which valuations depend on.
+
+Deactivate rather than delete is the pattern here. An instrument that trades already point at cannot be removed outright, so it is retired instead and stops appearing in pickers.
+
+That completes Managing Instruments. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll find and inspect the instruments that trades are booked against, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/10-instruments/step-01.png)
+
+## 2. Open the Instrument Manager
+
+Instruments are registered separately from trades. The bond used in the earlier walkthrough existed here first, which is why it could be found by its ISIN during deal capture.
+
+![Step 2](/learn/assets/10-instruments/step-02.png)
+
+## 3. What the register holds
+
+The register lists what the system can trade — type, name, currency, maturity and status, with the identifier alongside.
+
+![Step 3](/learn/assets/10-instruments/step-03.png)
+
+## 4. Search the register
+
+Search finds an instrument by name or identifier, which is the quickest route when you already know what you are looking for.
+
+![Step 4](/learn/assets/10-instruments/step-04.png)
+
+## 5. Filter by instrument type
+
+The type filter narrows it a different way, to bonds or futures contracts, when you are browsing rather than searching.
+
+![Step 5](/learn/assets/10-instruments/step-05.png)
+
+## 6. Expand an instrument
+
+Expanding a row shows the full definition — the terms that make the instrument what it is, and which valuations depend on.
+
+![Step 6](/learn/assets/10-instruments/step-06.png)
+
+## 7. Retire rather than delete
+
+Deactivate rather than delete is the pattern here. An instrument that trades already point at cannot be removed outright, so it is retired instead and stops appearing in pickers.
+
+![Step 7](/learn/assets/10-instruments/step-07.png)
+
+## 8. Next steps
+
+That completes Managing Instruments. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

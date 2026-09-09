@@ -1,0 +1,72 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.033
+In this walkthrough we'll set up a
+user record and see where their
+access comes from, in the OpenTRMS Workbench.
+
+2
+00:00:08.033 --> 00:00:19.467
+The User Access Workbook is the administrator's view of
+who can use the system. It opens on the directory — every
+user, with their login identifier, status and last sign-in.
+
+3
+00:00:19.467 --> 00:00:32.800
+Four tabs sit above it. Everything you do here applies to
+whichever user is selected, so you pick a person once and then
+work across profile, memberships, entitlements and review without losing them.
+
+4
+00:00:32.800 --> 00:00:45.300
+New user pre-provisions a record. It is worth knowing that
+this step is optional — if someone signs in and no record
+exists, one is created for them automatically on that first request.
+
+5
+00:00:45.300 --> 00:00:55.700
+The subject is the login identifier, and it has to
+match whatever the identity provider will send — a
+corporate email address, or a directory user ID like this one.
+
+6
+00:00:55.700 --> 00:01:03.600
+The display name is what colleagues will see
+against approvals and audit entries, so it
+should read as a person rather than an account.
+
+7
+00:01:03.600 --> 00:01:12.767
+Create the user, and the record appears in
+the directory straight away. It is active
+immediately, but on its own it grants nothing.
+
+8
+00:01:12.767 --> 00:01:19.900
+Selecting the new user loads them into the tabs
+above, and everything from here applies to them.
+
+9
+00:01:19.900 --> 00:01:31.500
+Memberships is where data groups are granted — these
+decide which books, portfolios and counterparties the
+person can see, and the table records who added each one and when.
+
+10
+00:01:31.500 --> 00:01:45.633
+A group is chosen here and added, and what it grants is data access —
+which books and counterparties the person can see. Functional groups,
+which carry what a person is allowed to do, are listed separately below.
+
+11
+00:01:45.633 --> 00:01:57.867
+The last two tabs complete the picture. Entitlements shows
+what the person can actually do once their groups are applied,
+and Access Review is where that access is signed off periodically.
+
+12
+00:01:57.867 --> 00:02:05.833
+That completes Users and Access. Every surface
+shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

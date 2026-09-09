@@ -1,0 +1,48 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:07.500
+In this walkthrough we'll follow trading activity
+into the accounting ledger, in the OpenTRMS Workbench.
+
+2
+00:00:07.500 --> 00:00:17.100
+Every trade eventually becomes an accounting entry.
+The Journal List is where those entries live, and it
+is the bridge between the trading floor and the ledger.
+
+3
+00:00:17.100 --> 00:00:27.600
+Entries carry a type. Mark to market records a
+change in value, realized profit and loss
+records a gain or loss that has actually crystallised.
+
+4
+00:00:27.600 --> 00:00:38.000
+Status matters just as much. A draft entry has
+been generated but not committed to the ledger,
+and only posted entries count towards the accounts.
+
+5
+00:00:38.000 --> 00:00:47.900
+The filters answer the two questions people
+actually ask — what happened in this accounting
+period, and what did this particular deal generate.
+
+6
+00:00:47.900 --> 00:00:57.000
+Opening an entry shows its lines.
+Every entry balances, so the lines
+always show a debit against a matching credit.
+
+7
+00:00:57.000 --> 00:01:08.933
+None of this is typed by hand. Posting Rules is the
+configuration that generates it — for each product and
+entry type, which account is debited and which is credited.
+
+8
+00:01:08.933 --> 00:01:17.500
+That completes Journals and Posting Rules. Every
+surface shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

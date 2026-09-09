@@ -1,0 +1,49 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.633
+In this walkthrough we'll see who is
+allowed to approve what, and which roles
+carry which permissions, in the OpenTRMS Workbench.
+
+2
+00:00:08.633 --> 00:00:19.600
+Approval Chains shows the sign-off required before a
+consequential action completes. It is read-only here —
+this is the configuration, not a queue of things waiting for you.
+
+3
+00:00:19.600 --> 00:00:30.933
+Each chain names the thing being approved, the condition
+that triggers it, and the steps in order. Publishing a
+curve, for instance, requires a risk manager to approve it.
+
+4
+00:00:30.933 --> 00:00:43.167
+Chains are filtered by asset class and by amount band,
+because approval requirements usually step up with size. A
+small trade and a large one can follow entirely different routes.
+
+5
+00:00:43.167 --> 00:00:52.700
+Approval decides who signs off. What a person
+may do in the first place comes from their
+role, and Roles Viewer lays those out as a matrix.
+
+6
+00:00:52.700 --> 00:01:02.633
+Every configured role gets a column, and every
+permission a row. Reading down a column tells
+you what that role can do across the whole system.
+
+7
+00:01:02.633 --> 00:01:13.433
+This is the reference to reach for when someone cannot see
+a screen or a button. Compare the permission they need
+against the roles they hold, and the gap is usually obvious.
+
+8
+00:01:13.433 --> 00:01:21.400
+That completes Approvals and Roles. Every surface
+shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

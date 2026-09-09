@@ -1,0 +1,48 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.133
+In this walkthrough we'll record a
+market fixing and query the ones
+already captured, in the OpenTRMS Workbench.
+
+2
+00:00:08.133 --> 00:00:17.333
+A fixing is a market rate recorded at a point
+in time. Capture Fixing is where one is
+entered by hand, when it has not arrived from a feed.
+
+3
+00:00:17.333 --> 00:00:25.033
+The index comes first, because it decides what
+the value means and which currency it is quoted in.
+
+4
+00:00:25.033 --> 00:00:35.700
+Then the date the rate applies to, and the rate
+itself. A fixing is always tied to a single day —
+that is what makes it a fixing rather than a forecast.
+
+5
+00:00:35.700 --> 00:00:47.167
+The rate preview underneath shows how the value will be
+interpreted before you commit it, which catches the common
+mistake of entering a percentage where a decimal was expected.
+
+6
+00:00:47.167 --> 00:00:55.467
+Fixings Query is the other half. It
+searches what has already been
+captured, for a single day or across a range.
+
+7
+00:00:55.467 --> 00:01:08.033
+It stays disabled until an index is chosen. That is
+deliberate: a query across every index at once would return
+far too much to be useful, so the surface asks you to narrow it first.
+
+8
+00:01:08.033 --> 00:01:16.867
+That completes Capturing and Querying Fixings. Every
+surface shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

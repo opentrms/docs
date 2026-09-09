@@ -1,0 +1,116 @@
+---
+title: 'Users and Access'
+description: 'How user records work in the OpenTRMS Workbench — the access workbook, pre-provisioning a user, and where group membership is granted.'
+sidebar_position: 1
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/16-user-access.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How user records work in the OpenTRMS Workbench — the access workbook, pre-provisioning a user, and where group membership is granted.
+
+<Walkthrough
+  video="/learn/assets/16-user-access/16-user-access.mp4"
+  captions="/learn/assets/16-user-access/16-user-access.vtt"
+  poster="/learn/assets/16-user-access/poster.png"
+  duration="2m 08s"
+>
+
+In this walkthrough we'll set up a user record and see where their access comes from, in the OpenTRMS Workbench.
+
+The User Access Workbook is the administrator's view of who can use the system. It opens on the directory — every user, with their login identifier, status and last sign-in.
+
+Four tabs sit above it. Everything you do here applies to whichever user is selected, so you pick a person once and then work across profile, memberships, entitlements and review without losing them.
+
+New user pre-provisions a record. It is worth knowing that this step is optional — if someone signs in and no record exists, one is created for them automatically on that first request.
+
+The subject is the login identifier, and it has to match whatever the identity provider will send — a corporate email address, or a directory user ID like this one.
+
+The display name is what colleagues will see against approvals and audit entries, so it should read as a person rather than an account.
+
+Create the user, and the record appears in the directory straight away. It is active immediately, but on its own it grants nothing.
+
+Selecting the new user loads them into the tabs above, and everything from here applies to them.
+
+Memberships is where data groups are granted — these decide which books, portfolios and counterparties the person can see, and the table records who added each one and when.
+
+A group is chosen here and added, and what it grants is data access — which books and counterparties the person can see. Functional groups, which carry what a person is allowed to do, are listed separately below.
+
+The last two tabs complete the picture. Entitlements shows what the person can actually do once their groups are applied, and Access Review is where that access is signed off periodically.
+
+That completes Users and Access. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll set up a user record and see where their access comes from, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/16-user-access/step-01.png)
+
+## 2. Open the User Access Workbook
+
+The User Access Workbook is the administrator's view of who can use the system. It opens on the directory — every user, with their login identifier, status and last sign-in.
+
+![Step 2](/learn/assets/16-user-access/step-02.png)
+
+## 3. One user, four tabs
+
+Four tabs sit above it. Everything you do here applies to whichever user is selected, so you pick a person once and then work across profile, memberships, entitlements and review without losing them.
+
+![Step 3](/learn/assets/16-user-access/step-03.png)
+
+## 4. Pre-provision a new user
+
+New user pre-provisions a record. It is worth knowing that this step is optional — if someone signs in and no record exists, one is created for them automatically on that first request.
+
+![Step 4](/learn/assets/16-user-access/step-04.png)
+
+## 5. Enter the login identifier
+
+The subject is the login identifier, and it has to match whatever the identity provider will send — a corporate email address, or a directory user ID like this one.
+
+![Step 5](/learn/assets/16-user-access/step-05.png)
+
+## 6. Enter the display name
+
+The display name is what colleagues will see against approvals and audit entries, so it should read as a person rather than an account.
+
+![Step 6](/learn/assets/16-user-access/step-06.png)
+
+## 7. Create the user
+
+Create the user, and the record appears in the directory straight away. It is active immediately, but on its own it grants nothing.
+
+![Step 7](/learn/assets/16-user-access/step-07.png)
+
+## 8. Select the new user
+
+Selecting the new user loads them into the tabs above, and everything from here applies to them.
+
+![Step 8](/learn/assets/16-user-access/step-08.png)
+
+## 9. Grant a data group
+
+Memberships is where data groups are granted — these decide which books, portfolios and counterparties the person can see, and the table records who added each one and when.
+
+![Step 9](/learn/assets/16-user-access/step-09.png)
+
+## 10. Data groups, not roles
+
+A group is chosen here and added, and what it grants is data access — which books and counterparties the person can see. Functional groups, which carry what a person is allowed to do, are listed separately below.
+
+![Step 10](/learn/assets/16-user-access/step-10.png)
+
+## 11. Entitlements and access review
+
+The last two tabs complete the picture. Entitlements shows what the person can actually do once their groups are applied, and Access Review is where that access is signed off periodically.
+
+![Step 11](/learn/assets/16-user-access/step-11.png)
+
+## 12. Next steps
+
+That completes Users and Access. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

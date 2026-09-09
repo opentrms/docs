@@ -18,14 +18,18 @@ export const SECTIONS = [
   {
     dir: 'get-started',
     label: 'Get started',
-    description: 'Find your way around the Workbench and set up your first counterparty.',
-    slugs: ['getting-started', 'create-counterparty-demo'],
+    description: 'Find your way around the Workbench.',
+    // create-counterparty-demo is deliberately absent: it is filmed against a
+    // fake HTML form used to test the generator offline, not against OpenTRMS.
+    slugs: ['00-getting-started'],
   },
   {
     dir: 'trading',
     label: 'Trading',
     description: 'Capture deals, work the blotter, and read what your book adds up to.',
-    slugs: ['03-deal-list', 'fx-spot', 'bond-workbook', '04-positions', '05-approvals-roles'],
+    // 01-fx-spot is parked upstream — the FX ticket cannot book (details.*
+    // numerics sent as strings). Reinstate it here when it is generated again.
+    slugs: ['02-bond-workbook', '03-deal-list', '04-positions', '05-approvals-roles'],
   },
   {
     dir: 'market-data',

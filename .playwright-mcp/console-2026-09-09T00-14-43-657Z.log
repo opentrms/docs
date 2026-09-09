@@ -1,0 +1,153 @@
+[   91038ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/05f82e5e.e7521a43.js:0
+[   91219ms] ChunkLoadError: Loading chunk 34 failed.
+(error: http://localhost:3123/assets/js/05f82e5e.e7521a43.js)
+    at n.f.j (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:20894)
+    at http://localhost:3123/assets/js/runtime~main.a2298053.js:1:893
+    at Array.reduce (<anonymous>)
+    at n.e (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:872)
+    at s.05f82e5e (http://localhost:3123/assets/js/main.99ee1b12.js:1:276034)
+    at d (http://localhost:3123/assets/js/main.99ee1b12.js:1:251019)
+    at http://localhost:3123/assets/js/main.99ee1b12.js:1:251289
+    at Array.forEach (<anonymous>)
+    at p (http://localhost:3123/assets/js/main.99ee1b12.js:1:251263)
+    at h (http://localhost:3123/assets/js/main.99ee1b12.js:1:251881)
+[  108985ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/14eb3368.e90fa70e.js:0
+[  108986ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/9595343b.163f784d.js:0
+[  109050ms] ChunkLoadError: Loading chunk 7234 failed.
+(error: http://localhost:3123/assets/js/14eb3368.e90fa70e.js)
+    at n.f.j (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:20894)
+    at http://localhost:3123/assets/js/runtime~main.a2298053.js:1:893
+    at Array.reduce (<anonymous>)
+    at n.e (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:872)
+    at s.14eb3368 (http://localhost:3123/assets/js/main.99ee1b12.js:1:279137)
+    at d (http://localhost:3123/assets/js/main.99ee1b12.js:1:251019)
+    at http://localhost:3123/assets/js/main.99ee1b12.js:1:251289
+    at Array.forEach (<anonymous>)
+    at p (http://localhost:3123/assets/js/main.99ee1b12.js:1:251263)
+    at h (http://localhost:3123/assets/js/main.99ee1b12.js:1:251881)
+[  113933ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/img/favicon.svg:0
+[  114810ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  115118ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  115472ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  115875ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  116328ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  116832ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  117385ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  117989ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  118645ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  119346ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  120099ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  120901ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  121755ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  122699ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/images/step-03-a2ce40ee0e4d214460bf0a107ac10246.png:0
+[  122701ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  122715ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/images/step-04-79be27ad3a6b84210cbd5c6cea9ce1a1.png:0
+[  123655ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  124657ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  125710ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  126815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  127970ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  129174ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  130429ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  131731ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  133084ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  134489ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  135946ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  137455ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  142497ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/learn/assets/04-positions/04-positions.mp4:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/5e95c892.c488a2d2.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/aba21aa0.62ce0c85.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/a7bd4aaa.f8c37f6a.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/22dd74f7.f166354c.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/a94703ab.948217a9.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/4c5e977b.0111efe0.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/c1af7fbf.5c84c7b9.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/d1182015.3c8d305a.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/f3e02cb6.a6c9cd22.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/7d16c524.d78840cc.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/165f0b69.bc611215.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/14eb3368.e90fa70e.js:0
+[  142813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/8c886e00.efb987b6.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/03732c55.e8de7253.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/ef34c634.3f01acea.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/63125dcc.b85fe203.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/92a9aa8a.73e725aa.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/2f63c0fd.3f2ed9e8.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/409abd5d.5b27b5ca.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/f06a603b.7b9dda1e.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/382014df.b36be84c.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/9595343b.163f784d.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/74ba7548.1b2ccb90.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/3014413f.10ae6f57.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/8816d446.30002283.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/7b5aae79.5af01c07.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/a0002b3c.995ff2fe.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/16d17ea2.7f3fe785.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/05f82e5e.e7521a43.js:0
+[  142815ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/1eed445f.24548116.js:0
+[  142818ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/img/favicon.svg:0
+[  147084ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/8816d446.30002283.js:0
+[  147102ms] ChunkLoadError: Loading chunk 1561 failed.
+(error: http://localhost:3123/assets/js/8816d446.30002283.js)
+    at Object.j (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:20894)
+    at http://localhost:3123/assets/js/runtime~main.a2298053.js:1:893
+    at Array.reduce (<anonymous>)
+    at n.e (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:872)
+    at push.58460.s.8816d446 (http://localhost:3123/assets/js/main.99ee1b12.js:1:299348)
+    at d (http://localhost:3123/assets/js/main.99ee1b12.js:1:251019)
+    at http://localhost:3123/assets/js/main.99ee1b12.js:1:251289
+    at Array.forEach (<anonymous>)
+    at p (http://localhost:3123/assets/js/main.99ee1b12.js:1:251263)
+    at h (http://localhost:3123/assets/js/main.99ee1b12.js:1:251881)
+[  150598ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/c1af7fbf.5c84c7b9.js:0
+[  150606ms] ChunkLoadError: Loading chunk 2702 failed.
+(error: http://localhost:3123/assets/js/c1af7fbf.5c84c7b9.js)
+    at Object.j (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:20894)
+    at http://localhost:3123/assets/js/runtime~main.a2298053.js:1:893
+    at Array.reduce (<anonymous>)
+    at n.e (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:872)
+    at push.58460.s.c1af7fbf (http://localhost:3123/assets/js/main.99ee1b12.js:1:311350)
+    at d (http://localhost:3123/assets/js/main.99ee1b12.js:1:251019)
+    at http://localhost:3123/assets/js/main.99ee1b12.js:1:251289
+    at Array.forEach (<anonymous>)
+    at p (http://localhost:3123/assets/js/main.99ee1b12.js:1:251263)
+    at h (http://localhost:3123/assets/js/main.99ee1b12.js:1:251881)
+[  150618ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/14eb3368.e90fa70e.js:0
+[  150618ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/a0002b3c.995ff2fe.js:0
+[  150620ms] ChunkLoadError: Loading chunk 7234 failed.
+(error: http://localhost:3123/assets/js/14eb3368.e90fa70e.js)
+    at Object.j (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:20894)
+    at http://localhost:3123/assets/js/runtime~main.a2298053.js:1:893
+    at Array.reduce (<anonymous>)
+    at n.e (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:872)
+    at push.58460.s.14eb3368 (http://localhost:3123/assets/js/main.99ee1b12.js:1:279137)
+    at d (http://localhost:3123/assets/js/main.99ee1b12.js:1:251019)
+    at http://localhost:3123/assets/js/main.99ee1b12.js:1:251289
+    at Array.forEach (<anonymous>)
+    at p (http://localhost:3123/assets/js/main.99ee1b12.js:1:251263)
+    at h (http://localhost:3123/assets/js/main.99ee1b12.js:1:251881)
+[  243694ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3123/assets/js/74ba7548.1b2ccb90.js:0
+[  243797ms] ChunkLoadError: Loading chunk 6490 failed.
+(error: http://localhost:3123/assets/js/74ba7548.1b2ccb90.js)
+    at Object.j (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:20894)
+    at http://localhost:3123/assets/js/runtime~main.a2298053.js:1:893
+    at Array.reduce (<anonymous>)
+    at n.e (http://localhost:3123/assets/js/runtime~main.a2298053.js:1:872)
+    at push.58460.s.74ba7548 (http://localhost:3123/assets/js/main.99ee1b12.js:1:295929)
+    at d (http://localhost:3123/assets/js/main.99ee1b12.js:1:251019)
+    at http://localhost:3123/assets/js/main.99ee1b12.js:1:251289
+    at Array.forEach (<anonymous>)
+    at p (http://localhost:3123/assets/js/main.99ee1b12.js:1:251263)
+    at h (http://localhost:3123/assets/js/main.99ee1b12.js:1:251881)
+[  263160ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom-client.development.js:28004
+[  310463ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom-client.development.js:28004
+[  492623ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-market-data-run-valuation-881-ddd.js:0
+[  492675ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/__props---category-market-data-valuation-959-65b.js:0
+[  492681ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-post-trade-journals-037-f59.js:0
+[  492695ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-trading-deal-listf-3-e-af5.js:0
+[  492698ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/__props---category-get-starteda-00-3b2.js:0
+[  492698ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---reference-cookbookf-06-fe5.js:0
+[  492704ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-get-started-getting-started-631-7f1.js:0
+[  492706ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-market-data-curve-viewer-74-b-661.js:0
+[  492706ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-trading-bond-workbook-301-d5c.js:0
+[  492710ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:3200/content---learn-trading-approvals-roles-7-b-5-1c5.js:0

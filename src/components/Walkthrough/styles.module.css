@@ -11,6 +11,42 @@
   background: var(--ifm-pre-background);
 }
 
+.facade {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  background-color: var(--ifm-pre-background);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.playIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  padding-left: 0.25rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgba(10, 11, 13, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.facade:hover .playIcon {
+  background: var(--ifm-color-primary);
+  color: var(--h06140f);
+  transform: scale(1.06);
+}
+
 .missing {
   padding: 1rem 1.125rem;
   border: 1px dashed var(--ifm-color-emphasis-300);

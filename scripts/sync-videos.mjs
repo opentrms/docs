@@ -11,19 +11,22 @@
  * Like sync-from-source.mjs, this never throws on missing input: it warns and
  * carries on, so a half-generated out/ directory cannot break the build.
  *
+ * Where the video comes from, in order:
+ *   1. A YouTube id in scripts/learn-videos.mjs — the published path.
+ *   2. LEARN_VIDEO_BASE_URL, if the videos are ever self-hosted instead.
+ *   3. The local .mp4, copied into static/learn/assets/ so a walkthrough is
+ *      previewable before it is uploaded. Gitignored — see .gitignore.
+ *
  * Env overrides:
  *   OPENTRMS_VIDEOGEN     - path to the videogen repo (default: ~/ideas/opentrms-videogen)
- *   LEARN_VIDEO_BASE_URL  - base URL the .mp4 files are hosted under. When set,
- *                           videos are referenced as <base>/<slug>.mp4 and are
- *                           not copied locally. When unset, the .mp4 is copied
- *                           into static/learn/assets/ for local preview (and is
- *                           gitignored there — see .gitignore).
+ *   LEARN_VIDEO_BASE_URL  - base URL for self-hosted .mp4 files (see 2 above).
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 
 import {SECTIONS, UNLISTED_SECTION} from './learn-sections.mjs';
+import {YOUTUBE_IDS} from './learn-videos.mjs';
 
 const VIDEOGEN = process.env.OPENTRMS_VIDEOGEN || path.join(os.homedir(), 'ideas/opentrms-videogen');
 const OUT_DIR = path.join(VIDEOGEN, 'out');
@@ -172,7 +175,7 @@ function copyScreenshots(slug, assetsDir, destDir) {
   return copied;
 }
 
-function writePage({slug, section, position, meta, videoUrl, captionsUrl, poster, transcript}) {
+function writePage({slug, section, position, meta, videoUrl, youtubeId, captionsUrl, poster, transcript}) {
   const frontmatter = [
     '---',
     `title: ${yamlString(meta.title)}`,
@@ -182,8 +185,9 @@ function writePage({slug, section, position, meta, videoUrl, captionsUrl, poster
   ].filter(Boolean).join('\n');
 
   const props = [
-    `  video=${JSON.stringify(videoUrl)}`,
-    captionsUrl ? `  captions=${JSON.stringify(captionsUrl)}` : null,
+    youtubeId ? `  youtube=${JSON.stringify(youtubeId)}` : null,
+    videoUrl ? `  video=${JSON.stringify(videoUrl)}` : null,
+    captionsUrl && !youtubeId ? `  captions=${JSON.stringify(captionsUrl)}` : null,
     poster ? `  poster=${JSON.stringify(poster)}` : null,
     meta.duration ? `  duration=${JSON.stringify(meta.duration)}` : null,
   ].filter(Boolean).join('\n');
@@ -262,6 +266,7 @@ function main() {
   }
 
   let pages = 0;
+  const unmapped = [];
 
   sections.forEach((section, sectionIndex) => {
     const present = section.slugs.filter((slug) => {
@@ -299,14 +304,18 @@ function main() {
       // local preview otherwise. Committing ~5 MB per walkthrough to git would
       // add a new copy to history on every regeneration.
       let videoUrl = null;
+      let youtubeId = YOUTUBE_IDS[slug] ?? null;
       const mp4Path = path.join(OUT_DIR, `${slug}.mp4`);
-      if (VIDEO_BASE_URL) {
+      if (youtubeId) {
+        // Published: embed it, and don't copy 5 MB nobody will load.
+      } else if (VIDEO_BASE_URL) {
         videoUrl = `${VIDEO_BASE_URL}/${slug}.mp4`;
       } else if (fs.existsSync(mp4Path)) {
         copyIfChanged(mp4Path, path.join(staticDir, `${slug}.mp4`));
         videoUrl = `/learn/assets/${slug}/${slug}.mp4`;
+        unmapped.push(slug);
       } else {
-        warn(`${slug}: no .mp4 — the page ships as screenshots and text only.`);
+        warn(`${slug}: no .mp4 and no YouTube id — the page ships as screenshots and text only.`);
       }
 
       writePage({
@@ -315,18 +324,24 @@ function main() {
         position: slugIndex + 1,
         meta,
         videoUrl,
+        youtubeId,
         captionsUrl,
         poster: screenshots.length ? `/learn/assets/${slug}/${screenshots[0]}` : null,
         transcript,
       });
       pages += 1;
       info(`${section.dir}/${slug} — ${screenshots.length} screenshots`
-        + `${captionsUrl ? ', captions' : ''}${videoUrl ? ', video' : ''}`);
+        + `${captionsUrl ? ', captions' : ''}`
+        + `${youtubeId ? `, youtube:${youtubeId}` : videoUrl ? ', local video' : ''}`);
     });
   });
 
-  info(`Wrote ${pages} walkthrough${pages === 1 ? '' : 's'} to docs/learn/`
-    + `${VIDEO_BASE_URL ? ` (video from ${VIDEO_BASE_URL})` : ' (video served locally from static/learn/assets)'}.`);
+  info(`Wrote ${pages} walkthrough${pages === 1 ? '' : 's'} to docs/learn/.`);
+  if (unmapped.length) {
+    warn(`${unmapped.length} walkthrough${unmapped.length === 1 ? ' has' : 's have'} no YouTube id `
+      + `and will not play once deployed: ${unmapped.join(', ')}.`);
+    warn('Upload them and add their ids to scripts/learn-videos.mjs.');
+  }
   if (warnings) {
     info(`${warnings} warning${warnings === 1 ? '' : 's'} above.`);
   }

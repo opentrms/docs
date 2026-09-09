@@ -1,0 +1,59 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:07.400
+In this walkthrough we'll create a
+new counterparty in the OpenTRMS
+Workbench, and make it available for trading.
+
+2
+00:00:07.400 --> 00:00:11.433
+Counterparties live under
+Reference data in the left-hand navigation.
+
+3
+00:00:11.433 --> 00:00:19.800
+Start with the legal name. Use the full
+registered name exactly as it appears on the
+entity's incorporation documents — not a trading alias.
+
+4
+00:00:19.800 --> 00:00:26.733
+Next, choose the counterparty type. The
+type drives which credit and margin rules
+the risk engine will apply, so it matters.
+
+5
+00:00:26.733 --> 00:00:34.067
+Set the country of incorporation. This is the
+jurisdiction of the legal entity, which is not
+always where the desk you deal with is located.
+
+6
+00:00:34.067 --> 00:00:41.800
+Now the Legal Entity Identifier — twenty
+alphanumeric characters. The Workbench
+validates the check digits before the record can be saved.
+
+7
+00:00:41.800 --> 00:00:48.900
+Enter the credit limit in US dollars. This is
+the gross notional cap across every desk, and
+it's enforced at the point of trade capture.
+
+8
+00:00:48.900 --> 00:00:55.467
+Finally, attach a standing settlement
+instruction. Without one, trades against
+this counterparty will book but will not settle.
+
+9
+00:00:55.467 --> 00:01:01.733
+Save the counterparty. The record is validated,
+written, and an audit entry is raised against your user.
+
+10
+00:01:01.733 --> 00:01:08.867
+The confirmation gives you the new
+counterparty reference. The record is active
+immediately and can now be selected during deal entry.

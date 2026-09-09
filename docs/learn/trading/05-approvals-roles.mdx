@@ -1,0 +1,84 @@
+---
+title: 'Approvals and Roles'
+description: 'How the OpenTRMS Workbench decides who may approve what — the approval chains behind consequential actions, and the role scope matrix.'
+sidebar_position: 4
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/05-approvals-roles.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How the OpenTRMS Workbench decides who may approve what — the approval chains behind consequential actions, and the role scope matrix.
+
+<Walkthrough
+  video="/learn/assets/05-approvals-roles/05-approvals-roles.mp4"
+  captions="/learn/assets/05-approvals-roles/05-approvals-roles.vtt"
+  poster="/learn/assets/05-approvals-roles/step-01.png"
+  duration="1m 23s"
+>
+
+In this walkthrough we'll see who is allowed to approve what, and which roles carry which permissions, in the OpenTRMS Workbench.
+
+Approval Chains shows the sign-off required before a consequential action completes. It is read-only here — this is the configuration, not a queue of things waiting for you.
+
+Each chain names the thing being approved, the condition that triggers it, and the steps in order. Publishing a curve, for instance, requires a risk manager to approve it.
+
+Chains are filtered by asset class and by amount band, because approval requirements usually step up with size. A small trade and a large one can follow entirely different routes.
+
+Approval decides who signs off. What a person may do in the first place comes from their role, and Roles Viewer lays those out as a matrix.
+
+Every configured role gets a column, and every permission a row. Reading down a column tells you what that role can do across the whole system.
+
+This is the reference to reach for when someone cannot see a screen or a button. Compare the permission they need against the roles they hold, and the gap is usually obvious.
+
+That completes Approvals and Roles. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll see who is allowed to approve what, and which roles carry which permissions, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/05-approvals-roles/step-01.png)
+
+## 2. Open Approval Chains
+
+Approval Chains shows the sign-off required before a consequential action completes. It is read-only here — this is the configuration, not a queue of things waiting for you.
+
+![Step 2](/learn/assets/05-approvals-roles/step-02.png)
+
+## 3. Read a chain
+
+Each chain names the thing being approved, the condition that triggers it, and the steps in order. Publishing a curve, for instance, requires a risk manager to approve it.
+
+![Step 3](/learn/assets/05-approvals-roles/step-03.png)
+
+## 4. Conditions and amount bands
+
+Chains are filtered by asset class and by amount band, because approval requirements usually step up with size. A small trade and a large one can follow entirely different routes.
+
+![Step 4](/learn/assets/05-approvals-roles/step-04.png)
+
+## 5. Open the Roles Viewer
+
+Approval decides who signs off. What a person may do in the first place comes from their role, and Roles Viewer lays those out as a matrix.
+
+![Step 5](/learn/assets/05-approvals-roles/step-05.png)
+
+## 6. A column per role
+
+Every configured role gets a column, and every permission a row. Reading down a column tells you what that role can do across the whole system.
+
+![Step 6](/learn/assets/05-approvals-roles/step-06.png)
+
+## 7. Diagnosing missing access
+
+This is the reference to reach for when someone cannot see a screen or a button. Compare the permission they need against the roles they hold, and the gap is usually obvious.
+
+![Step 7](/learn/assets/05-approvals-roles/step-07.png)
+
+## 8. Next steps
+
+That completes Approvals and Roles. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

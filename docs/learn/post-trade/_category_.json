@@ -1,0 +1,9 @@
+{
+  "label": "Post-trade",
+  "position": 4,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Settlement, netting and the accounting that follows a trade."
+  }
+}

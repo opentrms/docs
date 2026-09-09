@@ -1,0 +1,65 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:08.433
+In this walkthrough we'll explore the
+party tree and the holiday calendars
+behind every date, in the OpenTRMS Workbench.
+
+2
+00:00:08.433 --> 00:00:18.233
+Party Hierarchy holds everyone the system knows
+about, arranged as a tree. Every trade points at
+two of these — one on your side, one on theirs.
+
+3
+00:00:18.233 --> 00:00:29.933
+The tree has three levels. A group at the top, business
+units beneath it, and legal entities at the bottom — and
+it is the legal entity that actually trades and settles.
+
+4
+00:00:29.933 --> 00:00:38.633
+Each node carries a code and a type.
+Alpha Group is marked internal, which
+means it is part of your own organisation.
+
+5
+00:00:38.633 --> 00:00:50.767
+Beta Group is external. That single distinction decides a
+great deal — which side of a trade an entity can sit on,
+and which limits and settlement instructions apply to it.
+
+6
+00:00:50.767 --> 00:00:58.133
+Collapse all returns the tree to its top level, which
+is the quickest way back when the hierarchy is large.
+
+7
+00:00:58.133 --> 00:01:05.767
+Calendars are the other piece of
+reference data you meet early. The
+Workbench keeps one per financial centre.
+
+8
+00:01:05.767 --> 00:01:15.633
+London, TARGET for the euro, and New York
+each hold their own holidays, and the count
+beside each one tells you how well populated it is.
+
+9
+00:01:15.633 --> 00:01:23.133
+Selecting a calendar lists its holidays. These
+are the dates the system will refuse to settle on.
+
+10
+00:01:23.133 --> 00:01:35.567
+This is why a spot trade booked on a Thursday might settle the
+following Monday, and why the same trade in two currencies can
+settle on different days. The calendar decides, not the count of days.
+
+11
+00:01:35.567 --> 00:01:43.667
+That completes Parties and Calendars. Every
+surface shown here can also be opened from the
+agent panel on the right, by asking for it in plain English.

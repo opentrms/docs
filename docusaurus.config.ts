@@ -160,6 +160,12 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'learnSidebar',
+          position: 'left',
+          label: 'Learn',
+        },
         {to: '/reference/api/trms-api', label: 'API Reference', position: 'left'},
         {to: '/reference/schema-catalog', label: 'Schemas', position: 'left'},
         {to: '/reference/cookbook', label: 'Cookbook', position: 'left'},

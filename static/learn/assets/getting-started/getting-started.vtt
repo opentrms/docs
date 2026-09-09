@@ -1,0 +1,116 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:13.200
+In this walkthrough we'll take a first tour of the workspace and learn
+how to find anything. The screen has four parts — the top bar, the
+navigation on the left, your workspace in the middle, and the agent on the right.
+
+2
+00:00:13.200 --> 00:00:23.900
+Start on the left. The navigation lists every
+screen, grouped by what it is for — trades,
+instruments, market data, risk, and post-trade operations.
+
+3
+00:00:23.900 --> 00:00:34.533
+On the right is the agent — a second way into the same
+screens. Describe what you need in plain English and it
+opens them, and the prompt library below has examples.
+
+4
+00:00:34.533 --> 00:00:42.200
+Both sides fold away when you want
+the room. The navigation collapses
+from the button beside the Workbench name.
+
+5
+00:00:42.200 --> 00:00:48.333
+The agent hides the same way, which gives
+your workspace the full width of the screen.
+
+6
+00:00:48.333 --> 00:00:51.733
+The same two buttons bring them back.
+
+7
+00:00:51.733 --> 00:00:55.200
+Nothing is lost while they are hidden.
+
+8
+00:00:55.200 --> 00:01:02.967
+Now the middle. Open a screen and it
+appears as a panel in your workspace.
+Panels are tiles rather than pop-up windows.
+
+9
+00:01:02.967 --> 00:01:12.400
+Open a second and the two tile together, one
+below the other. Neither hides the navigation
+or the agent, so you keep your place while you work.
+
+10
+00:01:12.400 --> 00:01:19.767
+Each panel has its own controls — maximise it,
+detach it into a separate window, or close it.
+
+11
+00:01:19.767 --> 00:01:26.933
+That leaves the top bar. Everything is shown
+as of a business date, not today's date — the
+first thing to check when a number looks wrong.
+
+12
+00:01:26.933 --> 00:01:37.067
+Beside it is the role you are signed in as. It decides
+what appears in the navigation, so if a colleague has an
+item you do not, that is entitlements rather than a fault.
+
+13
+00:01:37.067 --> 00:01:46.567
+An arrangement you like can be kept.
+Templates hold saved layouts and presets for
+common operations, so a morning setup is one click.
+
+14
+00:01:46.567 --> 00:01:51.733
+Escape closes any menu or dialog,
+and always backs you out safely.
+
+15
+00:01:51.733 --> 00:01:56.800
+And when you have finished,
+close every panel at once from here.
+
+16
+00:01:56.800 --> 00:02:04.500
+One last thing, and the most useful. Command K,
+or Control K, opens universal search from anywhere.
+
+17
+00:02:04.500 --> 00:02:12.067
+Type what you are after and matching
+screens come first. No need to
+remember which menu group it lives under.
+
+18
+00:02:12.067 --> 00:02:18.033
+It searches your data as well. An
+ISIN finds the instrument itself.
+
+19
+00:02:18.033 --> 00:02:28.233
+A counterparty name finds deals booked against
+it. The same search covers users, parties and
+market indexes, and a result opens straight away.
+
+20
+00:02:28.233 --> 00:02:35.367
+And the top row hands what you typed to the
+agent, so the same box is both a search and a question.
+
+21
+00:02:35.367 --> 00:02:44.933
+That completes Getting Started in the Workbench. Every
+surface shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

@@ -1,0 +1,9 @@
+{
+  "label": "Trading",
+  "position": 2,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Capture deals, work the blotter, and read what your book adds up to."
+  }
+}

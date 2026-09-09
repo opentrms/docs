@@ -1,0 +1,65 @@
+WEBVTT
+
+1
+00:00:00.800 --> 00:00:07.900
+In this walkthrough we'll find a deal
+in the blotter, and open it for a
+closer look, in the OpenTRMS Workbench.
+
+2
+00:00:07.900 --> 00:00:15.267
+The Deal List is the blotter — every
+trade the system holds, whatever the
+product. It opens showing all of them.
+
+3
+00:00:15.267 --> 00:00:24.100
+The filters across the top narrow the list
+down. They combine, so you can work from a
+broad view to a precise one without losing your place.
+
+4
+00:00:24.100 --> 00:00:33.867
+Filter by asset class to see only the fixed income
+trades. The list updates in place, and the filter
+stays visible so you always know what you are looking at.
+
+5
+00:00:33.867 --> 00:00:42.833
+Any column can also group the rows.
+Grouping by status collects the deals
+into buckets, each showing how many it holds.
+
+6
+00:00:42.833 --> 00:00:51.833
+Groups open expanded. Collapse one to see
+just the summary line, which is the
+quickest way to read totals across a large blotter.
+
+7
+00:00:51.833 --> 00:00:58.300
+The same control opens it again, and the
+grouping can be changed or cleared whenever you like.
+
+8
+00:00:58.300 --> 00:01:06.533
+Opening a deal brings up its own panel
+beside the list, so you keep the
+blotter and the detail on screen together.
+
+9
+00:01:06.533 --> 00:01:14.600
+And when you already know what you are
+after, universal search reaches the same
+deal directly. A counterparty name is usually enough.
+
+10
+00:01:14.600 --> 00:01:21.233
+Picking a result opens that deal straight
+away, without going through the blotter at all.
+
+11
+00:01:21.233 --> 00:01:28.933
+That completes Finding Deals. Every surface
+shown here can also be opened from the agent
+panel on the right, by asking for it in plain English.

@@ -1,0 +1,84 @@
+---
+title: 'Market Indexes and Curves'
+description: 'How published market data is organised in the OpenTRMS Workbench — index metadata, dependencies and the grid points a curve is built from.'
+sidebar_position: 3
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/08-market-index.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How published market data is organised in the OpenTRMS Workbench — index metadata, dependencies and the grid points a curve is built from.
+
+<Walkthrough
+  video="/learn/assets/08-market-index/08-market-index.mp4"
+  captions="/learn/assets/08-market-index/08-market-index.vtt"
+  poster="/learn/assets/08-market-index/step-01.png"
+  duration="1m 17s"
+>
+
+In this walkthrough we'll see how a market curve is defined, and what it depends on, in the OpenTRMS Workbench.
+
+The Curve Viewer showed a curve. The Market Index Manager is where that curve is defined in the first place.
+
+Indexes are catalogued by type. Discount curves, overnight index curves, and composites built from others, each with its own currency.
+
+An index carries metadata rather than numbers. The market it belongs to, the group it sits in, and how values between published points are interpolated.
+
+Holiday calendars attach here, which is how a curve knows which days are good business days for the currency it prices.
+
+Dependencies are the interesting part. A composite index is built from others, so changing one of those changes everything downstream of it.
+
+New index adds a definition to the catalogue. Once it exists and has grid point data published against it, it becomes selectable in the Curve Viewer and usable by valuations.
+
+That completes Market Indexes and Curves. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll see how a market curve is defined, and what it depends on, in the OpenTRMS Workbench.
+
+![Step 1](/learn/assets/08-market-index/step-01.png)
+
+## 2. Open the Market Index Manager
+
+The Curve Viewer showed a curve. The Market Index Manager is where that curve is defined in the first place.
+
+![Step 2](/learn/assets/08-market-index/step-02.png)
+
+## 3. The index catalogue
+
+Indexes are catalogued by type. Discount curves, overnight index curves, and composites built from others, each with its own currency.
+
+![Step 3](/learn/assets/08-market-index/step-03.png)
+
+## 4. Index metadata
+
+An index carries metadata rather than numbers. The market it belongs to, the group it sits in, and how values between published points are interpolated.
+
+![Step 4](/learn/assets/08-market-index/step-04.png)
+
+## 5. Calendars attach to the index
+
+Holiday calendars attach here, which is how a curve knows which days are good business days for the currency it prices.
+
+![Step 5](/learn/assets/08-market-index/step-05.png)
+
+## 6. Indexes depend on other indexes
+
+Dependencies are the interesting part. A composite index is built from others, so changing one of those changes everything downstream of it.
+
+![Step 6](/learn/assets/08-market-index/step-06.png)
+
+## 7. Adding a new index
+
+New index adds a definition to the catalogue. Once it exists and has grid point data published against it, it becomes selectable in the Curve Viewer and usable by valuations.
+
+![Step 7](/learn/assets/08-market-index/step-07.png)
+
+## 8. Next steps
+
+That completes Market Indexes and Curves. Every surface shown here can also be opened from the agent panel on the right, by asking for it in plain English.

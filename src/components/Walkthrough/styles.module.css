@@ -1,0 +1,62 @@
+.walkthrough {
+  margin: 0 0 2.5rem;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  background: var(--ifm-pre-background);
+}
+
+.missing {
+  padding: 1rem 1.125rem;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.transcript {
+  margin-top: 0.75rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  background: var(--ifm-background-surface-color);
+}
+
+.summary {
+  cursor: pointer;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.summary:hover {
+  color: var(--ifm-font-color-base);
+}
+
+.duration {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ifm-font-color-secondary);
+  opacity: 0.75;
+}
+
+.transcriptBody {
+  padding: 0.25rem 1rem 1rem;
+  border-top: 1px solid var(--ifm-toc-border-color);
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.9375rem;
+}
+
+.transcriptBody p {
+  margin-bottom: 0.75rem;
+}

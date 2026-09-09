@@ -1,0 +1,9 @@
+{
+  "label": "Administration",
+  "position": 5,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Users, access policy, reference data and the audit trail."
+  }
+}

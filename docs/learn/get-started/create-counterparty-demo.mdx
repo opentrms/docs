@@ -1,0 +1,102 @@
+---
+title: 'Create a Counterparty'
+description: 'How to register a new trading counterparty in the Workbench, from reference data through to an active record with a settlement instruction attached.'
+sidebar_position: 2
+---
+
+{/* Generated from opentrms-videogen by `npm run sync-videos`. Do not edit:
+    change scenarios/create-counterparty-demo.yaml and regenerate, or this file overwrites you. */}
+
+import Walkthrough from '@site/src/components/Walkthrough';
+
+How to register a new trading counterparty in the Workbench, from reference data through to an active record with a settlement instruction attached.
+
+<Walkthrough
+  video="/learn/assets/create-counterparty-demo/create-counterparty-demo.mp4"
+  captions="/learn/assets/create-counterparty-demo/create-counterparty-demo.vtt"
+  poster="/learn/assets/create-counterparty-demo/step-01.png"
+  duration="1m 10s"
+>
+
+In this walkthrough we'll create a new counterparty in the OpenTRMS Workbench, and make it available for trading.
+
+Counterparties live under Reference data in the left-hand navigation.
+
+Start with the legal name. Use the full registered name exactly as it appears on the entity's incorporation documents — not a trading alias.
+
+Next, choose the counterparty type. The type drives which credit and margin rules the risk engine will apply, so it matters.
+
+Set the country of incorporation. This is the jurisdiction of the legal entity, which is not always where the desk you deal with is located.
+
+Now the Legal Entity Identifier — twenty alphanumeric characters. The Workbench validates the check digits before the record can be saved.
+
+Enter the credit limit in US dollars. This is the gross notional cap across every desk, and it's enforced at the point of trade capture.
+
+Finally, attach a standing settlement instruction. Without one, trades against this counterparty will book but will not settle.
+
+Save the counterparty. The record is validated, written, and an audit entry is raised against your user.
+
+The confirmation gives you the new counterparty reference. The record is active immediately and can now be selected during deal entry.
+
+</Walkthrough>
+
+
+## 1. Open the Workbench
+
+In this walkthrough we'll create a new counterparty in the OpenTRMS Workbench, and make it available for trading.
+
+![Step 1](/learn/assets/create-counterparty-demo/step-01.png)
+
+## 2. Find the Counterparties screen
+
+Counterparties live under Reference data in the left-hand navigation.
+
+![Step 2](/learn/assets/create-counterparty-demo/step-02.png)
+
+## 3. Enter the legal name
+
+Start with the legal name. Use the full registered name exactly as it appears on the entity's incorporation documents — not a trading alias.
+
+![Step 3](/learn/assets/create-counterparty-demo/step-03.png)
+
+## 4. Choose the counterparty type
+
+Next, choose the counterparty type. The type drives which credit and margin rules the risk engine will apply, so it matters.
+
+![Step 4](/learn/assets/create-counterparty-demo/step-04.png)
+
+## 5. Set the country of incorporation
+
+Set the country of incorporation. This is the jurisdiction of the legal entity, which is not always where the desk you deal with is located.
+
+![Step 5](/learn/assets/create-counterparty-demo/step-05.png)
+
+## 6. Enter the LEI
+
+Now the Legal Entity Identifier — twenty alphanumeric characters. The Workbench validates the check digits before the record can be saved.
+
+![Step 6](/learn/assets/create-counterparty-demo/step-06.png)
+
+## 7. Set the credit limit
+
+Enter the credit limit in US dollars. This is the gross notional cap across every desk, and it's enforced at the point of trade capture.
+
+![Step 7](/learn/assets/create-counterparty-demo/step-07.png)
+
+## 8. Attach a settlement instruction
+
+Finally, attach a standing settlement instruction. Without one, trades against this counterparty will book but will not settle.
+
+![Step 8](/learn/assets/create-counterparty-demo/step-08.png)
+
+## 9. Save the record
+
+Save the counterparty. The record is validated, written, and an audit entry is raised against your user.
+
+![Step 9](/learn/assets/create-counterparty-demo/step-09.png)
+
+## 10. Confirm the counterparty was created
+
+The confirmation gives you the new counterparty reference. The record is active immediately and can now be selected during deal entry.
+
+![Step 10](/learn/assets/create-counterparty-demo/step-10.png)

@@ -19,25 +19,25 @@ plainly that it cannot be quickly undone. That warning is
 the pattern for anything consequential — if you see it, read it.
 
 4
-00:00:31.300 --> 00:00:40.967
+00:00:31.300 --> 00:00:40.933
 The only input is the period itself. There
 is deliberately nothing else to configure,
 because a close either happens or it does not.
 
 5
-00:00:40.967 --> 00:00:53.033
+00:00:40.933 --> 00:00:53.000
 Before closing, the work is done elsewhere. Draft journal
 entries need posting, and anything still pending approval
 needs resolving, because neither can be added afterwards.
 
 6
-00:00:53.033 --> 00:01:02.700
+00:00:53.000 --> 00:01:02.667
 Start Close commits it. In a shared
 environment this affects everyone, so it is
 worth being certain the period is genuinely complete.
 
 7
-00:01:02.700 --> 00:01:11.067
+00:01:02.667 --> 00:01:11.033
 That completes Closing an Accounting Period. Every
 surface shown here can also be opened from the agent
 panel on the right, by asking for it in plain English.

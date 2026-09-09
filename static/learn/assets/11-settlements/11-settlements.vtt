@@ -35,19 +35,19 @@ And back to the working queue, which
 is where the day is actually run from.
 
 7
-00:00:52.400 --> 00:01:01.967
+00:00:52.400 --> 00:01:02.000
 The status filter narrows the queue further.
 Typing a status shows only the items in that
 state — projected, instructed, or settled.
 
 8
-00:01:01.967 --> 00:01:12.967
+00:01:02.000 --> 00:01:13.000
 Settlements are selected with the checkbox on each row. A
 selection can be carried straight through to the next step,
 which is instructing them against a settlement instruction.
 
 9
-00:01:12.967 --> 00:01:21.700
+00:01:13.000 --> 00:01:21.700
 Open Instruct Settlement takes the
 selection with it, so you do not re-key
 anything. That is the subject of the next walkthrough.

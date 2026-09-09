@@ -50,6 +50,18 @@ function info(msg) {
   console.log(`[sync-videos] ${msg}`);
 }
 
+/**
+ * Accepts either a bare video id or any YouTube URL — a share link is what you
+ * have in hand right after an upload, so requiring the id invites silent typos.
+ */
+function youtubeId(value) {
+  const raw = String(value ?? '').trim();
+  if (!raw) return null;
+  if (!raw.includes('/')) return raw;
+  const match = raw.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{6,})/);
+  return match ? match[1] : null;
+}
+
 /** MDX reads `{` and `<` as expression syntax; generated prose must not. */
 function escapeMdx(text) {
   return text.replace(/[{}]/g, (ch) => `&#${ch.charCodeAt(0)};`).replace(/</g, '&lt;');
@@ -304,9 +316,13 @@ function main() {
       // local preview otherwise. Committing ~5 MB per walkthrough to git would
       // add a new copy to history on every regeneration.
       let videoUrl = null;
-      let youtubeId = YOUTUBE_IDS[slug] ?? null;
+      const mapped = YOUTUBE_IDS[slug] ?? null;
+      const videoId = youtubeId(mapped);
+      if (mapped && !videoId) {
+        warn(`${slug}: could not read a video id out of "${mapped}" — falling back to local video.`);
+      }
       const mp4Path = path.join(OUT_DIR, `${slug}.mp4`);
-      if (youtubeId) {
+      if (videoId) {
         // Published: embed it, and don't copy 5 MB nobody will load.
       } else if (VIDEO_BASE_URL) {
         videoUrl = `${VIDEO_BASE_URL}/${slug}.mp4`;
@@ -324,7 +340,7 @@ function main() {
         position: slugIndex + 1,
         meta,
         videoUrl,
-        youtubeId,
+        youtubeId: videoId,
         captionsUrl,
         poster: screenshots.length ? `/learn/assets/${slug}/${screenshots[0]}` : null,
         transcript,
@@ -332,7 +348,7 @@ function main() {
       pages += 1;
       info(`${section.dir}/${slug} — ${screenshots.length} screenshots`
         + `${captionsUrl ? ', captions' : ''}`
-        + `${youtubeId ? `, youtube:${youtubeId}` : videoUrl ? ', local video' : ''}`);
+        + `${videoId ? `, youtube:${videoId}` : videoUrl ? ', local video' : ''}`);
     });
   });
 

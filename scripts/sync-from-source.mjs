@@ -280,7 +280,7 @@ description: The OpenTRMS database schema, generated from the backend's ERD sour
 <StatusBadge status="stable" reviewed="${TODAY}" />
 
 The full OpenTRMS schema currently spans **${tableCount} tables**, so this page
-splits the backend ERD into domain slices generated from \`docs/ERD.mermaid\`.
+splits the backend ERD into domain slices generated from \`docs/reference/erd.mermaid\`.
 Each slice keeps the local tables readable and adds one-field stubs when a
 foreign-key edge crosses into another domain.
 

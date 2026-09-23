@@ -14,7 +14,7 @@ This page is a curated map of the core entity groups in the OpenTRMS schema —
 enough to know which table to look for, not a column-by-column reprint of the
 internal spec. For full DDL and field-level detail, see the [ERD](/reference/erd)
 and the per-product [Schema catalog](/reference/schema-catalog). The source for
-this overview is the backend's `docs/DataDictionary_v1.0.md` and `docs/ERD.mermaid`.
+this overview is the backend's `docs/reference/data-dictionary.md` and `docs/reference/erd.mermaid`.
 
 ## `auth` — identity and entitlements
 
@@ -130,7 +130,7 @@ See [Approval chains](/concepts/approval-chains).
 Credit/risk-limit tables, internal-party records, and bank-account tables are
 gated by their own scopes (`credit:*`, `risk:*`, `parties:internal:*`,
 `bank_accounts:*` — see [Scopes & entitlements](/reference/scopes)) but are
-not part of the `docs/DataDictionary_v1.0.md` snapshot this page summarizes.
+not part of the `docs/reference/data-dictionary.md` snapshot this page summarizes.
 For the authoritative, current table list and relationships, use the
 [ERD](/reference/erd); for the JSON shape of each product and instrument type,
 use the [Schema catalog](/reference/schema-catalog).

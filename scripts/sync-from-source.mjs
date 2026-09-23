@@ -210,7 +210,7 @@ function buildErdSectionDiagram(section, entityBlocks, relationshipLines) {
 }
 
 function syncErd() {
-  const erdSourcePath = path.join(BACKEND, 'docs', 'ERD.mermaid');
+  const erdSourcePath = path.join(BACKEND, 'docs', 'reference', 'erd.mermaid');
   const outPath = path.join(DOCS_DIR, 'reference', 'erd.mdx');
   const downloadPath = path.join(STATIC_DIR, 'erd', 'trms-erd-full.mermaid');
 
@@ -234,7 +234,7 @@ description: The OpenTRMS database schema, generated from the backend's ERD sour
 <StatusBadge status="stable" reviewed="${TODAY}" />
 
 :::note
-The ERD source (\`docs/ERD.mermaid\`) was not found in the backend repository. Run \`npm run sync\` after fixing \`OPENTRMS_BACKEND\`.
+The ERD source (\`docs/reference/erd.mermaid\`) was not found in the backend repository. Run \`npm run sync\` after fixing \`OPENTRMS_BACKEND\`.
 :::
 
 \`\`\`mermaid

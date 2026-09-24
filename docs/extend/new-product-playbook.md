@@ -11,7 +11,7 @@ description: The end-to-end checklist for onboarding a new product type.
 # New-product playbook
 
 This page documents the current backend playbook for adding a new product
-today. It is based on the upstream `docs/NEW_PRODUCT_PLAYBOOK.md`, but written
+today. It is based on the upstream `docs/extending/new-product-playbook.md`, but written
 for contributors who need the present implementation path, not the future
 roadmap alone.
 

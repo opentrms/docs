@@ -1,48 +1,48 @@
 WEBVTT
 
 1
-00:00:00.800 --> 00:00:08.067
+00:00:00.800 --> 00:00:09.267
 In this walkthrough we'll see how a
 market curve is defined, and what it
 depends on, in the OpenTRMS Workbench.
 
 2
-00:00:08.067 --> 00:00:15.300
+00:00:09.267 --> 00:00:17.633
 The Curve Viewer showed a curve. The Market Index
 Manager is where that curve is defined in the first place.
 
 3
-00:00:15.300 --> 00:00:25.500
+00:00:17.633 --> 00:00:29.167
 Indexes are catalogued by type. Discount
 curves, overnight index curves, and
 composites built from others, each with its own currency.
 
 4
-00:00:25.500 --> 00:00:36.533
+00:00:29.167 --> 00:00:41.433
 An index carries metadata rather than numbers. The
 market it belongs to, the group it sits in, and
 how values between published points are interpolated.
 
 5
-00:00:36.533 --> 00:00:45.033
+00:00:41.433 --> 00:00:51.367
 Holiday calendars attach here, which is
 how a curve knows which days are good
 business days for the currency it prices.
 
 6
-00:00:45.033 --> 00:00:55.067
+00:00:51.367 --> 00:01:02.767
 Dependencies are the interesting part. A
 composite index is built from others, so
 changing one of those changes everything downstream of it.
 
 7
-00:00:55.067 --> 00:01:07.200
+00:01:02.767 --> 00:01:16.733
 New index adds a definition to the catalogue. Once it
 exists and has grid point data published against it, it
 becomes selectable in the Curve Viewer and usable by valuations.
 
 8
-00:01:07.200 --> 00:01:15.600
+00:01:16.733 --> 00:01:26.867
 That completes Market Indexes and Curves. Every
 surface shown here can also be opened from the
 agent panel on the right, by asking for it in plain English.
